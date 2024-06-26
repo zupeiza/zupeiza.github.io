@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Password Protected</title>
+        <title>Boda de Jes y Zupe</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="noindex, nofollow">
@@ -90,11 +90,11 @@
     <body>
 
         <div class="protected">
-            <div class="protected__alert" data-id="alert">You entered the wrong password</div>
+            <div class="protected__alert" data-id="alert">Contraseña incorrecta</div>
             <div class="protected__content">
-                <h1 class="protected__content__heading">You need a password to continue</h1>
+                <h1 class="protected__content__heading">Necesitas una contraseña para continuar</h1>
                 <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">Continue</button>
+                <button data-id="button" type="button" class="protected__content__btn">Continuar</button>
             </div>
         </div>
 
@@ -118,14 +118,14 @@
                     } else {
                         parent.location.hash = hash
                         alert[0].style.display = 'block'
-                        password[0].setAttribute('placeholder', 'Incorrect password')
+                        password[0].setAttribute('placeholder', 'Contraseña incorrecta')
                         password[0].value = ''
                     }
                 }
                 request.onerror = function () {
                     parent.location.hash = hash
                     alert[0].style.display = 'block'
-                    password[0].setAttribute('placeholder', 'Incorrect password')
+                    password[0].setAttribute('placeholder', 'Contraseña incorrecta')
                     password[0].value = ''
                 }
                 request.send()
