@@ -1,8 +1,23 @@
 {
     "nosotras": "Nós",
+    "nosotras-extend": "",
     "celebracion": "O luar",
+    "celebracion-extend": "",
     "informacion": "Datos",
+    "informacion-extend": "",
     "lejos": "Veño de lonxe",
+    "lejos-extend": "",
     "asientos": "As táboas",
-    "fotos": "As fotos"
+    "asientos-extend": "",
+    "fotos": "As fotos",
+    "fotos-extend": "",
+    "contacta": "Contacta con nós",
+    "formnameblock": "<!-- Name input-->\n\t<input class=\"form-control\" id=\"name\" type=\"text\" autocomplete=\"off\" placeholder=\"O teu nome*\" data-sb-validations=\"required\" \/>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"name:required\">Fai falla un nome<\/div>",
+    "formemailblock": "<!-- Email address input-->\n\t<input class=\"form-control\" id=\"email\" type=\"email\" autocomplete=\"off\" placeholder=\"O teu Email *\" data-sb-validations=\"required,email\" \/>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"email:required\">Requírese un email.<\/div>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"email:email\">Email no válido.<\/div>",
+    "formphoneblock": "<!-- Phone number input-->\n\t<input class=\"form-control\" id=\"phone\" type=\"tel\" autocomplete=\"off\" placeholder=\"O teu teléfono *\" data-sb-validations=\"required\" \/>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"phone:required\">Requírese un número de teléfono<\/div>",
+    "formmessblock": "<!-- Message input-->\n\t<textarea class=\"form-control\" id=\"message\" placeholder=\"A túa mensaxe *\" data-sb-validations=\"required\"></textarea>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"message:required\">Requírese unha mensaxe.<\/div>",
+    "formsubmitblock": "<div class=\"fw-bolder\">A túa mensaxe enviouse con éxito!<\/div>",
+    "formsubmiterrorblock": "Erro no envío da mensaxe",
+    "formsubmitbtn": "Enviar mensaxe"
+
 }
