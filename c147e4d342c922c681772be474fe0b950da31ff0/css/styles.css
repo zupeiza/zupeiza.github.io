@@ -6513,6 +6513,15 @@ textarea.form-control-lg {
   }
 }
 
+.parallax {
+  background-image: url("../assets/img/2020.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .offcanvas {
   position: fixed;
   bottom: 0;
@@ -11030,7 +11039,7 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item .portfolio-caption {
   padding: 1.5rem;
   text-align: center;
-  background-color: #fff;
+  background-color: rgba(0,0,0,0);
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
