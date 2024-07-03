@@ -16,9 +16,13 @@ window.addEventListener('DOMContentLoaded', event => {
             return;
         }
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            //navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('scrolled-down')
+            navbarCollapsible.classList.add('scrolled-up')
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            //navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('scrolled-down')
+            navbarCollapsible.classList.remove('scrolled-up')
         }
 
     };
@@ -34,7 +38,7 @@ window.addEventListener('DOMContentLoaded', event => {
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+            rootMargin: '0px 0px -200%',
         });
     };
 

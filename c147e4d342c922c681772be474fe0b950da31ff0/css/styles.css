@@ -10959,7 +10959,15 @@ p {
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
+  #mainNav.scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  #mainNav.scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+  }  
 }
+
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;

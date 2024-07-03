@@ -16,22 +16,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
       <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
         </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
+                <!--a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a-->
+                <ul id="languagesFlags" style="list-style-type: none; padding-top: 8px;">
+                  <li style="display: inline-block">
+                    <a class="nav-link" href="index.html" onclick="changeLanguage('es')"><span class="fi fi-es"></span></a>
+                  </li>
+                  <li style="display: inline-block">
+                    <a class="nav-link" href="index.html" onclick="changeLanguage('gl')"><span class="fi fi-es-ga"></span></a>
+                  </li>
+                  <li style="display: inline-block">
+                    <a class="nav-link" href="index.html" onclick="changeLanguage('en')"><span class="fi fi-ie"></span></a>
+                  </li>
+                </ul>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html" onclick="changeLanguage('es')">Español</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html" onclick="changeLanguage('gl')">Galego</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html" onclick="changeLanguage('en')">English</a></li>
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="dropdownSections">
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal1" data-i18n="nosotras"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal2" data-i18n="celebracion"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal3" data-i18n="informacion" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal4" data-i18n="lejos" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal5" data-i18n="asientos" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal6" data-i18n="fotos" ></a></li>
                     </ul>
                 </div>
             </div>
@@ -97,7 +111,11 @@
                                 <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading" data-i18n="nosotras"></div>
+                                <div class="portfolio-caption-heading">
+                                  <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                  <span data-i18n="nosotras" style="padding-left: 20px; padding-right: 20px;"></span>
+                                  <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                </div>
                                 <div class="portfolio-caption-subheading text-muted"  data-i18n="nosotras-extend"></div>
                             </div>
                         </div>
@@ -112,8 +130,12 @@
                                 <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading"  data-i18n="celebracion"></div>
-                                <div class="portfolio-caption-subheading text-muted"  data-i18n="celebracion-extend"></div>
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="celebracion" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="celebracion-extend"></div>
                             </div>
                         </div>
                     </div>
@@ -127,7 +149,12 @@
                                 <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading"  data-i18n="informacion"></div>
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="informacion" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+
                                 <div class="portfolio-caption-subheading text-muted"  data-i18n="informacion-extend"></div>
                             </div>
                         </div>
@@ -142,8 +169,12 @@
                                 <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading"  data-i18n="lejos"></div>
-                                <div class="portfolio-caption-subheading text-muted"  data-i18n="lejos-extend"></div>
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="lejos" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="lejos-extend"></div>
                             </div>
                         </div>
                     </div>
@@ -157,8 +188,12 @@
                                 <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading"  data-i18n="asientos"></div>
-                                <div class="portfolio-caption-subheading text-muted"  data-i18n="asientos-extend"></div>
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="asientos" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="asientos-extend"></div>
                             </div>
                         </div>
                     </div>
@@ -172,8 +207,12 @@
                                 <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading"  data-i18n="fotos"></div>
-                                <div class="portfolio-caption-subheading text-muted"  data-i18n="fotos-extend"></div>
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="fotos" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="fotos-extend"></div>
                             </div>
                         </div>
                     </div>
