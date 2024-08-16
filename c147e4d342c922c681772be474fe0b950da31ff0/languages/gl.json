@@ -13,6 +13,7 @@
     "asientos-extend": "",
     "fotos": "As fotos",
     "fotos-extend": "",
+    "boton-cerrar": "Pechar",
     "contacta": "Contacta connosco",
     "formnameblock": "<!-- Name input-->\n\t<input class=\"form-control\" id=\"name\" type=\"text\" autocomplete=\"off\" placeholder=\"O teu nome*\" data-sb-validations=\"required\" \/>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"name:required\">Fai falla un nome<\/div>",
     "formemailblock": "<!-- Email address input-->\n\t<input class=\"form-control\" id=\"email\" type=\"email\" autocomplete=\"off\" placeholder=\"O teu Email *\" data-sb-validations=\"required,email\" \/>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"email:required\">Requírese un email.<\/div>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"email:email\">Email no válido.<\/div>",
