@@ -10,6 +10,8 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
@@ -17,7 +19,8 @@
       <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
-        </style>
+        <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"-->
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -220,9 +223,27 @@
             </div>
         </section>
         <!-- About-->
-        <!--section class="page-section" id="about">
+        <section class="page-section" id="about">
             <div class="container">
-                <div class="text-center">
+                <!--form id="my-form"
+                method="POST" 
+                action="https://script.google.com/macros/s/AKfycbyILQs0tJvf0SMFTC04BlI8nszrZdmh6ZP7hJuPlSV4Yl4jK3EXAkg6xRGRC75g1CXY/exec"
+                >
+                <input name="Email" type="email" placeholder="Email" required>
+                <input name="Name" type="text" placeholder="Name" required>
+                <button type="submit">Send</button>
+                
+                </form>  
+                <form id="my-form"
+                method="POST" 
+                action=""
+                >
+                <input name="Email" type="email" placeholder="Email" required>
+                <input name="Name" type="text" placeholder="Name" required>
+                <button type="submit">Send</button>
+                
+                </form-->  
+                <!--div class="text-center">
                     <h2 class="section-heading text-uppercase">About</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
@@ -278,9 +299,78 @@
                             </h4>
                         </div>
                     </li>
-                </ul>
-            </div>
-        </section-->
+                </ul-->
+                    <form action="" class="m-auto" style="max-width:600px" id="my-form" method="POST">
+                        <div class="form-group mb-3 row">
+                                <label for="nombre0" class="col-md-5 col-form-label">Nombre</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control form-control-lg" id="nombre0" name="nombre" required>
+                                </div>
+                        </div>
+                        <div class="form-group mb-3 row"><label for="email1" class="col-md-5 col-form-label">Email</label>
+                            <div class="col-md-7"><input type="email" class="form-control form-control-lg" id="email1" name="email" required></div>
+                        </div>
+                        <div class="form-group mb-3 row"><label for="telefono2" class="col-md-5 col-form-label">Teléfono</label>
+                            <div class="col-md-7"><input type="text" class="form-control form-control-lg" id="telefono2" name="telefono" required></div>
+                        </div>
+                        <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">Menú</label>
+                            <div class="col-md-7 form-check">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="vegano" id="flexCheckChecked" >
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Menú vegano
+                                    </label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                    <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-input');">
+                                </div>
+                                <div id="alergenos-input" hidden>
+                                    <input type="text" class="form-control form-control" id="alergenos" name="alergenos" placeholder="Alérgenos">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4" />
+                        <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con acompañante?</label>
+                            <div class="col-md-7">
+                                <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="showfield(value,'nombre-acompanante');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="showfield(value,'nombre-acompanante');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row" id="nombre-acompanante" hidden><label for="nombre-de-tu-acompanante4" class="col-md-5 col-form-label">Nombre de tu acompañante</label>
+                            <div class="col-md-7"><input type="text" class="form-control form-control-lg" id="nombre-de-tu-acompanante4" name="nombre-de-tu-acompanante"></div>
+                        </div>
+                        <hr class="my-4" />
+                        <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con peques?</label>
+                            <div class="col-md-7">
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="showfield(value,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2">No</label></div>
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="showfield(value,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3">Sí</label></div>
+                            </div>
+                        </div>
+                        <div id="nenos" hidden>
+                            <div id="nenos-rows">
+                                <div class="mb-3 row" id="neno1">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Edad" aria-label="Edad">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="botonmasnenos"></div>
+                                <div class="form-group"><label class="col-md-5 col-form-label"></label>
+                                <div class="col-md-7" id="anadir-neno"><button class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()"></button></div>
+                            </div>    
+                        </div>
+
+                        <hr class="my-4" />
+                        <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                            <div class="col-md-7"><button class="btn btn-primary btn-lg" type="submit">Enviar</button></div>
+                        </div>
+                    </form-->
+                </div>
+        </section>
         <!-- Team-->
         <!--section class="page-section bg-light" id="team">
             <div class="container">
@@ -345,12 +435,12 @@
             </div>
         </div-->
         <!-- Contact-->
-        <section class="page-section" id="contact">
+        <!--section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase" data-i18n="contacta">Contact Us</h2>
                     <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
-                </div>
+                <!--/div-->
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
                 <!-- * * * * * * * * * * * * * * *-->
@@ -358,58 +448,58 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <!--form id="contactForm" data-sb-form-api-token="API_TOKEN">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group" data-i18n="formnameblock">
                                 <!-- Name input>
                                 <input class="form-control" id="name" type="text" placeholder="Your Name*" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="name:required" data-i18n="validanombre"></div-->
-                            </div>
+                            <!--/div>
                             <div class="form-group" data-i18n="formemailblock">
                                 <!-- Email address input>
                                 <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
-                            </div>
+                            <!--/div>
                             <div class="form-group mb-md-0" data-i18n="formphoneblock">
                                 <!-- Phone number input>
                                 <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div-->
-                            </div>
+                            <!--/div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0" data-i18n="formmessblock">
                                 <!-- Message input>
                                 <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div-->
-                            </div>
-                        </div>
-                    </div>
+                            <!--/div-->
+                        <!--/div-->
+                    <!--/div-->
                     <!-- Submit success message-->
                     <!---->
                     <!-- This is what your users will see when the form-->
                     <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
+                    <!--div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3" data-i18n="formsubmitblock">
                             <!--div class="fw-bolder">Form submission successful!</div>
                             To activate this form, sign up at
                             <br />
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a-->
-                        </div>
+                        <!--/div>
                     </div>
                     <!-- Submit error message-->
                     <!---->
                     <!-- This is what your users will see when there is-->
                     <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage">
+                    <!--div class="d-none" id="submitErrorMessage">
                       <div class="text-center text-danger mb-3" data-i18n="formsubmiterrorblock"></div>
                     </div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit" data-i18n="formsubmitbtn"></button></div>
+                    <!--div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit" data-i18n="formsubmitbtn"></button></div>
                 </form>
             </div>
-        </section>
+        </section-->
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
@@ -585,8 +675,167 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!--script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script-->
         <!-- I18N -->
         <script src="js/languages.js"></script>
+        <!--script src="text/javascript">
+        $( document ).ready(function() { //wait until body loads
+
+            var testimonial_ok=false; //keeps track of whether the testimonial box is filled out
+            
+            //Inputs that determine what fields to show
+            var rating = $('#live_form input:radio[name=rating]');
+            var testimonial=$('#live_form input:radio[name=testimonial]');				
+            
+            //Wrappers for all fields
+            var bad = $('#live_form textarea[name="feedback_bad"]').parent();
+            var ok = $('#live_form textarea[name="feedback_ok"]').parent();
+            var great = $('#live_form textarea[name="feedback_great"]').parent();
+            var testimonial_parent = $('#live_form #div_testimonial');
+            var thanks_anyway  = $('#live_form #thanks_anyway');
+            var all=bad.add(ok).add(great).add(testimonial_parent).add(thanks_anyway); //shortcut for all wrapper elements
+            
+            rating.change(function(){ //when the rating changes
+                var value=this.value;						
+                all.addClass('hidden'); //hide everything and reveal as needed
+                
+                if (value == 'Bad' || value == 'Fair'){
+                    bad.removeClass('hidden'); //show feedback_bad					
+                }
+                else if (value == 'Good' || value == 'Very Good'){
+                    ok.removeClass('hidden'); //show feedback_ok	
+                }		
+                else if (value == 'Excellent'){
+                    testimonial_parent.removeClass('hidden'); //show testimonial question
+                    
+                    //if testimonial has already been answered
+                    if (testimonial_ok == 'yes'){great.removeClass('hidden');} 
+                    else if (testimonial_ok == 'no'){thanks_anyway.removeClass('hidden');}
+                }
+            });	
+    
+            
+            testimonial.change(function(){ 
+                //hide all except testimonial question
+                all.addClass('hidden'); 
+                testimonial_parent.removeClass('hidden');
+            
+                testimonial_ok=this.value;
+                
+                if (testimonial_ok == 'yes'){ //if user willing to write testimonial
+                    great.removeClass('hidden'); //show feedback_great
+                }
+                else{
+                    thanks_anyway.removeClass('hidden'); //show thanks message
+                }
+                
+            });
+    });</script-->
+    <!--script>
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzDfoTbpWQQ_jINMCR8htVBiuOvkoOJ6FAkhV5oo9uWmiGf3zsJskv5BgfVtr8Nxmq7pQ/exec'
+     
+        form.addEventListener('submit', e => {
+          submitButton.disabled = true
+          e.preventDefault()
+          let requestBody = new FormData(form)
+          fetch(scriptURL, { method: 'POST', body: requestBody})
+            .then(response => {
+               alert('Success!', response)
+               submitButton.disabled = false
+              })
+            .catch(error => {
+            alert('Error!', error.message)
+              submitButton.disabled = false
+     
+            }
+            )
+        })
+     </script-->
+     <script>
+     
+        /*window.addEventListener("load", function() {
+            const form = document.getElementById('my-form');
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                .then(() => {
+                    alert("Success!");
+                })
+            });
+        });*/
+
+        window.addEventListener("load", function() {
+            const form = document.getElementById('my-form');
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const value = Object.fromEntries(data.entries());
+                console.log(data.entries());
+                const action = e.target.action;
+                const data2 = new FormData();
+                let value2 = '{"Email": "prueba6@net.d","Name": "3333"}';
+                // Loop through the object
+                for (let [key, val] of Object.entries(value)) {
+                // append each item to the formData (converted to JSON strings)
+                    data2.append(key, JSON.stringify(val));
+                }
+                fetch(action, {
+                    method: 'POST',
+                    body: data2,
+                })
+                .then(() => {
+                    alert("Success!");
+                })
+            });
+        });
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            const value = Object.fromEntries(data.entries());
+            console.log({ value });
+        }
+        const form = document.querySelector('form');
+        form.addEventListener('submit', handleSubmit);
+
+     </script>
+     <script>
+        function showfield(check,field){
+            let fieldToHideShow = document.body.querySelector('#'+field);
+            console.log(check);
+            if(check === "Sí" || check){
+                fieldToHideShow.hidden = false;
+                fieldToHideShow.required = true;
+            }
+            else if(check === "No" || !check){
+                fieldToHideShow.hidden = true;
+                fieldToHideShow.required = false;
+            }
+        }
+
+        function addneno() {
+            const divEle = document.getElementById("nenos-rows");
+            if (divEle.childElementCount<4){
+                divEle.innerHTML = divEle.innerHTML + `
+                    <div class="mb-3 row" id="neno` + (divEle.childElementCount+1) + `">
+                        <div class="col">
+                            <input id="nombre-neno` + (divEle.childElementCount+1) + `" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                        </div>
+                        <div class="col">
+                            <input id="edad-neno` + (divEle.childElementCount+1) + `" type="text" class="form-control" placeholder="Edad" aria-label="Edad">
+                        </div>
+                    </div>`;
+            }
+        }
+
+
+     </script>
     </body>
 </html>
