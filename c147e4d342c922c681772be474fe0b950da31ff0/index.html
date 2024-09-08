@@ -300,24 +300,24 @@
                         </div>
                     </li>
                 </ul-->
-                    <form action="" class="m-auto" style="max-width:600px" id="my-form" method="POST">
+                    <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
                         <div class="form-group mb-3 row">
-                                <label for="nombre0" class="col-md-5 col-form-label">Nombre</label>
+                                <label for="Nombre" class="col-md-5 col-form-label">Nombre</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control form-control-lg" id="nombre0" name="nombre" required>
+                                    <input type="text" class="form-control" id="Nombre" name="Nombre" required>
                                 </div>
                         </div>
-                        <div class="form-group mb-3 row"><label for="email1" class="col-md-5 col-form-label">Email</label>
-                            <div class="col-md-7"><input type="email" class="form-control form-control-lg" id="email1" name="email" required></div>
+                        <div class="form-group mb-3 row"><label for="Email" class="col-md-5 col-form-label">Email</label>
+                            <div class="col-md-7"><input type="email" class="form-control" id="Email" name="Email" required></div>
                         </div>
-                        <div class="form-group mb-3 row"><label for="telefono2" class="col-md-5 col-form-label">Teléfono</label>
-                            <div class="col-md-7"><input type="text" class="form-control form-control-lg" id="telefono2" name="telefono" required></div>
+                        <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label">Teléfono</label>
+                            <div class="col-md-7"><input type="text" class="form-control" id="Telefono" name="Telefono" required></div>
                         </div>
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">Menú</label>
                             <div class="col-md-7 form-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="vegano" id="flexCheckChecked" >
-                                    <label class="form-check-label" for="flexCheckChecked">
+                                    <input class="form-check-input" type="checkbox" value="Vegano" id="Vegano" >
+                                    <label class="form-check-label" for="Vegano">
                                         Menú vegano
                                     </label>
                                 </div>
@@ -326,49 +326,62 @@
                                     <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-input');">
                                 </div>
                                 <div id="alergenos-input" hidden>
-                                    <input type="text" class="form-control form-control" id="alergenos" name="alergenos" placeholder="Alérgenos">
+                                    <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
                                 </div>
                             </div>
                         </div>
-                        <hr class="my-4" />
+                    </form>
+                    <form>
+                    <hr class="my-4" />
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con acompañante?</label>
                             <div class="col-md-7">
-                                <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="showfield(value,'nombre-acompanante');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
-                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="showfield(value,'nombre-acompanante');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
+                                <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="showfield(value,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="showfield(value,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
                             </div>
                         </div>
-                        <div class="form-group mb-3 row" id="nombre-acompanante" hidden><label for="nombre-de-tu-acompanante4" class="col-md-5 col-form-label">Nombre de tu acompañante</label>
-                            <div class="col-md-7"><input type="text" class="form-control form-control-lg" id="nombre-de-tu-acompanante4" name="nombre-de-tu-acompanante"></div>
+                    </form>
+                    <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar" style="max-width:600px" id="form-acomp" method="POST"  hidden>
+                        <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label">Nombre de tu acompañante</label>
+                            <div class="col-md-7"><input type="text" class="form-control" id="Nombre" name="Nombre"></div>
                         </div>
-                        <hr class="my-4" />
+                        <button class="btn" type="submit" hidden>Enviar</button>
+                    </form>
+                    <hr class="my-4" />
+                    <form>
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con peques?</label>
                             <div class="col-md-7">
                                 <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="showfield(value,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2">No</label></div>
                                 <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="showfield(value,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3">Sí</label></div>
                             </div>
                         </div>
-                        <div id="nenos" hidden>
+                    </form>
+                    <div id="nenos" hidden>
+                        <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno1" method="POST">
                             <div id="nenos-rows">
                                 <div class="mb-3 row" id="neno1">
                                     <div class="col">
-                                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                                        <input id="Nombre" name="Nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
                                     </div>
                                     <div class="col">
-                                        <input type="text" class="form-control" placeholder="Edad" aria-label="Edad">
+                                        <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad">
                                     </div>
                                 </div>
                             </div>
+                            <button class="btn" type="submit" hidden>Enviar</button>
+                        </form>
+                        <form>
                             <div class="row" id="botonmasnenos"></div>
                                 <div class="form-group"><label class="col-md-5 col-form-label"></label>
                                 <div class="col-md-7" id="anadir-neno"><button class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()"></button></div>
                             </div>    
-                        </div>
-
+                        </form>
+                    </div>
+                    <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST">
                         <hr class="my-4" />
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                             <div class="col-md-7"><button class="btn btn-primary btn-lg" type="submit">Enviar</button></div>
                         </div>
-                    </form-->
+                    </form>
                 </div>
         </section>
         <!-- Team-->
@@ -772,6 +785,59 @@
         });*/
 
         window.addEventListener("load", function() {
+            const formenviar = document.getElementById('form-enviar');
+            let ready = true;
+            var formsIdArray = [];
+            formenviar.addEventListener("submit", function(e) {
+                e.preventDefault();
+
+                const forms = document.querySelectorAll('.a-validar');
+                Array.from(forms)
+                .forEach(function (form) {
+                    console.log(form.id);
+                    formsIdArray.push(form.id);
+                    if (!form.checkValidity() && (ready == true)) {
+                        ready = false;
+                    };
+                }); //foreach
+                if(ready==true) {
+                    var arrayLength = formsIdArray.length;
+                    for (var i = 0; i < arrayLength; i++) {
+                        const f = document.getElementById(formsIdArray[i]);
+                        const data = new FormData(f);
+                        const value = Object.fromEntries(data.entries());
+                        console.log(value);
+
+                        const action = e.target.action;
+                    
+                        fetch(action, {
+                            method: 'POST',
+                            body: data,
+                        })
+                        .then((json) => {
+                            console.log(f.id + json);
+                            if(json!==null) {
+                                formenviar.insertAdjacentHTML('afterend',`
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                    <div>¡Gracias por tu respuesta! Los datos se han guardado correctamente</div>
+                                    </div>`);
+                            }
+                        })
+                        .catch((e) => {
+                            console.log(f.id + e);
+                            formenviar.insertAdjacentHTML('afterend',`
+                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation"/></svg>
+                                <div>Algo ha fallado... Por favor inténtalo de nuevo</div>
+                                </div>`);
+
+                        })
+                    }
+                }
+            });
+        });
+        /*window.addEventListener("load", function() {
             const form = document.getElementById('my-form');
             form.addEventListener("submit", function(e) {
                 e.preventDefault();
@@ -804,34 +870,43 @@
         }
         const form = document.querySelector('form');
         form.addEventListener('submit', handleSubmit);
-
+*/
      </script>
      <script>
         function showfield(check,field){
             let fieldToHideShow = document.body.querySelector('#'+field);
-            console.log(check);
             if(check === "Sí" || check){
                 fieldToHideShow.hidden = false;
-                fieldToHideShow.required = true;
+                fieldToHideShow.querySelectorAll('.form-control').forEach(function(el) {
+                    el.required = true;
+                });
             }
             else if(check === "No" || !check){
                 fieldToHideShow.hidden = true;
-                fieldToHideShow.required = false;
+                fieldToHideShow.querySelectorAll('.form-control').forEach(function(el) {
+                    el.required = false;
+                });
             }
         }
 
         function addneno() {
-            const divEle = document.getElementById("nenos-rows");
-            if (divEle.childElementCount<4){
-                divEle.innerHTML = divEle.innerHTML + `
-                    <div class="mb-3 row" id="neno` + (divEle.childElementCount+1) + `">
-                        <div class="col">
-                            <input id="nombre-neno` + (divEle.childElementCount+1) + `" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
-                        </div>
-                        <div class="col">
-                            <input id="edad-neno` + (divEle.childElementCount+1) + `" type="text" class="form-control" placeholder="Edad" aria-label="Edad">
-                        </div>
-                    </div>`;
+            num_nenos = document.getElementsByClassName("neno").length;
+            const divEle = document.getElementById("form-neno"+num_nenos);
+            if (num_nenos<4){
+                divEle.insertAdjacentHTML('afterend',`
+                        <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno` + (divEle.childElementCount+1) + `" method="POST">
+                            <div id="nenos-rows">
+                                <div class="mb-3 row" id="neno` + (divEle.childElementCount+1) + `">
+                                    <div class="col">
+                                        <input id="Nombre" name="Nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                                    </div>
+                                    <div class="col">
+                                        <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn" type="submit" hidden>Enviar</button>
+                        </form>`);
             }
         }
 
