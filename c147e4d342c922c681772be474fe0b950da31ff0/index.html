@@ -10,6 +10,9 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!--jquery-->
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/intlTelInput.min.js"></script>
+
 
 
         <!-- Google fonts-->
@@ -19,6 +22,8 @@
       <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/css/intlTelInput.css">
+
         <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"-->
 
     </head>
@@ -315,12 +320,12 @@
                             <div class="col-md-7"><input type="email" class="form-control" id="Email" name="Email" required></div>
                         </div>
                         <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label">Teléfono</label>
-                            <div class="col-md-7"><input type="text" class="form-control" id="Telefono" name="Telefono" required></div>
+                            <div class="col-md-7"><input type="tel" class="form-control" id="telefono" name="Telefono" required></div>
                         </div>
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Contamos contigo?</label>
                             <div class="col-md-7">
-                                <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia" value="No" onclick="vienes(false);"><label class="form-check-label custom-control-label" for="asistencia_2">No</label></div>
-                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_3" value="Sí" onclick="vienes(true);"><label class="form-check-label custom-control-label" for="asistencia_3">Sí</label></div>
+                                <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia" value="No" onclick="vienes(false);" required><label class="form-check-label custom-control-label" for="asistencia_2">No</label></div>
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_3" value="Sí" onclick="vienes(true);" required><label class="form-check-label custom-control-label" for="asistencia_3">Sí</label></div>
                             </div>
                         </div>
                         <div id="novienes" hidden><div class="alert alert-info d-flex align-items-center" role="alert">
@@ -351,28 +356,46 @@
                             <hr class="my-4" />
                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con acompañante?</label>
                                 <div class="col-md-7">
-                                    <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="showfield(false,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
-                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="showfield(true,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
+                                    <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="vieneSecondForm(false,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
+                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="vieneSecondForm(true,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
                                 </div>
                             </div>
                         </form>
-                        <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar" style="max-width:600px" id="form-acomp" method="POST"  hidden=>
-                                <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label">Nombre de tu acompañante</label>
-                                    <div class="col-md-7"><input type="text" class="form-control" id="Nombre" name="Nombre"></div>
+                        <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST"  hidden>
+                            <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label">Nombre de tu acompañante</label>
+                                <div class="col-md-7"><input type="text" class="form-control" id="Nombre" name="Nombre"></div>
+                            </div>
+                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">Menú</label>
+                                <div class="col-md-7 form-check">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano" >
+                                        <label class="form-check-label" for="Vegano">
+                                            Menú vegano
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                        <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-acomp-input');">
+                                    </div>
+                                    <div id="alergenos-acomp-input" hidden>
+                                        <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
+                                    </div>
                                 </div>
-                                <button class="btn" type="submit" hidden>Enviar</button>
+                            </div>
+
+                            <input type="text" class="form-control" id="telefono-form-acomp" name="Telefono" hidden>
                         </form>
                         <hr class="my-4" />
                         <form>
                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con peques?</label>
                                 <div class="col-md-7">
-                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="showfield(false,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2">No</label></div>
-                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="showfield(true,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3">Sí</label></div>
+                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2">No</label></div>
+                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3">Sí</label></div>
                                 </div>
                             </div>
                         </form>
                         <div id="nenos" hidden>
-                            <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno1" method="POST">
+                            <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
                                 <div id="nenos-rows">
                                     <div class="mb-3 row" id="neno1">
                                         <div class="col">
@@ -382,8 +405,19 @@
                                             <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad">
                                         </div>
                                     </div>
+                                    <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                                        <div class="col-md-7 form-check">
+                                            <div class="form-check form-switch">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                                <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-neno1-input');">
+                                            </div>
+                                            <div id="alergenos-neno1-input" hidden>
+                                                <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="telefono-form-neno1" name="Telefono" hidden>        
                                 </div>
-                                <button class="btn" type="submit" hidden>Enviar</button>
                             </form>
                             <form class="m-auto">
                                 <div class="mb-3 row" id="botonmasnenos">
@@ -393,7 +427,13 @@
                             </form>
                         </div>
                     </div>
-                    <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST" class="a-validar">
+                    <!--form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST" class="a-validar">
+                        <hr class="my-4" />
+                        <div class="form-group mb-3 row"><label for="message-label4" class="col-md-5 col-form-label a-validar">¿Quieres añadir algún comentario?</label>
+                            <div class="col-md-7"><textarea class="form-control" id="message-label" name="Comentarios"></textarea></div>
+                        </div>
+                    </form-->
+                    <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST">
                         <hr class="my-4" />
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                             <div class="col-md-7"><button class="btn btn-primary btn-lg" type="submit">Enviar</button></div>
@@ -731,6 +771,37 @@
         })
      </script-->
      <script>
+        const input = document.querySelector("#telefono");
+        window.intlTelInput(input, {
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/utils.js",
+            separateDialCode: true,
+            onlyCountries: ["es", "ie", "de", "se","gb"],
+            initialCountry: "es", 
+            i18n: {
+            // Country names - see the full list in src/js/intl-tel-input/i18n/en/countries.ts
+            es: "España",
+            ie: "Irlanda",
+            de: "Alemania",
+            se: "Suecia",
+            gb: "Gran Bretaña",
+            // Aria label for the selected country element
+            selectedCountryAriaLabel: "Selected country",
+            // Screen reader text for when no country is selected
+            noCountrySelected: "No country selected",
+            // Aria label for the country list element
+            countryListAriaLabel: "List of countries",
+            // Placeholder for the search input in the dropdown
+            searchPlaceholder: "Search",
+            // Screen reader text for when the search produces no results
+            zeroSearchResults: "No results found",
+            // Screen reader text for when the search produces 1 result
+            oneSearchResult: "1 result found",
+            // Screen reader text for when the search produces multiple results
+            multipleSearchResults: "${count} results found",
+        }
+        });
+    </script>
+     <script>
      
         /*window.addEventListener("load", function() {
             const form = document.getElementById('my-form');
@@ -750,23 +821,26 @@
 
         window.addEventListener("load", function() {
             const formenviar = document.getElementById('form-enviar');
-            let ready = true;
-            var formsIdArray = [];
-            var numEnviosOk = 0;
             formenviar.addEventListener("submit", function(e) {
                 e.preventDefault();
+                let ready = true;
+                var formsIdArray = [];
+                var numEnviosOk = 0;
 
                 const forms = document.querySelectorAll('.a-validar');
                 Array.from(forms)
                 .forEach(function (form) {
+                    console.log(form.id);
                     console.log(form.id + form.checkValidity());
                     formsIdArray.push(form.id);
                     if (!form.checkValidity() && (ready == true)) {
                         ready = false;
+                        alert('El formulario '+form.id+' está incompleto');
                     };
                 }); //foreach
                 console.log("Pulsado");
                 console.log(ready);
+                console.log(document.querySelector(".iti__selected-dial-code").innerHTML)
                 if(ready==true) {
                     var arrayLength = formsIdArray.length;
                     for (var i = 0; i < arrayLength; i++) {
@@ -842,16 +916,40 @@
             let fieldToHideShow = document.body.querySelector('#'+field);
             if(check === "Sí" || check){
                 fieldToHideShow.hidden = false;
-                fieldToHideShow.querySelectorAll('.form-control').forEach(function(el) {
-                    el.required = true;
-                });
             }
             else if(check === "No" || !check){
                 fieldToHideShow.hidden = true;
-                fieldToHideShow.querySelectorAll('.form-control').forEach(function(el) {
-                    el.required = false;
-                });
             }
+            fieldToHideShow.querySelectorAll('.form-control').forEach(function(el) {
+                el.required = el.checkVisibility();
+            });
+
+        }
+
+        
+
+        function vieneSecondForm(rvsp,formid) {
+            showfield(rvsp,formid);
+            var tel = document.getElementById('telefono').value;
+            
+            if(rvsp) {
+                console.log(formid + ' ' + tel);
+                document.getElementById('telefono-'+formid).value = tel;
+                document.getElementById(formid).classList.add("a-validar");
+            }
+            else {
+                document.getElementById('telefono-'+formid).value = '';
+                document.getElementById(formid).classList.remove("a-validar");
+            }
+        }
+
+
+        function vienennenos(rvsp) {
+            showfield(rvsp,'nenos');
+            console.log(document.querySelectorAll('.neno'));
+            document.querySelectorAll('.neno').forEach(function(form) {
+                vieneSecondForm(rvsp,form.id);
+            });
         }
 
         function vienes(rvsp) {
@@ -864,6 +962,7 @@
         function addneno() {
             num_nenos = document.getElementsByClassName("neno").length;
             const divEle = document.getElementById("form-neno"+num_nenos);
+            
             if (num_nenos<4){
                 var html_formneno = `
                         <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno` + (num_nenos+1) + `" method="POST">
@@ -876,11 +975,25 @@
                                         <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad" required>
                                     </div>
                                 </div>
+                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                                    <div class="col-md-7 form-check">
+                                        <div class="form-check form-switch">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                            <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-neno` + (num_nenos+1) + `-input');">
+                                        </div>
+                                        <div id="alergenos-neno` + (num_nenos+1) + `-input" hidden>
+                                            <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
+                                        </div>
+                                    </div>
+                                </div>        
+
                             </div>
-                            <button class="btn" type="submit" hidden>Enviar</button>
+                                    <input type="text" class="form-control" id="telefono-form-neno` + (num_nenos+1) + `" name="Telefono" hidden>        
                         </form>`
                 divEle.insertAdjacentHTML('afterend',html_formneno);
             }
+            vienennenos(true);
+            
         }
 
         function removeneno(){
@@ -890,7 +1003,10 @@
                 showfield(false,"form-neno"+num_nenos);
                 divEle.remove();
             }
+            vienennenos(true);
+            
         }
+
 
 
      </script>

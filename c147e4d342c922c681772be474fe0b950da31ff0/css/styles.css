@@ -11344,3 +11344,8 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Eagle Lake", "Montserrat" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.intl-tel-input { width: 100%; }
+.iti-flag {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.3/img/flags.png");
+}
