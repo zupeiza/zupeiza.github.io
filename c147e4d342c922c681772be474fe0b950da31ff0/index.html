@@ -231,7 +231,7 @@
         <section class="page-section" id="about">
             <div class="container ">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Formulario de confirmación</h2>
+                    <h2 class="section-heading">Formulario de confirmación</h2>
                 </div>
                 <div id="formularios">
                     <!--form id="my-form"
@@ -321,6 +321,8 @@
                         </div>
                         <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label">Teléfono</label>
                             <div class="col-md-7"><input type="tel" class="form-control" id="telefono" name="Telefono" required></div>
+                            <input id="fullNumber" type="text" name="TelefonoCompleto" hidden>
+                            <textarea class="form-control" id="message" name="Comentarios" hidden></textarea>
                         </div>
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Contamos contigo?</label>
                             <div class="col-md-7">
@@ -331,8 +333,8 @@
                         <div id="novienes" hidden><div class="alert alert-info d-flex align-items-center" role="alert">
                             <div>Vaya... lo sentimos mucho, ¡pero esperamos poder enseñarte las fotos y vernos en otra ocasión!</div>
                             </div></div>
-                        <div class="vienes" hidden>                           
-                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">Menú</label>
+                        <div class="vienes" hidden>
+                            <div class="form-group mb-5 row"><label class="col-md-5 col-form-label">¿Cómo podemos hacer que estés agusto?</label>
                                 <div class="col-md-7 form-check">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano" >
@@ -347,8 +349,24 @@
                                     <div id="alergenos-input" hidden>
                                         <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
                                     </div>
+                                    <div class="form-check form-switch">
+                                        <label class="form-check-label" for="necesidadesSwitch">Necesidades especiales</label>
+                                        <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch" onclick="showfield(this.checked,'necesidades-input');">
+                                    </div>
+                                    <div id="necesidades-input" hidden>
+                                        <input type="text" class="form-control" id="necesidades-input" name="Necesidades" placeholder="Lugar de reposo, hueco para carrito...">
+                                    </div>
                                 </div>
                             </div>
+                                                        
+                            <div class="form-group mb-5 row"><label class="col-md-5 col-form-label">¿Te apetecería participar en algún juego/actividad?</label>
+                                <div class="col-md-7">
+                                    <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia" value="No" onclick="vienes(false);" required><label class="form-check-label custom-control-label" for="asistencia_2">No</label></div>
+                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_3" value="Sí" onclick="vienes(true);" required><label class="form-check-label custom-control-label" for="asistencia_3">Sí</label></div>
+                                </div>
+                            </div>
+    
+    
                         </div>
                     </form>
                     <div class="vienes" hidden>
@@ -384,6 +402,7 @@
                             </div>
 
                             <input type="text" class="form-control" id="telefono-form-acomp" name="Telefono" hidden>
+                            <input id="fullNumber-form-acomp" type="text" name="TelefonoCompleto" hidden>
                         </form>
                         <hr class="my-4" />
                         <form>
@@ -416,7 +435,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="telefono-form-neno1" name="Telefono" hidden>        
+                                    <input type="text" class="form-control" id="telefono-form-neno1" name="Telefono" hidden>
+                                    <input id="fullNumber-form-neno1" type="text" name="TelefonoCompleto" hidden>
                                 </div>
                             </form>
                             <form class="m-auto">
@@ -427,12 +447,12 @@
                             </form>
                         </div>
                     </div>
-                    <!--form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST" class="a-validar">
+                    <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST">
                         <hr class="my-4" />
-                        <div class="form-group mb-3 row"><label for="message-label4" class="col-md-5 col-form-label a-validar">¿Quieres añadir algún comentario?</label>
+                        <div class="form-group mb-3 row"><label for="message-label4" class="col-md-5 col-form-label">¿Quieres añadir algún comentario?</label>
                             <div class="col-md-7"><textarea class="form-control" id="message-label" name="Comentarios"></textarea></div>
                         </div>
-                    </form-->
+                    </form>
                     <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST">
                         <hr class="my-4" />
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
@@ -826,6 +846,8 @@
                 let ready = true;
                 var formsIdArray = [];
                 var numEnviosOk = 0;
+                document.getElementById('fullNumber').value = document.querySelector(".iti__selected-dial-code").innerHTML;
+                document.getElementById('message').value = document.getElementById('message-label').value
 
                 const forms = document.querySelectorAll('.a-validar');
                 Array.from(forms)
@@ -840,7 +862,6 @@
                 }); //foreach
                 console.log("Pulsado");
                 console.log(ready);
-                console.log(document.querySelector(".iti__selected-dial-code").innerHTML)
                 if(ready==true) {
                     var arrayLength = formsIdArray.length;
                     for (var i = 0; i < arrayLength; i++) {
@@ -930,15 +951,19 @@
 
         function vieneSecondForm(rvsp,formid) {
             showfield(rvsp,formid);
-            var tel = document.getElementById('telefono').value;
+
+            var tel = document.getElementById('telefono');
             
             if(rvsp) {
-                console.log(formid + ' ' + tel);
-                document.getElementById('telefono-'+formid).value = tel;
+                console.log(formid + ' ' + tel.value);
+                console.log(formid + ' ' + document.querySelector(".iti__selected-dial-code").innerHTML);
+                document.getElementById('telefono-'+formid).value = tel.value;
+                document.getElementById('fullNumber-'+formid).value = document.querySelector(".iti__selected-dial-code").innerHTML;
                 document.getElementById(formid).classList.add("a-validar");
             }
             else {
                 document.getElementById('telefono-'+formid).value = '';
+                document.getElementById('fullNumber-'+formid).value = '';
                 document.getElementById(formid).classList.remove("a-validar");
             }
         }
@@ -988,7 +1013,9 @@
                                 </div>        
 
                             </div>
-                                    <input type="text" class="form-control" id="telefono-form-neno` + (num_nenos+1) + `" name="Telefono" hidden>        
+                                    <input type="text" class="form-control" id="telefono-form-neno` + (num_nenos+1) + `" name="Telefono" hidden>
+                                    <input id="fullNumber-form-neno` + (num_nenos+1) + `" type="text" name="TelefonoCompleto" hidden>
+
                         </form>`
                 divEle.insertAdjacentHTML('afterend',html_formneno);
             }
