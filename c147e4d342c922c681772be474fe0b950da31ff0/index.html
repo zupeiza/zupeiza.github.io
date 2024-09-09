@@ -335,12 +335,12 @@
                     <hr class="my-4" />
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con acompañante?</label>
                             <div class="col-md-7">
-                                <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="showfield(value,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
-                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="showfield(value,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
+                                <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="showfield(false,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="showfield(true,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
                             </div>
                         </div>
                     </form>
-                    <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar" style="max-width:600px" id="form-acomp" method="POST"  hidden>
+                    <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar" style="max-width:600px" id="form-acomp" method="POST"  hidden=>
                         <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label">Nombre de tu acompañante</label>
                             <div class="col-md-7"><input type="text" class="form-control" id="Nombre" name="Nombre"></div>
                         </div>
@@ -350,8 +350,8 @@
                     <form>
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con peques?</label>
                             <div class="col-md-7">
-                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="showfield(value,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2">No</label></div>
-                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="showfield(value,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3">Sí</label></div>
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="showfield(false,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2">No</label></div>
+                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="showfield(true,'nenos')"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3">Sí</label></div>
                             </div>
                         </div>
                     </form>
@@ -369,10 +369,10 @@
                             </div>
                             <button class="btn" type="submit" hidden>Enviar</button>
                         </form>
-                        <form>
-                            <div class="row" id="botonmasnenos"></div>
-                                <div class="form-group"><label class="col-md-5 col-form-label"></label>
-                                <div class="col-md-7" id="anadir-neno"><button class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()"></button></div>
+                        <form class="m-auto">
+                            <div class="mb-3 row" id="botonmasnenos">
+                                <div class="col-md-9 mx-3" id="anadir-neno"><button class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()">&nbsp;</button></div>
+                                <div class="col-md-9 mx-3" id="restar-neno"><button class="btn btn-primary btn-lg fas fa-minus fa-3x" type="button" onclick="removeneno()"></button></div>
                             </div>    
                         </form>
                     </div>
@@ -800,6 +800,8 @@
                         ready = false;
                     };
                 }); //foreach
+                console.log("Pulsado");
+                console.log(ready);
                 if(ready==true) {
                     var arrayLength = formsIdArray.length;
                     for (var i = 0; i < arrayLength; i++) {
@@ -814,15 +816,26 @@
                             method: 'POST',
                             body: data,
                         })
-                        .then((json) => {
-                            console.log(f.id + json);
+                        .then((response) => {
+                            if (response.ok){
+                                return response.json();                
+                            }
+                            else {
+                                if (response.status===500){
+                                    return response.json() // return was missing here
+                                    .then(json=>{
+                                        throw new Error(json.message);
+                                    })
+                                }
+                            }  
+                            /*console.log(f.id + json.statusText);
                             if(json!==null) {
                                 formenviar.insertAdjacentHTML('afterend',`
                                 <div class="alert alert-success d-flex align-items-center" role="alert">
                                     <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
                                     <div>¡Gracias por tu respuesta! Los datos se han guardado correctamente</div>
                                     </div>`);
-                            }
+                            }*/
                         })
                         .catch((e) => {
                             console.log(f.id + e);
@@ -893,21 +906,29 @@
             num_nenos = document.getElementsByClassName("neno").length;
             const divEle = document.getElementById("form-neno"+num_nenos);
             if (num_nenos<4){
-                divEle.insertAdjacentHTML('afterend',`
-                        <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno` + (divEle.childElementCount+1) + `" method="POST">
+                var html_formneno = `
+                        <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno` + (num_nenos+1) + `" method="POST">
                             <div id="nenos-rows">
-                                <div class="mb-3 row" id="neno` + (divEle.childElementCount+1) + `">
+                                <div class="mb-3 row" id="neno` + (num_nenos+1) + `">
                                     <div class="col">
-                                        <input id="Nombre" name="Nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                                        <input id="Nombre" name="Nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required>
                                     </div>
                                     <div class="col">
-                                        <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad">
+                                        <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad" required>
                                     </div>
                                 </div>
                             </div>
                             <button class="btn" type="submit" hidden>Enviar</button>
-                        </form>`);
+                        </form>`
+                divEle.insertAdjacentHTML('afterend',html_formneno);
             }
+        }
+
+        function removeneno(){
+            num_nenos = document.getElementsByClassName("neno").length;
+            const divEle = document.getElementById("form-neno"+num_nenos);
+            showfield(false,"form-neno"+num_nenos);
+            divEle.remove();
         }
 
 
