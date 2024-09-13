@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-const input = document.querySelector("#telefono");
+const input = document.querySelector("#telefono-ppal");
 window.intlTelInput(input, {
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/utils.js",
     separateDialCode: true,
@@ -167,20 +167,24 @@ function showfield(check,field){
 function vieneSecondForm(rvsp,formid) {
     showfield(rvsp,formid);
 
-    var tel = document.getElementById('telefono');
-    
-    if(rvsp) {
-        console.log(formid + ' ' + tel.value);
-        console.log(formid + ' ' + document.querySelector(".iti__selected-dial-code").innerHTML);
-        document.getElementById('telefono-'+formid).value = tel.value;
-        document.getElementById('fullNumber-'+formid).value = document.querySelector(".iti__selected-dial-code").innerHTML;
-        document.getElementById(formid).classList.add("a-validar");
-    }
-    else {
-        document.getElementById('telefono-'+formid).value = '';
-        document.getElementById('fullNumber-'+formid).value = '';
-        document.getElementById(formid).classList.remove("a-validar");
-    }
+    var tel = document.getElementById('telefono-ppal');
+    document.getElementById(formid).querySelectorAll('.form').forEach(function(f) {
+        var i = f.id;
+
+        if(rvsp) {
+            console.log(formid + ' ' + tel.value);
+            console.log(formid + ' ' + document.querySelector(".iti__selected-dial-code").innerHTML);
+            document.getElementById('telefono-'+i).value = tel.value;
+            document.getElementById('fullNumber-'+i).value = document.querySelector(".iti__selected-dial-code").innerHTML;
+            document.getElementById(i).classList.add("a-validar");
+        }
+            
+        else {
+            document.getElementById('telefono-'+i).value = '';
+            document.getElementById('fullNumber-'+i).value = '';
+            document.getElementById(i).classList.remove("a-validar");
+        }
+    })
 }
 
 
@@ -188,9 +192,8 @@ function vienennenos(rvsp) {
     showfield(rvsp,'nenos');
     console.log(document.querySelectorAll('.neno'));
     document.querySelectorAll('.neno').forEach(function(form) {
-        vieneSecondForm(rvsp,form.id);
+        vieneSecondForm(rvsp,form);
     });
-    console.log(localStorage);
 }
 
 function vienes(rvsp) {
@@ -205,28 +208,7 @@ function addneno() {
     const divEle = document.getElementById("form-neno"+num_nenos);
     
     if (num_nenos<4){
-        var html_formneno = `
-                <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno` + (num_nenos+1) + `" method="POST">
-                    <div id="nenos-rows">
-                        <div class="mb-3 row" id="neno` + (num_nenos+1) + `">
-                            <div class="col" data-i18n="placeholder-neno-nombre"></div>
-                            <div class="col" data-i18n="placeholder-neno-edad"></div>
-                        </div>
-                        <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
-                            <div class="col-md-7 form-check">
-                                <div class="form-check form-switch">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
-                                    <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-neno` + (num_nenos+1) + `-input');">
-                                </div>
-                                <div id="alergenos-neno` + (num_nenos+1) + `-input" hidden data-i18n="placeholder-alergenos"></div>
-                            </div>
-                        </div>        
-
-                    </div>
-                            <input type="text" class="form-control" id="telefono-form-neno` + (num_nenos+1) + `" name="Telefono" hidden>
-                            <input id="fullNumber-form-neno` + (num_nenos+1) + `" type="text" name="TelefonoCompleto" hidden>
-
-                </form>`
+        var html_formneno = document.getElementById("form-neno1").outerHTML.replaceAll("neno1","neno"+(num_nenos+1));
         divEle.insertAdjacentHTML('afterend',html_formneno);
     }
     vienennenos(true);

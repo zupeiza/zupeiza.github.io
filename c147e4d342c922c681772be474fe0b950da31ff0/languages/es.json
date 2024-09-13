@@ -41,6 +41,8 @@
     "qpeques": "¿Vienes con peques?",
     "placeholder-neno-nombre": "<input id=\"Nombre\" name=\"Nombre\" type=\"text\" class=\"form-control\" placeholder=\"Nombre\" aria-label=\"Nombre\">",
     "placeholder-neno-edad": "<input id=\"Edad\" name=\"Edad\" type=\"text\" class=\"form-control\" placeholder=\"Edad\" aria-label=\"Edad\">",
+    "qcomentario": "¿Quieres añadir algún comentario?",
+    "enviar": "Enviar",
     "fotos": "Las fotos",
     "gracias-respuesta": "¡Gracias por tu respuesta! Los datos se han guardado correctamente",
     "fallo-respuesta": "Algo ha fallado... Por favor inténtalo de nuevo",
