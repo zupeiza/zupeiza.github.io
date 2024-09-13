@@ -422,7 +422,7 @@
                                     <div id="formularios mb-7">
                                         <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
                                             <div class="form-group mb-3 row">
-                                                    <label for="Nombre" class="col-md-5 col-form-label">Nombre</label>
+                                                    <label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre"></label>
                                                     <div class="col-md-7">
                                                         <input type="text" class="form-control" id="Nombre" name="Nombre" required>
                                                     </div>
@@ -430,145 +430,135 @@
                                             <div class="form-group mb-3 row"><label for="Email" class="col-md-5 col-form-label">Email</label>
                                                 <div class="col-md-7"><input type="email" class="form-control" id="Email" name="Email" required></div>
                                             </div>
-                                            <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label">Teléfono</label>
+                                            <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label" data-i18n="telefono"></label>
                                                 <div class="col-md-7  text-start"><input type="tel" class="form-control" id="telefono" name="Telefono" required></div>
                                                 <input id="fullNumber" type="text" name="TelefonoCompleto" hidden>
                                                 <textarea class="form-control" id="message" name="Comentarios" hidden></textarea>
                                             </div>
-                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Contamos contigo?</label>
+                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="q-vienes"></label>
                                                 <div class="col-md-7  text-start">
-                                                    <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia" value="No" onclick="vienes(false);" required><label class="form-check-label custom-control-label" for="asistencia_2">No</label></div>
-                                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_3" value="Sí" onclick="vienes(true);" required><label class="form-check-label custom-control-label" for="asistencia_3">Sí</label></div>
+                                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_y" value="No" onclick="vienes(false);" required><label class="form-check-label custom-control-label" for="asistencia_2" data-i18n="no"></label></div>
+                                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_n" value="Sí" onclick="vienes(true);" required><label class="form-check-label custom-control-label" for="asistencia_3" data-i18n="si"></label></div>
                                                 </div>
                                             </div>
                                             <div id="novienes" hidden><div class="alert alert-info d-flex align-items-center" role="alert">
-                                                <div>Vaya... lo sentimos mucho, ¡pero esperamos poder enseñarte las fotos y vernos en otra ocasión!</div>
+                                                <div data-i18n="novienes"></div>
                                                 </div></div>
                                             <div class="vienes" hidden>
-                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label">¿Cómo podemos hacer que estés agusto?</label>
+                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="agusto"></label>
                                                     <div class="col-md-7 form-check  text-start">
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano" >
-                                                            <label class="form-check-label" for="Vegano">
-                                                                Menú vegano
-                                                            </label>
+                                                            <label class="form-check-label" for="Vegano" data-i18n="vegano"></label>
                                                         </div>
                                                         <div class="form-check form-switch">
-                                                            <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                                            <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
                                                             <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-input');">
                                                         </div>
-                                                        <div id="alergenos-input" hidden>
-                                                            <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
-                                                        </div>
+                                                        <div id="alergenos-input" hidden data-i18n="placeholder-alergenos"></div>
                                                         <div class="form-check form-switch">
-                                                            <label class="form-check-label" for="necesidadesSwitch">Necesidades especiales</label>
+                                                            <label class="form-check-label" for="necesidadesSwitch" data-i18n="necesidades"></label>
                                                             <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch" onclick="showfield(this.checked,'necesidades-input');">
                                                         </div>
-                                                        <div id="necesidades-input" hidden>
-                                                            <input type="text" class="form-control" id="necesidades-input" name="Necesidades" placeholder="Lugar de reposo, hueco para carrito...">
-                                                        </div>
+                                                        <div id="necesidades-input" hidden data-i18n="placeholder-necesidades"></div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label">Si hay mesa de niños, ¿dónde quieres estar?</label>
+                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="cerca-nenos"></label>
                                                     <div class="col-md-7  text-start">
                                                         <div class="dropdown">
                                                             <select class="form-select" aria-label="Default select example" nombre="Cercania-nenos">
-                                                                <option selected>Selecciona una opción</option>
-                                                                <option value="1">Cerca</option>
-                                                                <option value="2">Lejos</option>
-                                                                <option value="3">Me da igual</option>
+                                                                <option selected data-i18n="seleccion"></option>
+                                                                <option value="1" data-i18n="nenoscerca"></option>
+                                                                <option value="2" data-i18n="nenoslejos"></option>
+                                                                <option value="3" data-i18n="indiferente"></option>
                                                               </select>
                                                           </div>
                                                     </div>
                                                 </div>
                                                                             
-                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label">¿Te apetecería participar en algún juego/actividad?</label>
+                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qactividad"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juego" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_y">Sí</label></div>
-                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_n">No</label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
                                                     </div>
                                                 </div>
                                                 <div id="actividades" hidden>
-                                                    <div class="form-group mb-5 row"><label class="col-md-5 col-form-label">¿Das tu consentimiento para que bromeemos contigo?</label>
+                                                    <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qconsentimiento-broma"></label>
                                                         <div class="col-md-7  text-start">
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí"><label class="form-check-label custom-control-label" for="bromascheck_y">Sí</label></div>
-                                                            <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No""><label class="form-check-label custom-control-label" for="bromascheck_n">No</label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí"><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No""><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
                                                         </div>
                                                     </div>
                                                     <div class="form-check form-switch  text-start">
-                                                        <label class="form-check-label" for="propuestaSwitch">¿Quieres hacer algo, tú o con más gente?</label>
+                                                        <label class="form-check-label" for="propuestaSwitch" data-i18n="propuesta"></label>
                                                         <input class="form-check-input" type="checkbox" role="switch" value="" id="propuestaSwitch" onclick="showfield(this.checked,'propuesta-input');">
                                                     </div>
-                                                    <div id="propuesta-input" hidden>
-                                                        <input type="text" class="form-control" id="propuesta-input" name="Propuestas" placeholder="Me gustaría hacer...">
-                                                    </div>
+                                                    <div id="propuesta-input" hidden data-i18n="placeholder-propuesta"></div>
                                                 </div>
                                             </div>
                                         </form>
                                         <div class="vienes" hidden>
                                             <form>
                                                 <hr class="my-4" />
-                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con acompañante?</label>
+                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qacompanante"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="vieneSecondForm(false,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2">No</label></div>
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="vieneSecondForm(true,'form-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3">Sí</label></div>
+                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2" data-i18n="no"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="vieneSecondForm(true,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3" data-i18n="si"></label></div>
                                                     </div>
                                                 </div>
                                             </form>
-                                            <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST"  hidden>
-                                                <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label">Nombre de tu acompañante</label>
+                                            <div class="p-3 mb-2 bg-light" id="div-acomp" hidden>
+                                            <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
+                                                <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre-acomp"></label>
                                                     <div class="col-md-7  text-start"><input type="text" class="form-control" id="Nombre" name="Nombre"></div>
                                                 </div>
-                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">Menú</label>
+                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="menu"></label>
                                                     <div class="col-md-7 form-check  text-start">
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano" >
-                                                            <label class="form-check-label" for="Vegano">
-                                                                Menú vegano
-                                                            </label>
+                                                            <label class="form-check-label" for="Vegano" data-i18n="vegano"></label>
                                                         </div>
                                                         <div class="form-check form-switch">
-                                                            <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                                            <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
                                                             <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-acomp-input');">
                                                         </div>
-                                                        <div id="alergenos-acomp-input" hidden>
-                                                            <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
-                                                        </div>
+                                                        <div id="alergenos-acomp-input" hidden data-i18n="placeholder-alergenos"></div>
                                                     </div>
                                                 </div>
-                    
-                                                <input type="text" class="form-control" id="telefono-form-acomp" name="Telefono" hidden>
-                                                <input id="fullNumber-form-acomp" type="text" name="TelefonoCompleto" hidden>
+                                                <div class="form-group row"><label class="col-md-5 col-form-label" data-i18n="qacomp-actividad"></label>
+                                                    <div class="col-md-7 text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí"><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                                
+                                                <input class="d-none" type="text" class="form-control" id="telefono-form-acomp" name="Telefono">
+                                                <input class="d-none" id="fullNumber-form-acomp" type="text" name="TelefonoCompleto">
+                                                </div>    
                                             </form>
+                                            </div>
                                             <hr class="my-4" />
                                             <form>
-                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label">¿Vienes con peques?</label>
+                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qpeques"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2">No</label></div>
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3">Sí</label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2" data-i18n="no"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3" data-i18n="si"></label></div>
                                                     </div>
                                                 </div>
                                             </form>
-                                            <div id="nenos" hidden>
+                                            <div class="p-3 mb-2 bg-light" id="nenos" hidden>
                                                 <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
                                                     <div id="nenos-rows">
                                                         <div class="mb-3 row" id="neno1">
-                                                            <div class="col">
-                                                                <input id="Nombre" name="Nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
-                                                            </div>
-                                                            <div class="col">
-                                                                <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad">
-                                                            </div>
+                                                            <div class="col" data-i18n="placeholder-neno-nombre"></div>
+                                                            <div class="col" data-i18n="placeholder-neno-edad"></div>
                                                         </div>
                                                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                                                             <div class="col-md-7 form-check  text-start">
                                                                 <div class="form-check form-switch">
-                                                                    <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                                                    <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
                                                                     <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-neno1-input');">
                                                                 </div>
-                                                                <div id="alergenos-neno1-input" hidden>
-                                                                    <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
-                                                                </div>
+                                                                <div id="alergenos-neno1-input" hidden data-i18n="placeholder-alergenos"></div>
                                                             </div>
                                                         </div>
                                                         <input type="text" class="form-control" id="telefono-form-neno1" name="Telefono" hidden>
@@ -576,16 +566,16 @@
                                                     </div>
                                                 </form>
                                                 <form class="m-auto">
-                                                    <div class="mb-3 row" id="botonmasnenos">
-                                                        <div class="col-md-9 mx-3" id="anadir-neno"><button class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()">&nbsp;</button></div>
-                                                        <div class="col-md-9 mx-3" id="restar-neno"><button class="btn btn-primary btn-lg fas fa-minus fa-3x" type="button" onclick="removeneno()"></button></div>
+                                                    <div class="btn-group" role="group" id="botonmasnenos">
+                                                        <button id="anadir-neno" class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()">&nbsp;</button>
+                                                        <button id="restar-neno" class="btn btn-primary btn-lg fas fa-minus fa-3x" type="button" onclick="removeneno()"></button>
                                                     </div>    
                                                 </form>
                                             </div>
                                         </div>
                                         <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST">
                                             <hr class="my-4" />
-                                            <div class="form-group mb-3 row"><label for="message-label4" class="col-md-5 col-form-label">¿Quieres añadir algún comentario?</label>
+                                            <div class="form-group mb-3 row"><label for="Comentarios" class="col-md-5 col-form-label">¿Quieres añadir algún comentario?</label>
                                                 <div class="col-md-7  text-start"><textarea class="form-control" id="message-label" name="Comentarios"></textarea></div>
                                             </div>
                                         </form>
@@ -712,7 +702,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
@@ -720,6 +710,7 @@
         <!--script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script-->
         <!-- I18N -->
         <script src="js/languages.js"></script>
+        <script src="js/scripts.js"></script>
     <!--script>
         const form = document.querySelector("#form")
         const submitButton = document.querySelector("#submit")

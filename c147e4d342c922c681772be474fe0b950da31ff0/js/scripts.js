@@ -67,10 +67,10 @@ window.intlTelInput(input, {
     i18n: {
     // Country names - see the full list in src/js/intl-tel-input/i18n/en/countries.ts
     es: "España",
-    ie: "Irlanda",
-    de: "Alemania",
-    se: "Suecia",
-    gb: "Gran Bretaña",
+    ie: "Irland",
+    de: "Deutschland",
+    nl: "Nederland",
+    gb: "Great Britain",
     // Aria label for the selected country element
     selectedCountryAriaLabel: "Selected country",
     // Screen reader text for when no country is selected
@@ -135,13 +135,13 @@ window.addEventListener("load", function() {
                         const formdiv = document.getElementById('formularios');
                         formdiv.innerHTML = `
                         <div class="alert alert-success d-flex align-items-center" role="alert">
-                            <div>¡Gracias por tu respuesta! Los datos se han guardado correctamente</div>
+                            <div data-i18n="gracias-respuesta"></div>
                             </div>`;
                     }
                 })
                 .catch(error => {
                     formenviar.insertAdjacentHTML('afterend',`<div class="alert alert-warning d-flex align-items-center" role="alert">
-                        <div>Algo ha fallado... Por favor inténtalo de nuevo</div>
+                        <div data-i18n="fallo-respuesta"></div>
                         </div>`);
                     console.log(error);
                 })
@@ -190,6 +190,7 @@ function vienennenos(rvsp) {
     document.querySelectorAll('.neno').forEach(function(form) {
         vieneSecondForm(rvsp,form.id);
     });
+    console.log(localStorage);
 }
 
 function vienes(rvsp) {
@@ -208,22 +209,16 @@ function addneno() {
                 <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto a-validar neno" style="max-width:600px" id="form-neno` + (num_nenos+1) + `" method="POST">
                     <div id="nenos-rows">
                         <div class="mb-3 row" id="neno` + (num_nenos+1) + `">
-                            <div class="col">
-                                <input id="Nombre" name="Nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required>
-                            </div>
-                            <div class="col">
-                                <input id="Edad" name="Edad" type="text" class="form-control" placeholder="Edad" aria-label="Edad" required>
-                            </div>
+                            <div class="col" data-i18n="placeholder-neno-nombre"></div>
+                            <div class="col" data-i18n="placeholder-neno-edad"></div>
                         </div>
                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                             <div class="col-md-7 form-check">
                                 <div class="form-check form-switch">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Alergias/Intolerancias alimentarias</label>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
                                     <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-neno` + (num_nenos+1) + `-input');">
                                 </div>
-                                <div id="alergenos-neno` + (num_nenos+1) + `-input" hidden>
-                                    <input type="text" class="form-control" id="Alergenos" name="Alergenos" placeholder="Alérgenos">
-                                </div>
+                                <div id="alergenos-neno` + (num_nenos+1) + `-input" hidden data-i18n="placeholder-alergenos"></div>
                             </div>
                         </div>        
 
