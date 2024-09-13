@@ -151,6 +151,7 @@ window.addEventListener("load", function() {
 });
 
 function showfield(check,field){
+    console.log(field);
     let fieldToHideShow = document.body.querySelector('#'+field);
     if(check === "Sí" || check){
         fieldToHideShow.hidden = false;
@@ -192,7 +193,7 @@ function vienennenos(rvsp) {
     showfield(rvsp,'nenos');
     console.log(document.querySelectorAll('.neno'));
     document.querySelectorAll('.neno').forEach(function(form) {
-        vieneSecondForm(rvsp,form);
+        vieneSecondForm(rvsp,form.id);
     });
 }
 
