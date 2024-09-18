@@ -215,6 +215,7 @@ function addneno() {
         var html_formneno = document.getElementById("div-form-neno1").outerHTML.replaceAll("neno1","neno"+(num_nenos+1));
         divEle.insertAdjacentHTML('afterend',html_formneno);
         document.getElementById("alergenos-neno"+(num_nenos+1)+"-input").hidden = true;
+        document.getElementById("necesidades-input-neno"+(num_nenos+1)).hidden = true;
     }
     vienennenos(true);
     
