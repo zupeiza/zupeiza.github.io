@@ -275,7 +275,13 @@ function retrieve() {
 async function getData() {
     const url = "https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec";
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {
+            headers: {
+                "Content-Type": "text/plain",
+                'Authorization': 'Basic ' + btoa(document.querySelector(".iti__selected-dial-code").innerHTML+document.getElementById('telefono-ppal').value.replaceAll(' ','') + ":" + document.getElementById("password").value),
+            }
+        }
+      );
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
