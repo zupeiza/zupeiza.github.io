@@ -50,6 +50,8 @@
     "fallo-respuesta": "Algo ha fallado... Por favor inténtalo de nuevo",
     "fotos-extend": "",
     "boton-cerrar": "Cerrar",
+    "boton-recuperar": "Recuperar datos",
+    "no-data": "No se han encontrado datos",
     "contacta": "Contacta con nosotras",
     "formnameblock": "<!-- Name input-->\n\t<input class=\"form-control\" id=\"name\" type=\"text\" autocomplete=\"off\" placeholder=\"Tu nombre*\" data-sb-validations=\"required\" \/>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"name:required\">Hace falta un nombre<\/div>",
     "formemailblock": "<!-- Email address input-->\n\t<input class=\"form-control\" id=\"email\" type=\"email\" autocomplete=\"off\" placeholder=\"Tu Email *\" data-sb-validations=\"required,email\" \/>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"email:required\">Se requiere un email.<\/div>\n\t<div class=\"invalid-feedback\" data-sb-feedback=\"email:email\">Email no válido.<\/div>",

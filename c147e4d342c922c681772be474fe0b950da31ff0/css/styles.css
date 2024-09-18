@@ -10882,6 +10882,11 @@ p {
   font-size: 1.125rem;
   font-weight: 700;
 }
+.btn-lg {
+  font-family: "Eagle Lake", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
 .btn-social {
   height: 2.5rem;

@@ -439,9 +439,20 @@
                                                 </div>
                                             </div>
                                             <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label" data-i18n="telefono"></label>
-                                                <div class="col-md-7  text-start"><input type="tel" class="form-control" id="telefono-ppal" name="Telefono" required></div>
+                                                <div class="col-md-7 text-start"><input type="tel" class="form-control" id="telefono-ppal" name="Telefono" required></div>
                                                 <input id="fullNumber" type="text" name="TelefonoCompleto" hidden>
                                                 <textarea class="form-control" id="message" name="Comentarios" hidden></textarea>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                                                <div class="col-md-7">
+                                                    <button class="btn btn-secondary btn-lg text-uppercase" type="button" onclick="retrieve();">
+                                                    <i class="fas fa-cloud-download me-1"></i>
+                                                    <span data-i18n="boton-recuperar"></span>                                                
+                                                    </button>
+                                                </div>
+                                                <div id="retrieve-ko" class="alert alert-warning d-flex align-items-center d-none mt-2" role="alert">
+                                                    <div data-i18n="no-data"></div>
+                                                </div>               
                                             </div>
                                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="q-vienes"></label>
                                                 <div class="col-md-7  text-start">

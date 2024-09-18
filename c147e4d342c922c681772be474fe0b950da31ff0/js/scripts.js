@@ -235,7 +235,8 @@ function removeneno(){
 }
 
 const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");togglePassword.addEventListener("click", function () {
+        const password = document.querySelector("#password");
+        togglePassword.addEventListener("click", function () {
             // toggle the type attribute
             const type = password.getAttribute("type") === "password" ? "text" : "password";
             password.setAttribute("type", type);
@@ -247,3 +248,16 @@ const togglePassword = document.querySelector("#togglePassword");
         form.addEventListener('submit', function (e) {
             e.preventDefault();
         });
+
+function retrieve() {
+    if (document.getElementById("Nombre").value == "" || document.getElementById("Email").value == "" || document.getElementById("telefono-ppal").value == "" || document.getElementById("password").value == "" ) {
+        (document.querySelector('#retrieve-ko')).classList.remove("d-none");
+    }
+        
+    else {
+        (document.querySelector('#retrieve-ko')).classList.add("d-none");
+    }
+  
+    return false;
+
+}
