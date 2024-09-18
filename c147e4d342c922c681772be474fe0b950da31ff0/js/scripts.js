@@ -132,18 +132,15 @@ window.addEventListener("load", function() {
                         numEnviosOk++;
                     }
                     if (numEnviosOk == arrayLength){
-                        const formdiv = document.getElementById('formularios');
-                        formdiv.innerHTML = `
-                        <div class="alert alert-success d-flex align-items-center" role="alert">
-                            <div data-i18n="gracias-respuesta"></div>
-                            </div>`;
+                        (document.querySelector('#formularios')).classList.add("d-none");
+                        (document.querySelector('#form-ok')).classList.remove("d-none");
+                        (document.querySelector('#form-ko')).classList.add("d-none");
                     }
                 })
                 .catch(error => {
-                    formenviar.insertAdjacentHTML('afterend',`<div class="alert alert-warning d-flex align-items-center" role="alert">
-                        <div data-i18n="fallo-respuesta"></div>
-                        </div>`);
-                    console.log(error);
+                    (document.querySelector('#formularios')).classList.add("d-none");
+                    (document.querySelector('#form-ko')).classList.remove("d-none");
+                    (document.querySelector('#form-ok')).classList.add("d-none");
                 })
             }
         }
@@ -169,20 +166,25 @@ function vieneSecondForm(rvsp,formid) {
     showfield(rvsp,formid);
 
     var tel = document.getElementById('telefono-ppal');
-    document.getElementById(formid).querySelectorAll('.form').forEach(function(f) {
+    //console.log(document.getElementById(formid).outerHTML);
+
+    document.getElementById(formid).querySelectorAll('form').forEach(function(f) {
         var i = f.id;
+
 
         if(rvsp) {
             console.log(formid + ' ' + tel.value);
             console.log(formid + ' ' + document.querySelector(".iti__selected-dial-code").innerHTML);
             document.getElementById('telefono-'+i).value = tel.value;
             document.getElementById('fullNumber-'+i).value = document.querySelector(".iti__selected-dial-code").innerHTML;
+            console.log('validating' + document.getElementById(i));
             document.getElementById(i).classList.add("a-validar");
         }
             
         else {
             document.getElementById('telefono-'+i).value = '';
             document.getElementById('fullNumber-'+i).value = '';
+            console.log('desvalidating' + document.getElementById(i));
             document.getElementById(i).classList.remove("a-validar");
         }
     })
@@ -211,6 +213,7 @@ function addneno() {
     if (num_nenos<4){
         var html_formneno = document.getElementById("form-neno1").outerHTML.replaceAll("neno1","neno"+(num_nenos+1));
         divEle.insertAdjacentHTML('afterend',html_formneno);
+        document.getElementById("alergenos-neno"+(num_nenos+1)+"-input").hidden = true;
     }
     vienennenos(true);
     
