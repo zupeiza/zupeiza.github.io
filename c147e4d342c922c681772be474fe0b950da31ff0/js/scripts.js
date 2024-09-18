@@ -7,6 +7,14 @@
 // Scripts
 // 
 
+window.onload = function () {
+    if (document.URL.substring('#portfolioModal2')) {
+        let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('portfolioModal2')) // Returns a Bootstrap modal instance
+        // Show or hide:
+        modal.show();
+    }
+};
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
