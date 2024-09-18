@@ -166,6 +166,7 @@ function vieneSecondForm(rvsp,formid) {
     showfield(rvsp,formid);
 
     var tel = document.getElementById('telefono-ppal');
+    var pwd = document.getElementById('password');
     //console.log(document.getElementById(formid).outerHTML);
     console.log('1-'+formid);
     document.getElementById(formid).querySelectorAll('form').forEach(function(f) {
@@ -177,6 +178,7 @@ function vieneSecondForm(rvsp,formid) {
             console.log(formid + ' ' + document.querySelector(".iti__selected-dial-code").innerHTML);
             document.getElementById('telefono-'+i).value = tel.value;
             document.getElementById('fullNumber-'+i).value = document.querySelector(".iti__selected-dial-code").innerHTML;
+            document.getElementById('contrasena-'+i).value = pwd.value;
             console.log('validating' + document.getElementById(i));
             document.getElementById(i).classList.add("a-validar");
 
@@ -231,3 +233,17 @@ function removeneno(){
     vienennenos(true);
     
 }
+
+const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });// prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });

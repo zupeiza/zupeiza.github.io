@@ -11349,3 +11349,18 @@ section#contact form#contactForm :-ms-input-placeholder {
 .iti-flag {
   background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.3/img/flags.png");
 }
+
+div.password-box {
+  display: flex; 
+  align-items: center; 
+  background-color: #fff; 
+  border-radius: 6px;
+}
+
+#togglePassword {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+

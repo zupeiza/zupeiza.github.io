@@ -23,6 +23,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/css/intlTelInput.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
         <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"-->
 
@@ -430,6 +431,13 @@
                                             <div class="form-group mb-3 row"><label for="Email" class="col-md-5 col-form-label">Email</label>
                                                 <div class="col-md-7"><input type="email" class="form-control" id="Email" name="Email" required></div>
                                             </div>
+                                            <div class="form-group mb-3 row">
+                                                <label for="password" class="col-md-5 col-form-label" data-i18n="contrasena"></label>
+                                                <div class="col-md-7 password-box">
+                                                    <input type="password" class="form-control" id="password" name="Contrasena" required >
+                                                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                                </div>
+                                            </div>
                                             <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label" data-i18n="telefono"></label>
                                                 <div class="col-md-7  text-start"><input type="tel" class="form-control" id="telefono-ppal" name="Telefono" required></div>
                                                 <input id="fullNumber" type="text" name="TelefonoCompleto" hidden>
@@ -538,6 +546,7 @@
                                                                     
                                                     <input class="d-none" type="text" class="form-control" id="telefono-form-acomp" name="Telefono">
                                                     <input class="d-none" id="fullNumber-form-acomp" type="text" name="TelefonoCompleto">
+                                                    <input class="d-none" type="password" class="form-control" id="contrasena-form-acomp" name="Contrasena">
                                                     </div>    
                                                 </form>
                                             </div><!--div-acomp-->
@@ -573,7 +582,8 @@
                                                             </div>
                                                         </div>
                                                         <input type="text" class="form-control d-none" id="telefono-form-neno1" name="Telefono" >
-                                                        <input class="d-none" id="fullNumber-form-neno1" type="text" name="TelefonoCompleto" >        
+                                                        <input class="d-none" id="fullNumber-form-neno1" type="text" name="TelefonoCompleto" >
+                                                        <input class="d-none" type="password" class="form-control" id="contrasena-form-neno1" name="Contrasena">        
                                                     </div>
                                                 </form>
                                                 </div>

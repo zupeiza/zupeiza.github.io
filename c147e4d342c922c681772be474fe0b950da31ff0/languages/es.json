@@ -17,6 +17,8 @@
     "formulario-long": "",
     "nombre": "Nombre",
     "telefono": "Teléfono",
+    "contrasena": "Contraseña",
+    "contrasena-help": "Si después de enviar el formulario necesitas modificar algo, podrás acceder con esta contraseña",
     "q-vienes": "¿Contamos contigo?",
     "novienes": "Vaya... lo sentimos mucho, ¡pero esperamos poder enseñarte las fotos y vernos en otra ocasión!",
     "agusto": "¿Cómo podemos hacer que estés agusto?",
