@@ -259,12 +259,12 @@ const togglePassword = document.querySelector("#togglePassword");
 function retrieve() {
     
     if (document.getElementById("Nombre").value == "" || document.getElementById("Email").value == "" || document.getElementById("telefono-ppal").value == "" || document.getElementById("password").value == "" ) {
-        (document.querySelector('#retrieve-ko')).classList.remove("d-none");
+        (document.querySelector('#cannot-retrieve')).classList.remove("d-none");
 
     }
         
     else {
-        (document.querySelector('#retrieve-ko')).classList.add("d-none");
+        (document.querySelector('#cannot-retrieve')).classList.add("d-none");
         getData();
     }
   
@@ -282,7 +282,18 @@ async function getData() {
   
       const json = await response.json();
       console.log(json);
+      if (json.length == 0) {
+        (document.querySelector('#retrieve-ko')).classList.remove("d-none");
+      } else {
+        (document.querySelector('#retrieve-ko')).classList.add("d-none");
+        rellenar(json);
+      }
     } catch (error) {
       console.error(error.message);
     }
+  }
+
+  function rellenar (json) {
+    formsdata = JSON.stringify(json);
+    
   }
