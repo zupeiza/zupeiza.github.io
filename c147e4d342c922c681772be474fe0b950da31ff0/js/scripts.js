@@ -8,8 +8,8 @@
 // 
 
 window.onload = function () {
-    if (document.URL.substring('#portfolioModal2')) {
-        let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('portfolioModal2')) // Returns a Bootstrap modal instance
+    if (document.URL.substring('#form-modal')) {
+        let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('form-modal')) // Returns a Bootstrap modal instance
         // Show or hide:
         modal.show();
     }
@@ -104,8 +104,8 @@ window.addEventListener("load", function() {
         let ready = true;
         var formsIdArray = [];
         var numEnviosOk = 0;
-        document.getElementById('fullNumber').value = document.querySelector(".iti__selected-dial-code").innerHTML;
-        document.getElementById('message').value = document.getElementById('message-label').value
+        //document.getElementById('fullNumber').value = document.querySelector(".iti__selected-dial-code").innerHTML;
+        //document.getElementById('message').value = document.getElementById('message-label').value
 
         const forms = document.querySelectorAll('.a-validar');
         Array.from(forms)
@@ -125,6 +125,11 @@ window.addEventListener("load", function() {
             for (var i = 0; i < arrayLength; i++) {
                 const f = document.getElementById(formsIdArray[i]);
                 const data = new FormData(f);
+                var tipo = formsIdArray[i].replace('form-','');
+                data.append('Tipo',tipo);
+                data.set('Telefono',document.querySelector(".iti__selected-dial-code").innerHTML+document.getElementById('telefono-ppal').value.replaceAll(' ',''));
+                data.set('Contrasena',document.getElementById('password').value);
+
                 const value = Object.fromEntries(data.entries());
                 console.log(value);
 
@@ -173,32 +178,26 @@ function showfield(check,field){
 function vieneSecondForm(rvsp,formid) {
     showfield(rvsp,formid);
 
-    var tel = document.getElementById('telefono-ppal');
-    var pwd = document.getElementById('password');
     //console.log(document.getElementById(formid).outerHTML);
-    console.log('1-'+formid);
+
     document.getElementById(formid).querySelectorAll('form').forEach(function(f) {
         var i = f.id;
-        console.log('2-'+formid);
 
         if(rvsp) {
-            console.log(formid + ' ' + tel.value);
-            console.log(formid + ' ' + document.querySelector(".iti__selected-dial-code").innerHTML);
-            document.getElementById('telefono-'+i).value = tel.value;
-            document.getElementById('fullNumber-'+i).value = document.querySelector(".iti__selected-dial-code").innerHTML;
-            document.getElementById('contrasena-'+i).value = pwd.value;
             console.log('validating' + document.getElementById(i));
             document.getElementById(i).classList.add("a-validar");
 
         }
             
         else {
-            document.getElementById('telefono-'+i).value = '';
-            document.getElementById('fullNumber-'+i).value = '';
             console.log('desvalidating' + document.getElementById(i));
             document.getElementById(i).classList.remove("a-validar");
         }
     })
+}
+
+function rellenar(formid) {
+
 }
 
 
@@ -258,8 +257,11 @@ const togglePassword = document.querySelector("#togglePassword");
         });
 
 function retrieve() {
+    
     if (document.getElementById("Nombre").value == "" || document.getElementById("Email").value == "" || document.getElementById("telefono-ppal").value == "" || document.getElementById("password").value == "" ) {
         (document.querySelector('#retrieve-ko')).classList.remove("d-none");
+        getData();
+
     }
         
     else {
@@ -269,3 +271,18 @@ function retrieve() {
     return false;
 
 }
+
+async function getData() {
+    const url = "https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+  
+      const json = await response.json();
+      console.log(json);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }

@@ -50,7 +50,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="dropdownSections">
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal1" data-i18n="nosotras"></a></li>
-                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal2" data-i18n="formulario"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal3" data-i18n="informacion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal4" data-i18n="celebracion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal5" data-i18n="lejos" ></a></li>
@@ -132,7 +132,7 @@
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -407,7 +407,7 @@
             </div>
         </div>
         <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="form-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
@@ -421,7 +421,7 @@
                                     <!--img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." /-->
                                     <!--span data-i18n="formulario-long"-->
                                     <div id="formularios" class="mb-7">
-                                        <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
+                                        <form action="https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
                                             <div class="form-group mb-3 row">
                                                     <label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre"></label>
                                                     <div class="col-md-7">
@@ -441,7 +441,6 @@
                                             <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label" data-i18n="telefono"></label>
                                                 <div class="col-md-7 text-start"><input type="tel" class="form-control" id="telefono-ppal" name="Telefono" required></div>
                                                 <input id="fullNumber" type="text" name="TelefonoCompleto" hidden>
-                                                <textarea class="form-control" id="message" name="Comentarios" hidden></textarea>
                                             </div>
                                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                                                 <div class="col-md-7">
@@ -527,7 +526,7 @@
                                                 </div>
                                             </form>
                                             <div class="p-3 mb-2 bg-light" id="div-acomp" hidden>
-                                                <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
+                                                <form action="https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
                                                     <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre-acomp"></label>
                                                         <div class="col-md-7  text-start"><input type="text" class="form-control" id="Nombre" name="Nombre"></div>
                                                     </div>
@@ -555,9 +554,9 @@
                                                             <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
                                                         </div>
                                                                     
-                                                    <input class="d-none" type="text" class="form-control" id="telefono-form-acomp" name="Telefono">
+                                                    <!--input class="d-none" type="text" class="form-control" id="telefono-form-acomp" name="Telefono">
                                                     <input class="d-none" id="fullNumber-form-acomp" type="text" name="TelefonoCompleto">
-                                                    <input class="d-none" type="password" class="form-control" id="contrasena-form-acomp" name="Contrasena">
+                                                    <input class="d-none" type="password" class="form-control" id="contrasena-form-acomp" name="Contrasena"-->
                                                     </div>    
                                                 </form>
                                             </div><!--div-acomp-->
@@ -572,7 +571,7 @@
                                             </form>
                                             <div class="p-3 mb-2 bg-light" id="nenos" hidden>
                                                 <div id="div-form-neno1">
-                                                <form action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
+                                                <form action="https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
                                                     <div id="nenos-rows">
                                                         <div class="mb-3 row" id="neno1">
                                                             <div class="col" data-i18n="placeholder-neno-nombre"></div>
@@ -592,9 +591,9 @@
                                                                 <div id="necesidades-input-neno1" hidden data-i18n="placeholder-necesidades"></div>  
                                                             </div>
                                                         </div>
-                                                        <input type="text" class="form-control d-none" id="telefono-form-neno1" name="Telefono" >
+                                                        <!--input type="text" class="form-control d-none" id="telefono-form-neno1" name="Telefono" >
                                                         <input class="d-none" id="fullNumber-form-neno1" type="text" name="TelefonoCompleto" >
-                                                        <input class="d-none" type="password" class="form-control" id="contrasena-form-neno1" name="Contrasena">        
+                                                        <input class="d-none" type="password" class="form-control" id="contrasena-form-neno1" name="Contrasena"-->        
                                                     </div>
                                                 </form>
                                                 </div>
@@ -606,13 +605,13 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST">
+                                        <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec" method="POST">
                                             <hr class="my-4" />
                                             <div class="form-group mb-3 row"><label for="Comentarios" class="col-md-5 col-form-label" data-i18n="qcomentario"></label>
                                                 <div class="col-md-7  text-start"><textarea class="form-control" id="message-label" name="Comentarios"></textarea></div>
                                             </div>
                                         </form>
-                                        <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxcYwJPa3vsAjCMhJ3WciSJngjoqNnsDjUJ8SEe7MmVCtUgxN3lqDVHEck-aq_gCU4ARQ/exec" method="POST">
+                                        <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec" method="POST">
                                             <hr class="my-4" />
                                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                                                 <div class="col-md-7  text-start"><button class="btn btn-primary btn-lg" type="submit" data-i18n="enviar"></button></div>
