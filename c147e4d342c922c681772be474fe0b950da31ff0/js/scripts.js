@@ -127,7 +127,7 @@ window.addEventListener("load", function() {
                 const data = new FormData(f);
                 var tipo = formsIdArray[i].replace('form-','');
                 data.append('Tipo',tipo);
-                data.set('Telefono',document.querySelector(".iti__selected-dial-code").innerHTML+document.getElementById('telefono-ppal').value.replaceAll(' ',''));
+                data.set('Telefono',document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ',''));
                 data.set('Contrasena',document.getElementById('password').value);
 
                 const value = Object.fromEntries(data.entries());
@@ -260,12 +260,12 @@ function retrieve() {
     
     if (document.getElementById("Nombre").value == "" || document.getElementById("Email").value == "" || document.getElementById("telefono-ppal").value == "" || document.getElementById("password").value == "" ) {
         (document.querySelector('#retrieve-ko')).classList.remove("d-none");
-        getData();
 
     }
         
     else {
         (document.querySelector('#retrieve-ko')).classList.add("d-none");
+        getData();
     }
   
     return false;
@@ -273,15 +273,9 @@ function retrieve() {
 }
 
 async function getData() {
-    const url = "https://script.google.com/macros/s/AKfycbwYa4qP6o68uR18mMnIuT8yzruDOMCxnBV_p-MVWDNdLb4w4FrWtKyEGMgyGg7IJ_ovjQ/exec";
+    const url = "https://script.google.com/macros/s/AKfycbw8SbfpckGd_kBa1Cirm84_BAug3Xjx_JHBZpDogYGMi__MkqwM_xhZn5XVOP1GExYZaw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','');
     try {
-      const response = await fetch(url, {
-            headers: {
-                "Content-Type": "text/plain",
-                'Authorization': 'Basic ' + btoa(document.querySelector(".iti__selected-dial-code").innerHTML+document.getElementById('telefono-ppal').value.replaceAll(' ','') + ":" + document.getElementById("password").value),
-            }
-        }
-      );
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
