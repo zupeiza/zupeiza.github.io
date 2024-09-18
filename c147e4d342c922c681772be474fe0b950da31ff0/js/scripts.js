@@ -167,10 +167,10 @@ function vieneSecondForm(rvsp,formid) {
 
     var tel = document.getElementById('telefono-ppal');
     //console.log(document.getElementById(formid).outerHTML);
-
+    console.log('1-'+formid);
     document.getElementById(formid).querySelectorAll('form').forEach(function(f) {
         var i = f.id;
-
+        console.log('2-'+formid);
 
         if(rvsp) {
             console.log(formid + ' ' + tel.value);
@@ -179,6 +179,7 @@ function vieneSecondForm(rvsp,formid) {
             document.getElementById('fullNumber-'+i).value = document.querySelector(".iti__selected-dial-code").innerHTML;
             console.log('validating' + document.getElementById(i));
             document.getElementById(i).classList.add("a-validar");
+
         }
             
         else {
@@ -195,7 +196,7 @@ function vienennenos(rvsp) {
     showfield(rvsp,'nenos');
     console.log(document.querySelectorAll('.neno'));
     document.querySelectorAll('.neno').forEach(function(form) {
-        vieneSecondForm(rvsp,form.id);
+        vieneSecondForm(rvsp,'div-'+form.id);
     });
 }
 
@@ -208,10 +209,10 @@ function vienes(rvsp) {
 
 function addneno() {
     num_nenos = document.getElementsByClassName("neno").length;
-    const divEle = document.getElementById("form-neno"+num_nenos);
+    const divEle = document.getElementById("div-form-neno"+num_nenos);
     
     if (num_nenos<4){
-        var html_formneno = document.getElementById("form-neno1").outerHTML.replaceAll("neno1","neno"+(num_nenos+1));
+        var html_formneno = document.getElementById("div-form-neno1").outerHTML.replaceAll("neno1","neno"+(num_nenos+1));
         divEle.insertAdjacentHTML('afterend',html_formneno);
         document.getElementById("alergenos-neno"+(num_nenos+1)+"-input").hidden = true;
     }
@@ -222,8 +223,8 @@ function addneno() {
 function removeneno(){
     num_nenos = document.getElementsByClassName("neno").length;
     if (num_nenos>1){
-        const divEle = document.getElementById("form-neno"+num_nenos);
-        showfield(false,"form-neno"+num_nenos);
+        const divEle = document.getElementById("div-form-neno"+num_nenos);
+        showfield(false,"div-form-neno"+num_nenos);
         divEle.remove();
     }
     vienennenos(true);
