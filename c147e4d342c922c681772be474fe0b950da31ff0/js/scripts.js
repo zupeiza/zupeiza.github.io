@@ -273,7 +273,7 @@ function retrieve() {
 }
 
 async function getData() {
-    const url = "https://script.google.com/macros/s/AKfycbyYnE2963VKi4o-tIs1Haf_zRVENAXCEahqhzo1X7vhjHJxqwLy8CamsoKMVNdpi6k/exec";
+    const url = "https://script.google.com/macros/s/AKfycbwYa4qP6o68uR18mMnIuT8yzruDOMCxnBV_p-MVWDNdLb4w4FrWtKyEGMgyGg7IJ_ovjQ/exec";
     try {
       const response = await fetch(url, {
             headers: {
