@@ -39,7 +39,7 @@
     "nombre-acomp": "Nombre de tu acompañante",
     "menu": "Menú",
     "qacomp-actividad": "¿Le apetecería participar en algún juego/actividad?",
-    "placeholder-propuesta": "<input type=\"text\" class=\"form-control\" id=\"propuesta-input\" name=\"Propuestas\" placeholder=\"Me gustaría hacer...\">",
+    "placeholder-propuesta": "<input type=\"text\" class=\"form-control\" id=\"Propuesta\" name=\"Propuestas\" placeholder=\"Me gustaría hacer...\">",
     "qpeques": "¿Vienes con peques?",
     "placeholder-neno-nombre": "<input id=\"Nombre\" name=\"Nombre\" type=\"text\" class=\"form-control\" placeholder=\"Nombre\" aria-label=\"Nombre\">",
     "placeholder-neno-edad": "<input id=\"Edad\" name=\"Edad\" type=\"text\" class=\"form-control\" placeholder=\"Edad\" aria-label=\"Edad\">",

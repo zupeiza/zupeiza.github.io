@@ -321,32 +321,55 @@ async function getData() {
     } else {
         document.getElementById('asistencia_y').checked = true;
         vienes(true);
-    }
-    if (datos_principal.Vegano == "on") {
-        document.getElementById('Vegano').checked = true;
-    } else {
-        document.getElementById('Vegano').checked = false;
-    }
-    if (datos_principal.Alergenos != "") {
-        document.getElementById('flexSwitchCheckDefault').checked = true;
-        showfield(true,'alergenos-input');
-        document.getElementById('Alergenos').value = datos_principal.Alergenos;
+        if (datos_principal.Vegano == "on") {
+            document.getElementById('Vegano').checked = true;
+        } else {
+            document.getElementById('Vegano').checked = false;
+        }
+        if (datos_principal.Alergenos != "") {
+            document.getElementById('flexSwitchCheckDefault').checked = true;
+            showfield(true,'alergenos-input');
+            document.getElementById('Alergenos').value = datos_principal.Alergenos;
+        } else {
+            document.getElementById('flexSwitchCheckDefault').checked = false;
+            showfield(false,'alergenos-input');
+            document.getElementById('Alergenos').value = "";
+        }
+        if (datos_principal.Necesidades != "") {
+            document.getElementById('necesidadesSwitch').checked = true;
+            showfield(true,'necesidades-input');
+            document.getElementById('Necesidades').value = datos_principal.Necesidades;
+        } else {
+            document.getElementById('necesidadesSwitch').checked = false;
+            showfield(false,'necesidades-input');
+            document.getElementById('Necesidades').value = "";
+        }
+        document.getElementById('select-cercania').selected = datos_principal.Cercania_nenos;
+        document.getElementById('select-cercania').value = datos_principal.Cercania_nenos;
+        if (datos_principal.Juegos == "No") {
+            document.getElementById('actividadcheck_n').checked = true;
+            showfield(false,'actividades');
+        } else if (datos_principal.Juegos == "Sí") {
+            document.getElementById('actividadcheck_y').checked = true;
+            showfield(true,'actividades');
+            if (datos_principal.Bromas == "No") {
+                document.getElementById('bromascheck_n').checked = true;
+            } else if (datos_principal.Bromas == "Sí") {
+                document.getElementById('bromascheck_y').checked = true;            
+            }
+            if (datos_principal.Propuestas != "") {
+                document.getElementById('propuestaSwitch').checked = true;
+                showfield(true,'propuesta-input');
+                document.getElementById('Propuesta').value = datos_principal.Propuestas;
+            } else {
+                document.getElementById('propuestaSwitch').checked = false;
+                showfield(false,'propuesta-input');
+                document.getElementById('Propuesta').value = "";
+            }
+        }
         
-    } else {
-        document.getElementById('flexSwitchCheckDefault').checked = false;
-        showfield(false,'alergenos-input');
-        document.getElementById('Alergenos').value = "";
     }
-    if (datos_principal.Necesidades != "") {
-        document.getElementById('necesidadesSwitch').checked = true;
-        showfield(true,'necesidades-input');
-        document.getElementById('Necesidades').value = datos_principal.Necesidades;
-        console.log(datos_principal.Necesidades);
-    } else {
-        document.getElementById('necesidadesSwitch').checked = false;
-        showfield(false,'necesidades-input');
-        document.getElementById('Necesidades').value = "";
-    }
+
 
 
 
