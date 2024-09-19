@@ -329,22 +329,24 @@ async function getData() {
     }
     if (datos_principal.Alergenos != "") {
         document.getElementById('flexSwitchCheckDefault').checked = true;
-        document.getElementById('Alergenos').value = datos_principal.Alergenos;
         showfield(true,'alergenos-input');
+        document.getElementById('Alergenos').value = datos_principal.Alergenos;
+        
     } else {
         document.getElementById('flexSwitchCheckDefault').checked = false;
-        document.getElementById('Alergenos').value = "";
         showfield(false,'alergenos-input');
-    }/*
+        document.getElementById('Alergenos').value = "";
+    }
     if (datos_principal.Necesidades != "") {
         document.getElementById('necesidadesSwitch').checked = true;
-        document.getElementById('Necesidades').value = datos_principal.Necesidades;
         showfield(true,'necesidades-input');
+        document.getElementById('Necesidades').value = datos_principal.Necesidades;
+        console.log(datos_principal.Necesidades);
     } else {
         document.getElementById('necesidadesSwitch').checked = false;
-        document.getElementById('Necesidades').value = "";
         showfield(false,'necesidades-input');
-    }*/
+        document.getElementById('Necesidades').value = "";
+    }
 
 
 

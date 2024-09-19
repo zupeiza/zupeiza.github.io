@@ -26,7 +26,7 @@
     "alergenos": "Alergias/Intolerancias alimentarias",
     "placeholder-alergenos": "<input type=\"text\" class=\"form-control\" id=\"Alergenos\" name=\"Alergenos\" placeholder=\"Alérgenos\">",
     "necesidades": "Necesidades especiales",
-    "placeholder-necesidades": "<input type=\"text\" class=\"form-control\" id=\"necesidades-input\" name=\"Necesidades\" placeholder=\"Lugar de reposo, hueco para carrito...\">",
+    "placeholder-necesidades": "<input type=\"text\" class=\"form-control\" id=\"Necesidades\" name=\"Necesidades\" placeholder=\"Lugar de reposo, hueco para carrito...\">",
     "cerca-nenos": "Si hay mesa de niños, ¿dónde quieres estar?",
     "seleccion": "Selecciona una opción",
     "nenoscerca": "Cerca",
