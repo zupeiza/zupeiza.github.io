@@ -408,10 +408,43 @@ async function getData() {
         
                 formsprocesados++;
             }
-            while(formsprocesados<json.length) {
-                var num_neno = json.lenth - formsprocesados;
-                var datos_neno = json.find(r => r.Tipo == ('neno'+num_neno));
-                formsprocesados++;
+            
+            if (json.length > formsprocesados) {
+                document.getElementById('vienes-con-peques_y').checked = true;
+                vienennenos(true);
+                var num_neno = 1;
+                while(formsprocesados<json.length) {
+                    var datos_neno = json.find(n => n.Tipo == ('neno'+num_neno));
+                    formsprocesados++;
+
+                    document.getElementById('Nombre-neno'+num_neno).value = datos_neno.Nombre;
+                    document.getElementById('Edad-neno'+num_neno).value = datos_neno.Edad;
+                    if (datos_neno.Alergenos != "") {
+                        document.getElementById('flexSwitchCheck-neno'+num_neno).checked = true;
+                        showfield(true,'alergenos-neno'+num_neno+'-input');
+                        document.getElementById('Alergenos-neno'+num_neno).value = datos_neno.Alergenos;
+                    } else {
+                        document.getElementById('flexSwitchCheck-neno'+num_neno).checked = false;
+                        showfield(false,'alergenos-neno'+num_neno+'-input');
+                        document.getElementById('Alergenos-neno'+num_neno).value = "";
+                    }
+                    if (datos_neno.Necesidades != "") {
+                        document.getElementById('necesidadesSwitch-neno'+num_neno).checked = true;
+                        showfield(true,'necesidades-input-neno'+num_neno);
+                        document.getElementById('Necesidades-neno'+num_neno).value = datos_neno.Necesidades;
+                    } else {
+                        document.getElementById('necesidadesSwitch-neno'+num_neno).checked = false;
+                        showfield(false,'necesidades-input-neno'+num_neno);
+                        document.getElementById('Necesidades-neno'+num_neno).value = "";
+                    }
+                    if (formsprocesados != json.length) {
+                        num_neno++;
+                        addneno();
+                    }
+                }
+            } else {
+                document.getElementById('vienes-con-peques_n').checked = true;
+                vienennenos(false);
             }
 
         } else {
