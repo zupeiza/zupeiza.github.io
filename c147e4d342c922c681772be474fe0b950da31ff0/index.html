@@ -441,7 +441,6 @@
                                             </div>
                                             <div class="form-group mb-3 row"><label for="Telefono" class="col-md-5 col-form-label" data-i18n="telefono"></label>
                                                 <div class="col-md-7 text-start"><input type="tel" class="form-control" id="telefono-ppal" name="Telefono" required></div>
-                                                <input id="fullNumber" type="text" name="TelefonoCompleto" hidden>
                                             </div>
                                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                                                 <div class="col-md-7">
@@ -528,15 +527,15 @@
                                                 <hr class="my-4" />
                                                 <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qacompanante"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_2" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_2" data-i18n="no"></label></div>
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante3_3" value="Sí" onclick="vieneSecondForm(true,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante3_3" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_n" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_n" data-i18n="no"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_y" value="Sí" onclick="vieneSecondForm(true,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_y" data-i18n="si"></label></div>
                                                     </div>
                                                 </div>
                                             </form>
                                             <div class="p-3 mb-2 bg-light" id="div-acomp" hidden>
                                                 <form action="https://script.google.com/macros/s/AKfycbw8SbfpckGd_kBa1Cirm84_BAug3Xjx_JHBZpDogYGMi__MkqwM_xhZn5XVOP1GExYZaw/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
-                                                    <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre-acomp"></label>
-                                                        <div class="col-md-7  text-start"><input type="text" class="form-control" id="Nombre" name="Nombre"></div>
+                                                    <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre-acomp" class="col-md-5 col-form-label" data-i18n="nombre-acomp"></label>
+                                                        <div class="col-md-7  text-start"><input type="text" class="form-control" id="Nombre-acomp" name="Nombre"></div>
                                                     </div>
                                                     <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="menu"></label>
                                                         <div class="col-md-7 form-check  text-start">
@@ -545,26 +544,22 @@
                                                                 <label class="form-check-label" for="Vegano" data-i18n="vegano"></label>
                                                             </div>
                                                             <div class="form-check form-switch">
-                                                                <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
-                                                                <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-acomp-input');">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault-acomp" data-i18n="alergenos"></label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault-acomp" onclick="showfield(this.checked,'alergenos-acomp-input');">
                                                             </div>
-                                                            <div id="alergenos-acomp-input" hidden data-i18n="placeholder-alergenos"></div>
+                                                            <div id="alergenos-acomp-input" hidden data-i18n="placeholder-alergenosacomp"></div>
                                                             <div class="form-check form-switch">
                                                                 <label class="form-check-label" for="necesidadesSwitch-acomp" data-i18n="necesidades"></label>
                                                                 <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch-acomp" onclick="showfield(this.checked,'necesidades-input-acomp');">
                                                             </div>
-                                                            <div id="necesidades-input-acomp" hidden data-i18n="placeholder-necesidades"></div>    
+                                                            <div id="necesidades-input-acomp" hidden data-i18n="placeholder-necesidadesacomp"></div>    
                                                         </div>
                                                     </div>
                                                     <div class="form-group row"><label class="col-md-5 col-form-label" data-i18n="qacomp-actividad"></label>
                                                         <div class="col-md-7 text-start">
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí"><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí"><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
                                                         </div>
-                                                                    
-                                                    <!--input class="d-none" type="text" class="form-control" id="telefono-form-acomp" name="Telefono">
-                                                    <input class="d-none" id="fullNumber-form-acomp" type="text" name="TelefonoCompleto">
-                                                    <input class="d-none" type="password" class="form-control" id="contrasena-form-acomp" name="Contrasena"-->
                                                     </div>    
                                                 </form>
                                             </div><!--div-acomp-->
@@ -572,8 +567,8 @@
                                             <form>
                                                 <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qpeques"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_2" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_2" data-i18n="no"></label></div>
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques6_3" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques6_3" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_n" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques_n" data-i18n="no"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_y" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques_y" data-i18n="si"></label></div>
                                                     </div>
                                                 </div>
                                             </form>
@@ -582,8 +577,8 @@
                                                 <form action="https://script.google.com/macros/s/AKfycbw8SbfpckGd_kBa1Cirm84_BAug3Xjx_JHBZpDogYGMi__MkqwM_xhZn5XVOP1GExYZaw/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
                                                     <div id="nenos-rows">
                                                         <div class="mb-3 row" id="neno1">
-                                                            <div class="col" data-i18n="placeholder-neno-nombre"></div>
-                                                            <div class="col" data-i18n="placeholder-neno-edad"></div>
+                                                            <div class="col" data-i18n="placeholder-neno1-nombre"></div>
+                                                            <div class="col" data-i18n="placeholder-neno1-edad"></div>
                                                         </div>
                                                         <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                                                             <div class="col-md-7 form-check  text-start">
@@ -591,17 +586,14 @@
                                                                     <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
                                                                     <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-neno1-input');">
                                                                 </div>
-                                                                <div id="alergenos-neno1-input" hidden data-i18n="placeholder-alergenos"></div>
+                                                                <div id="alergenos-neno1-input" hidden data-i18n="placeholder-alergenos1"></div>
                                                                 <div class="form-check form-switch">
                                                                     <label class="form-check-label" for="necesidadesSwitch-neno1" data-i18n="necesidades"></label>
                                                                     <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch-neno1" onclick="showfield(this.checked,'necesidades-input-neno1');">
                                                                 </div>
-                                                                <div id="necesidades-input-neno1" hidden data-i18n="placeholder-necesidades"></div>  
+                                                                <div id="necesidades-input-neno1" hidden data-i18n="placeholder-necesidades1"></div>  
                                                             </div>
                                                         </div>
-                                                        <!--input type="text" class="form-control d-none" id="telefono-form-neno1" name="Telefono" >
-                                                        <input class="d-none" id="fullNumber-form-neno1" type="text" name="TelefonoCompleto" >
-                                                        <input class="d-none" type="password" class="form-control" id="contrasena-form-neno1" name="Contrasena"-->        
                                                     </div>
                                                 </form>
                                                 </div>

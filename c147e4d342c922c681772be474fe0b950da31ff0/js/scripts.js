@@ -313,6 +313,7 @@ async function getData() {
 
   function rellenar(json) {
     var datos_principal = json.find(r => r.Tipo == 'principal');
+    var formsprocesados = 1;
     document.getElementById('Nombre').value = datos_principal.Nombre;
     document.getElementById('Email').value = datos_principal.Email;
     if (datos_principal.Asistencia == "No") {
@@ -367,7 +368,57 @@ async function getData() {
                 document.getElementById('Propuesta').value = "";
             }
         }
+        console.log(json.length);
+        if (json.length > 1) {
+            var datos_acomp = json.find(r => r.Tipo == 'acomp');
+            if (datos_acomp) {
+                console.log('Hay acompañante')
+                document.getElementById('vienes-con-acompanante_y').checked = true;
+                vieneSecondForm(true,'div-acomp');
+                document.getElementById('Nombre-acomp').value = datos_acomp.Nombre;
+                if (datos_acomp.Vegano == "on") {
+                    document.getElementById('Vegano-acomp').checked = true;
+                } else {
+                    document.getElementById('Vegano-acomp').checked = false;
+                }
+                if (datos_acomp.Alergenos != "") {
+                    document.getElementById('flexSwitchCheckDefault-acomp').checked = true;
+                    showfield(true,'alergenos-acomp-input');
+                    document.getElementById('Alergenos-acomp').value = datos_acomp.Alergenos;
+                } else {
+                    document.getElementById('flexSwitchCheckDefault-acomp').checked = false;
+                    showfield(false,'alergenos-acomp-input');
+                    document.getElementById('Alergenos-acomp').value = "";
+                }
+                if (datos_acomp.Necesidades != "") {
+                    document.getElementById('necesidadesSwitch-acomp').checked = true;
+                    showfield(true,'necesidades-input-acomp');
+                    document.getElementById('Necesidades-acomp').value = datos_acomp.Necesidades;
+                } else {
+                    document.getElementById('necesidadesSwitch-acomp').checked = false;
+                    showfield(false,'necesidades-input-acomp');
+                    document.getElementById('Necesidades-acomp').value = "";
+                }
+                if (datos_principal.Juegos == "No") {
+                    document.getElementById('actividadcheckacomp_n').checked = true;
+                } else if (datos_principal.Juegos == "Sí") {
+                    document.getElementById('actividadcheckacomp_y').checked = true;
+                }
         
+        
+                formsprocesados++;
+            }
+            while(formsprocesados<json.length) {
+                var num_neno = json.lenth - formsprocesados;
+                var datos_neno = json.find(r => r.Tipo == ('neno'+num_neno));
+                formsprocesados++;
+            }
+
+        } else {
+            console.log('No hay más registros')
+            document.getElementById('vienes-con-acompanante_n').checked = true;
+            vieneSecondForm(false,'div-acomp');
+        }
     }
 
 
