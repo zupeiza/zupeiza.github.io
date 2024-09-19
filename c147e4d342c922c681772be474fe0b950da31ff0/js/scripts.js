@@ -8,13 +8,19 @@
 // 
 
 window.onload = function () {
+    var hasParam = window.location.href.indexOf('form')
+    console.log(hasParam);
+    if(hasParam != -1) {
+        $('#form-modal').modal('show');
+    }
+/*
     let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('form-modal')) // Returns a Bootstrap modal instance
     if (document.URL.substring('#form-modal')) {
         // Show or hide:
         modal.show();
     } else {
         modal.hide();
-    }
+    }*/
 };
 
 window.addEventListener('DOMContentLoaded', event => {
