@@ -326,7 +326,7 @@ async function getData() {
         document.getElementById('Vegano').checked = true;
     } else {
         document.getElementById('Vegano').checked = false;
-    }/*
+    }
     if (datos_principal.Alergenos != "") {
         document.getElementById('flexSwitchCheckDefault').checked = true;
         document.getElementById('Alergenos').value = datos_principal.Alergenos;
@@ -335,7 +335,7 @@ async function getData() {
         document.getElementById('flexSwitchCheckDefault').checked = false;
         document.getElementById('Alergenos').value = "";
         showfield(false,'alergenos-input');
-    }
+    }/*
     if (datos_principal.Necesidades != "") {
         document.getElementById('necesidadesSwitch').checked = true;
         document.getElementById('Necesidades').value = datos_principal.Necesidades;
