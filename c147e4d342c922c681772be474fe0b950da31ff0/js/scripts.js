@@ -8,10 +8,12 @@
 // 
 
 window.onload = function () {
+    let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('form-modal')) // Returns a Bootstrap modal instance
     if (document.URL.substring('#form-modal')) {
-        let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('form-modal')) // Returns a Bootstrap modal instance
         // Show or hide:
         modal.show();
+    } else {
+        modal.hide();
     }
 };
 
@@ -196,11 +198,6 @@ function vieneSecondForm(rvsp,formid) {
     })
 }
 
-function rellenar(formid) {
-
-}
-
-
 function vienennenos(rvsp) {
     showfield(rvsp,'nenos');
     console.log(document.querySelectorAll('.neno'));
@@ -286,14 +283,70 @@ async function getData() {
         (document.querySelector('#retrieve-ko')).classList.remove("d-none");
       } else {
         (document.querySelector('#retrieve-ko')).classList.add("d-none");
-        rellenar(json);
+        if (checkPwd(json)) {
+            rellenar(json);
+        }
       }
     } catch (error) {
       console.error(error.message);
     }
   }
 
-  function rellenar (json) {
-    formsdata = JSON.stringify(json);
+  function checkPwd (json) {
+    var datos_principal = json.find(r => r.Tipo == 'principal');
+    if (document.getElementById('password').value != datos_principal.Contrasena) {
+        (document.querySelector('#retrieve-pwd-ko')).classList.remove("d-none");
+        return false;
+    } else {
+        (document.querySelector('#retrieve-pwd-ko')).classList.add("d-none");
+        return true;
+    }
+//    alert(JSON.stringify(json.find(r => r.Tipo == 'principal')));
+//    var formsdata = JSON.stringify(json);  
+  }
+
+  function rellenar(json) {
+    var datos_principal = json.find(r => r.Tipo == 'principal');
+    document.getElementById('Nombre').value = datos_principal.Nombre;
+    document.getElementById('Email').value = datos_principal.Email;
+    if (datos_principal.Asistencia == "No") {
+        document.getElementById('asistencia_y').checked = false;
+        document.getElementById('asistencia_n').checked = true;
+        vienes(false);
+    } else {
+        document.getElementById('asistencia_y').checked = true;
+        document.getElementById('asistencia_n').checked = false;
+        vienes(true);
+    }
+    if (datos_principal.Vegano == "on") {
+        document.getElementById('Vegano').checked = true;
+    } else {
+        document.getElementById('Vegano').checked = false;
+    }
+    if (datos_principal.Alergenos != "") {
+        document.getElementById('flexSwitchCheckDefault').checked = true;
+        document.getElementById('Alergenos').value = datos_principal.Alergenos;
+        showfield(true,'alergenos-input');
+    } else {
+        document.getElementById('flexSwitchCheckDefault').checked = false;
+        document.getElementById('Alergenos').value = "";
+        showfield(false,'alergenos-input');
+    }
+    if (datos_principal.Necesidades != "") {
+        document.getElementById('necesidadesSwitch').checked = true;
+        document.getElementById('Necesidades').value = datos_principal.Necesidades;
+        showfield(true,'necesidades-input');
+    } else {
+        document.getElementById('necesidadesSwitch').checked = false;
+        document.getElementById('Necesidades').value = "";
+        showfield(false,'necesidades-input');
+    }
+
+
+
+    
+
+//    var formsdata = JSON.stringify(json);
+
     
   }
