@@ -316,19 +316,17 @@ async function getData() {
     document.getElementById('Nombre').value = datos_principal.Nombre;
     document.getElementById('Email').value = datos_principal.Email;
     if (datos_principal.Asistencia == "No") {
-        document.getElementById('asistencia_y').checked = false;
         document.getElementById('asistencia_n').checked = true;
         vienes(false);
     } else {
         document.getElementById('asistencia_y').checked = true;
-        document.getElementById('asistencia_n').checked = false;
         vienes(true);
     }
     if (datos_principal.Vegano == "on") {
         document.getElementById('Vegano').checked = true;
     } else {
         document.getElementById('Vegano').checked = false;
-    }
+    }/*
     if (datos_principal.Alergenos != "") {
         document.getElementById('flexSwitchCheckDefault').checked = true;
         document.getElementById('Alergenos').value = datos_principal.Alergenos;
@@ -346,7 +344,7 @@ async function getData() {
         document.getElementById('necesidadesSwitch').checked = false;
         document.getElementById('Necesidades').value = "";
         showfield(false,'necesidades-input');
-    }
+    }*/
 
 
 
