@@ -8,20 +8,19 @@
 // 
 
 window.onload = function () {
-    var hasParam = window.location.href.indexOf('form')
+    var hasParam = window.location.href.indexOf('form=yes')
     console.log(hasParam);
     if(hasParam != -1) {
         $('#form-modal').modal('show');
     }
-/*
-    let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('form-modal')) // Returns a Bootstrap modal instance
-    if (document.URL.substring('#form-modal')) {
-        // Show or hide:
-        modal.show();
-    } else {
-        modal.hide();
-    }*/
+
 };
+
+function modalReopen() {
+    window.location.href = window.location.href.replace('?form=yes','');
+    console.log(window.location.href)
+    location.reload();
+}
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -107,6 +106,7 @@ window.intlTelInput(input, {
 
 window.addEventListener("load", function() {
     const formenviar = document.getElementById('form-enviar');
+
     formenviar.addEventListener("submit", function(e) {
         e.preventDefault();
         let ready = true;
@@ -123,12 +123,14 @@ window.addEventListener("load", function() {
             formsIdArray.push(form.id);
             if (!form.checkValidity() && (ready == true)) {
                 ready = false;
-                alert('El formulario '+form.id+' está incompleto');
+                (document.querySelector('#validacion-ko')).classList.remove("d-none");
             };
         }); //foreach
         console.log("Pulsado");
         console.log(ready);
         if(ready==true) {
+            loading();
+            (document.querySelector('#validacion-ko')).classList.add("d-none");
             var arrayLength = formsIdArray.length;
             for (var i = 0; i < arrayLength; i++) {
                 const f = document.getElementById(formsIdArray[i]);
@@ -160,9 +162,11 @@ window.addEventListener("load", function() {
                         (document.querySelector('#formularios')).classList.add("d-none");
                         (document.querySelector('#form-ok')).classList.remove("d-none");
                         (document.querySelector('#form-ko')).classList.add("d-none");
+                        loading(false);
                     }
                 })
                 .catch(error => {
+                    loading(false);
                     (document.querySelector('#formularios')).classList.add("d-none");
                     (document.querySelector('#form-ko')).classList.remove("d-none");
                     (document.querySelector('#form-ok')).classList.add("d-none");
@@ -171,6 +175,23 @@ window.addEventListener("load", function() {
         }
     });
 });
+
+function loading(proceso) {
+    if (proceso) {
+        $(".btn .fa-spinner").show();
+        (document.querySelector('#txt-enviar')).classList.add("d-none");
+        (document.querySelector('#txt-cargando')).classList.remove("d-none");
+    } else {
+        $(".btn .fa-spinner").hide();
+        (document.querySelector('#txt-enviar')).classList.remove("d-none");
+        (document.querySelector('#txt-cargando')).classList.add("d-none");
+    }
+     /* var button = document.getElementById("submit");
+      button.innerHTML = "Loading...";
+      var span = document.getElementById("button_span");
+      span.classList.add("spinner-grow");
+      span.classList.add("spinner-grow-sm");*/
+}
 
 function showfield(check,field){
     console.log(field);
@@ -280,7 +301,7 @@ function retrieve() {
 }
 
 async function getData() {
-    const url = "https://script.google.com/macros/s/AKfycbw8SbfpckGd_kBa1Cirm84_BAug3Xjx_JHBZpDogYGMi__MkqwM_xhZn5XVOP1GExYZaw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','');
+    const url = "https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','');
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -302,7 +323,7 @@ async function getData() {
     }
   }
 
-  function checkPwd (json) {
+function checkPwd (json) {
     var datos_principal = json.find(r => r.Tipo == 'principal');
     if (document.getElementById('password').value != datos_principal.Contrasena) {
         (document.querySelector('#retrieve-pwd-ko')).classList.remove("d-none");
@@ -313,9 +334,9 @@ async function getData() {
     }
 //    alert(JSON.stringify(json.find(r => r.Tipo == 'principal')));
 //    var formsdata = JSON.stringify(json);  
-  }
+}
 
-  function rellenar(json) {
+function rellenar(json) {
     var datos_principal = json.find(r => r.Tipo == 'principal');
     var formsprocesados = 1;
     document.getElementById('Nombre').value = datos_principal.Nombre;
@@ -457,13 +478,6 @@ async function getData() {
             vieneSecondForm(false,'div-acomp');
         }
     }
-
-
-
-
-    
-
 //    var formsdata = JSON.stringify(json);
+}
 
-    
-  }

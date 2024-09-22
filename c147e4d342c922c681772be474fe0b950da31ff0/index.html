@@ -36,13 +36,13 @@
                 <!--a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a-->
                 <ul id="languagesFlags" style="list-style-type: none; padding-top: 8px;">
                   <li style="display: inline-block">
-                    <a class="nav-link" href="index.html" onclick="setLanguage('es')"><span class="fi fi-es"></span></a>
+                    <a class="nav-link" href="index.html" onclick="setLanguagePreference('es')"><span class="fi fi-es"></span></a>
                   </li>
                   <li style="display: inline-block">
-                    <a class="nav-link" href="index.html" onclick="setLanguage('gl')"><span class="fi fi-es-ga"></span></a>
+                    <a class="nav-link" href="index.html" onclick="setLanguagePreference('gl')"><span class="fi fi-es-ga"></span></a>
                   </li>
                   <li style="display: inline-block">
-                    <a class="nav-link" href="index.html" onclick="setLanguage('en')"><span class="fi fi-ie"></span></a>
+                    <a class="nav-link" href="index.html" onclick="setLanguagePreference('en')"><span class="fi fi-ie"></span></a>
                   </li>
                 </ul>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="dropdownSections">
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal1" data-i18n="nosotras"></a></li>
-                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" onclick="modalReopen();" href="#form-modal" data-i18n="formulario"></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal3" data-i18n="informacion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal4" data-i18n="celebracion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal5" data-i18n="lejos" ></a></li>
@@ -133,7 +133,7 @@
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal" onclick="modalReopen();">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -504,15 +504,15 @@
                                                                             
                                                 <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qactividad"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
                                                     </div>
                                                 </div>
                                                 <div id="actividades" hidden>
                                                     <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qconsentimiento-broma"></label>
                                                         <div class="col-md-7  text-start">
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí"><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No""><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí" required><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No" required><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
                                                         </div>
                                                     </div>
                                                     <div class="form-check form-switch  text-start">
@@ -558,8 +558,8 @@
                                                     </div>
                                                     <div class="form-group row"><label class="col-md-5 col-form-label" data-i18n="qacomp-actividad"></label>
                                                         <div class="col-md-7 text-start">
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí"><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
                                                         </div>
                                                     </div>    
                                                 </form>
@@ -608,22 +608,31 @@
                                         </div>
                                         <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" method="POST">
                                             <hr class="my-4" />
-                                            <div class="form-group mb-3 row"><label for="Comentarios" class="col-md-5 col-form-label" data-i18n="qcomentario"></label>
+                                            <div class="form-group mb-3 row"><label for="comentarios" class="col-md-5 col-form-label" data-i18n="qcomentario"></label>
                                                 <div class="col-md-7  text-start"><textarea class="form-control" id="comentarios" name="Comentarios"></textarea></div>
                                             </div>
                                         </form>
                                         <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" method="POST">
                                             <hr class="my-4" />
                                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
-                                                <div class="col-md-7  text-start"><button class="btn btn-primary btn-lg" type="submit" data-i18n="enviar"></button></div>
+                                                <div class="col-md-7  text-start">
+                                                    <button id="btn-enviar" class="btn btn-primary btn-lg" type="submit">
+                                                        <i class="fas fa-spinner fa-spin" style="display:none;"></i>
+                                                        <span id="txt-enviar" class="btn-text" data-i18n="enviar"></span>
+                                                        <span id="txt-cargando" class="btn-text d-none" data-i18n="cargando"></span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </form>
+                                        <div id="validacion-ko" class="alert alert-warning d-flex align-items-center d-none" role="alert">
+                                            <div data-i18n="faltan-campos"></div>
+                                        </div>    
                                     </div>
                                     <div id="form-ok" class="alert alert-success d-flex align-items-center d-none" role="alert">
                                         <div data-i18n="gracias-respuesta"></div>
                                     </div>
-                                    <div id="form-ko" class="alert alert-success d-flex align-items-center d-none" role="alert">
-                                        <div data-i18n="gracias-respuesta"></div>
+                                    <div id="form-ko" class="alert alert-warning d-flex align-items-center d-none" role="alert">
+                                        <div data-i18n="fallo-respuesta"></div>
                                     </div>
                                     <!--/span-->
                                     <div class="mt-9">
