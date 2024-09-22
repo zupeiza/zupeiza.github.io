@@ -504,15 +504,15 @@
                                                                             
                                                 <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qactividad"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');" checked><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
                                                     </div>
                                                 </div>
                                                 <div id="actividades" hidden>
                                                     <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qconsentimiento-broma"></label>
                                                         <div class="col-md-7  text-start">
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí" required><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No" required><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí" checked><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No"><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
                                                         </div>
                                                     </div>
                                                     <div class="form-check form-switch  text-start">
@@ -528,8 +528,8 @@
                                                 <hr class="my-4" />
                                                 <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qacompanante"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_n" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_n" data-i18n="no"></label></div>
                                                         <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_y" value="Sí" onclick="vieneSecondForm(true,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_n" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_n" data-i18n="no"></label></div>
                                                     </div>
                                                 </div>
                                             </form>
@@ -558,8 +558,8 @@
                                                     </div>
                                                     <div class="form-group row"><label class="col-md-5 col-form-label" data-i18n="qacomp-actividad"></label>
                                                         <div class="col-md-7 text-start">
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
                                                         </div>
                                                     </div>    
                                                 </form>
@@ -568,8 +568,8 @@
                                             <form>
                                                 <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qpeques"></label>
                                                     <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_n" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques_n" data-i18n="no"></label></div>
                                                         <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_y" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_n" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques_n" data-i18n="no"></label></div>
                                                     </div>
                                                 </div>
                                             </form>

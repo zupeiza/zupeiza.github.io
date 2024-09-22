@@ -123,13 +123,12 @@ window.addEventListener("load", function() {
             formsIdArray.push(form.id);
             if (!form.checkValidity() && (ready == true)) {
                 ready = false;
-                (document.querySelector('#validacion-ko')).classList.remove("d-none");
             };
         }); //foreach
         console.log("Pulsado");
         console.log(ready);
         if(ready==true) {
-            loading();
+            loading(true);
             (document.querySelector('#validacion-ko')).classList.add("d-none");
             var arrayLength = formsIdArray.length;
             for (var i = 0; i < arrayLength; i++) {
@@ -172,6 +171,8 @@ window.addEventListener("load", function() {
                     (document.querySelector('#form-ok')).classList.add("d-none");
                 })
             }
+        } else {
+            (document.querySelector('#validacion-ko')).classList.remove("d-none");
         }
     });
 });
@@ -205,7 +206,6 @@ function showfield(check,field){
     fieldToHideShow.querySelectorAll('.form-control').forEach(function(el) {
         el.required = el.checkVisibility();
     });
-
 }
 
 function vieneSecondForm(rvsp,formid) {
