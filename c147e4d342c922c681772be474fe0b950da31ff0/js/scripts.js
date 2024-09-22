@@ -136,7 +136,11 @@ window.addEventListener("load", function() {
                 var tipo = formsIdArray[i].replace('form-','');
                 data.append('Tipo',tipo);
                 data.set('Telefono',document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ',''));
+                if (tipo == 'principal') {
+                    data.set('Comentarios',document.getElementById('comentarios').value);
+                }
                 data.set('Contrasena',document.getElementById('password').value);
+                data.set('Asistencia','Sí');
 
                 const value = Object.fromEntries(data.entries());
                 console.log(value);
@@ -245,19 +249,19 @@ function removeneno(){
 }
 
 const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");
-        togglePassword.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-            
-            // toggle the icon
-            this.classList.toggle("bi-eye");
-        });// prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-        });
+const password = document.querySelector("#password");
+togglePassword.addEventListener("click", function () {
+    // toggle the type attribute
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    
+    // toggle the icon
+    this.classList.toggle("bi-eye");
+});// prevent form submit
+const form = document.querySelector("form");
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+});
 
 function retrieve() {
     
@@ -271,7 +275,7 @@ function retrieve() {
         getData();
     }
   
-    return false;
+    return;
 
 }
 
