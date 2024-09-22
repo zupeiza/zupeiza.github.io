@@ -62,7 +62,6 @@
     "placeholder-neno4-edad": "<input id=\"Edad-neno1\" name=\"Edad\" type=\"number\" min=\"0\" class=\"form-control\" placeholder=\"Edad\" aria-label=\"Edad\">",
     "qcomentario": "¿Quieres añadir algún comentario?",
     "enviar": "Enviar",
-    "fotos": "Las fotos",
     "gracias-respuesta": "¡Gracias por tu respuesta! Los datos se han guardado correctamente",
     "fallo-respuesta": "Algo ha fallado... Por favor inténtalo de nuevo",
     "faltan-campos": "Hay campos pendientes de rellenar",
