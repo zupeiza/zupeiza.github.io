@@ -139,6 +139,7 @@ window.addEventListener("load", function() {
                 data.set('Telefono',document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ',''));
                 if (tipo == 'principal') {
                     data.set('Comentarios',document.getElementById('comentarios').value);
+                    data.set('Transporte',document.getElementById('transporte').value);
                 }
                 data.set('Contrasena',document.getElementById('password').value);
                 data.set('Asistencia','Sí');
@@ -180,13 +181,13 @@ window.addEventListener("load", function() {
 
 function loading(proceso) {
     if (proceso) {
-        $(".spinicon").show();
-        $(".sendicon").hide();
+        (document.querySelector('#sendicon')).classList.add("d-none");
+        (document.querySelector('#spinicon')).classList.remove("d-none");
         (document.querySelector('#txt-enviar')).classList.add("d-none");
         (document.querySelector('#txt-cargando')).classList.remove("d-none");
     } else {
-        $(".spinicon").hide();
-        $(".sendicon").show();
+        (document.querySelector('#sendicon')).classList.remove("d-none");
+        (document.querySelector('#spinicon')).classList.add("d-none");
         (document.querySelector('#txt-enviar')).classList.remove("d-none");
         (document.querySelector('#txt-cargando')).classList.add("d-none");
     }
