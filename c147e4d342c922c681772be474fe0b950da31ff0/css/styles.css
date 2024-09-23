@@ -11348,7 +11348,17 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Eagle Lake", "Montserrat" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #212529;
+  color: var(--bs-white);
 }
+
+#contact-footer a {
+  color: var(--bs-white);
+}
+#contact-footer a:hover {
+  color: #0d6efd;
+}
+
 
 .intl-tel-input { width: 100%; }
 .iti-flag {

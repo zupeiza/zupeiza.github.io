@@ -75,6 +75,7 @@
     "fallo-respuesta": "Algo ha fallado... Por favor inténtalo de nuevo",
     "faltan-campos": "Hay campos pendientes de rellenar",
     "fotos-extend": "Aquí estarán accesibles las fotos después de la boda",
+    "fotos-long": "",
     "boton-cerrar": "Cerrar",
     "boton-recuperar": "Recuperar datos",
     "data-missing": "Faltan datos para realizar la búsqueda",
@@ -89,5 +90,6 @@
     "formsubmiterrorblock": "Error al enviar el mensaje",
     "formsubmitbtn": "Enviar mensaje",
     "no": "No",
-    "si": "Sí"
+    "si": "Sí",
+    "datoscontacto": "Contacto<br>Isa (+34) 646176099 / Jes (+34) 600664019<br>"
 }

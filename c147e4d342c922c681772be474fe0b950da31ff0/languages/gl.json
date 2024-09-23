@@ -75,6 +75,7 @@
     "faltan-campos": "Hay campos pendientes de rellenar",
     "fotos": "As fotos",
     "fotos-extend": "Aquí estarán accesibles as fotos despois da voda",
+    "fotos-long": "",
     "boton-cerrar": "Pechar",
     "boton-recuperar": "Recuperar datos",
     "data-missing": "Faltan datos para realizar a procura",
@@ -89,6 +90,7 @@
     "formsubmiterrorblock": "Erro no envío da mensaxe",
     "formsubmitbtn": "Enviar mensaxe",
     "no": "Non",
-    "si": "Sí"
+    "si": "Sí",
+    "datoscontacto": "Contacto:<br>Jes (+34) 600664019 / Zupe (+34) 646176099<br>"
 
 }

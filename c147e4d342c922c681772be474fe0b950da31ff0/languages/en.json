@@ -75,6 +75,7 @@
     "faltan-campos": "Some data are missing",
     "fotos": "The pictures",
     "fotos-extend": "Pictures will be available here after the wedding",
+    "fotos-long": "",
     "boton-cerrar": "Close",
     "boton-recuperar": "Recover data",
     "data-missing": "Some data are missing",
@@ -89,5 +90,6 @@
     "formsubmiterrorblock": "Error sending message!",
     "formsubmitbtn": "Send message",
     "no": "No",
-    "si": "Yes"
+    "si": "Yes",
+    "datoscontacto": "Contacto:<br>Jes (+34) 600664019 / Zupe (+34) 646176099<br>"
 }
