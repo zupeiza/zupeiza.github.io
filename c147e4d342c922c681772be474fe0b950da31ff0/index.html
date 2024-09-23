@@ -51,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="dropdownSections">
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal1" data-i18n="nosotras"></a></li>
-                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" onclick="modalReopen();" href="#form-modal" data-i18n="formulario"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal3" data-i18n="informacion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal4" data-i18n="celebracion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal5" data-i18n="lejos" ></a></li>
@@ -133,7 +133,7 @@
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal" onclick="modalReopen();">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
@@ -396,7 +396,7 @@
                                     <p class="item-intro text-muted" data-i18n="nosotras-extend"></p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
                                     <span data-i18n="nosotras-long"></span>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         <span data-i18n="boton-cerrar"></span>
                                     </button>
@@ -502,17 +502,36 @@
                                                     </div>
                                                 </div>
                                                                             
-                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qactividad"></label>
-                                                    <div class="col-md-7  text-start">
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');" checked><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
-                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                <div class="form-group mb-5 row">
+                                                    <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qactividad"></label>
+                                                        <div data-i18n="actividadHelpBlock" class="form-text"></div>
                                                     </div>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                    
                                                 </div>
                                                 <div id="actividades" hidden>
-                                                    <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="qconsentimiento-broma"></label>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qconsentimiento-broma"></label>
+                                                        <div data-i18n="bromasHelpBlock" class="form-text"></div>
+                                                        </div>
                                                         <div class="col-md-7  text-start">
                                                             <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí" checked><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
                                                             <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No"><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group mt-5 mb-5 row">
+                                                        <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qkaraoke"></label>
+                                                        </div>
+                                                        <div class="col-md-7  text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheck_y" value="Sí" checked><label class="form-check-label custom-control-label" for="karaokecheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheck_n" value="No"><label class="form-check-label custom-control-label" for="karaokecheck_n" data-i18n="no"></label></div>
                                                         </div>
                                                     </div>
                                                     <div class="form-check form-switch  text-start">
@@ -526,7 +545,10 @@
                                         <div class="vienes" hidden>
                                             <form>
                                                 <hr class="my-4" />
-                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qacompanante"></label>
+                                                <div class="form-group mb-3 row">
+                                                    <div class="col-md-5 col-form-label" >
+                                                        <label data-i18n="qacompanante"></label>
+                                                    </div>
                                                     <div class="col-md-7  text-start">
                                                         <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_y" value="Sí" onclick="vieneSecondForm(true,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_y" data-i18n="si"></label></div>
                                                         <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_n" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_n" data-i18n="no"></label></div>
@@ -556,12 +578,42 @@
                                                             <div id="necesidades-input-acomp" hidden data-i18n="placeholder-necesidadesacomp"></div>    
                                                         </div>
                                                     </div>
-                                                    <div class="form-group row"><label class="col-md-5 col-form-label" data-i18n="qacomp-actividad"></label>
-                                                        <div class="col-md-7 text-start">
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
-                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5 col-form-label" >
+                                                            <label data-i18n="qacomp-actividad"></label>
+                                                            <div data-i18n="actividadHelpBlock" class="form-text"></div>
                                                         </div>
-                                                    </div>    
+                                                        <div class="col-md-7 text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí" onclick="showfield(true,'actividadesacomp');" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No" onclick="showfield(false,'actividadesacomp');" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="actividadesacomp" hidden>
+                                                        <div class="form-group mb-5 row">
+                                                            <div class="col-md-5 col-form-label" >
+                                                                <label data-i18n="qconsentimiento-bromaacomp"></label>
+                                                                <div data-i18n="bromasHelpBlock" class="form-text"></div>
+                                                            </div>
+                                                            <div class="col-md-7  text-start">
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="bromascheckacomp_y" data-i18n="si"></label></div>
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="bromascheckacomp_n" data-i18n="no"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group mb-5 row">
+                                                            <div class="col-md-5 col-form-label">
+                                                                <label data-i18n="qkaraokeacomp"></label>
+                                                            </div>
+                                                            <div class="col-md-7  text-start">
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="karaokecheckacomp_y" data-i18n="si"></label></div>
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="karaokecheckacomp_n" data-i18n="no"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-check form-switch  text-start">
+                                                            <label class="form-check-label" for="propuestaSwitchacomp" data-i18n="propuestaacomp"></label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" value="" id="propuestaSwitchacomp" onclick="showfield(this.checked,'propuesta-inputacomp');">
+                                                        </div>
+                                                        <div id="propuesta-inputacomp" hidden data-i18n="placeholder-propuestaacomp"></div>
+                                                    </div>       
                                                 </form>
                                             </div><!--div-acomp-->
                                             <hr class="my-4" />
@@ -608,16 +660,20 @@
                                         </div>
                                         <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" method="POST">
                                             <hr class="my-4" />
+                                            <div class="form-group mb-3 row"><label for="transporte" class="col-md-5 col-form-label" data-i18n="qtransporte"></label>
+                                                <div class="col-md-7  text-start"><textarea class="form-control" id="transporte" name="Transporte"></textarea></div>
+                                            </div><hr class="my-4" />
                                             <div class="form-group mb-3 row"><label for="comentarios" class="col-md-5 col-form-label" data-i18n="qcomentario"></label>
                                                 <div class="col-md-7  text-start"><textarea class="form-control" id="comentarios" name="Comentarios"></textarea></div>
                                             </div>
                                         </form>
                                         <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" method="POST">
                                             <hr class="my-4" />
-                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
-                                                <div class="col-md-7  text-start">
+                                            <div class="form-group mb-3 row">
+                                                <div class="col text-center">
                                                     <button id="btn-enviar" class="btn btn-primary btn-lg" type="submit">
-                                                        <i class="fas fa-spinner fa-spin" style="display:none;"></i>
+                                                        <i id="spinicon" class="fas fa-spinner fa-spin" style="display:none;"></i>
+                                                        <i id="sendicon" class="fas fa-paper-plane"></i>
                                                         <span id="txt-enviar" class="btn-text" data-i18n="enviar"></span>
                                                         <span id="txt-cargando" class="btn-text d-none" data-i18n="cargando"></span>
                                                     </button>
@@ -636,7 +692,7 @@
                                     </div>
                                     <!--/span-->
                                     <div class="mt-9">
-                                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                             <i class="fas fa-xmark me-1"></i>
                                             <span data-i18n="boton-cerrar"></span>
                                         </button>
@@ -662,7 +718,7 @@
                                     <p class="item-intro text-muted" data-i18n="informacion-extend"></p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
                                     <span data-i18n="informacion-long"></span>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         <span data-i18n="boton-cerrar"></span>
                                     </button>
@@ -686,7 +742,7 @@
                                     <h2 class="text-uppercase" data-i18n="celebracion"></h2>
                                     <p class="item-intro text-muted" data-i18n="celebracion-extend"></p>
                                     <span data-i18n="celebracion-long"></span>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         <span data-i18n="boton-cerrar"></span>
                                     </button>
@@ -711,7 +767,7 @@
                                     <p class="item-intro text-muted" data-i18n="lejos-extend" ></p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/europa1.png" alt="Europa" />
                                     <span data-i18n="lejos-long"></span>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         <span data-i18n="boton-cerrar"></span>
                                     </button>
@@ -736,7 +792,7 @@
                                     <p class="item-intro text-muted" data-i18n="fotos-extend"></p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
                                     <span data-i18n="fotos-long"></span>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         <span data-i18n="boton-cerrar"></span>
                                     </button>

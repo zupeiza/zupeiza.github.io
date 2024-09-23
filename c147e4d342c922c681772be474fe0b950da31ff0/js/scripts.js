@@ -16,11 +16,11 @@ window.onload = function () {
 
 };
 
-function modalReopen() {
+/*function modalReopen() {
     window.location.href = window.location.href.replace('?form=yes','');
     console.log(window.location.href)
     location.reload();
-}
+}*/
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -158,7 +158,8 @@ window.addEventListener("load", function() {
                         numEnviosOk++;
                     }
                     if (numEnviosOk == arrayLength){
-                        (document.querySelector('#formularios')).classList.add("d-none");
+                        //(document.querySelector('#formularios')).classList.add("d-none");
+                        getData();
                         (document.querySelector('#form-ok')).classList.remove("d-none");
                         (document.querySelector('#form-ko')).classList.add("d-none");
                         loading(false);
@@ -166,7 +167,7 @@ window.addEventListener("load", function() {
                 })
                 .catch(error => {
                     loading(false);
-                    (document.querySelector('#formularios')).classList.add("d-none");
+                    //(document.querySelector('#formularios')).classList.add("d-none");
                     (document.querySelector('#form-ko')).classList.remove("d-none");
                     (document.querySelector('#form-ok')).classList.add("d-none");
                 })
@@ -179,11 +180,13 @@ window.addEventListener("load", function() {
 
 function loading(proceso) {
     if (proceso) {
-        $(".btn .fa-spinner").show();
+        $(".spinicon").show();
+        $(".sendicon").hide();
         (document.querySelector('#txt-enviar')).classList.add("d-none");
         (document.querySelector('#txt-cargando')).classList.remove("d-none");
     } else {
-        $(".btn .fa-spinner").hide();
+        $(".spinicon").hide();
+        $(".sendicon").show();
         (document.querySelector('#txt-enviar')).classList.remove("d-none");
         (document.querySelector('#txt-cargando')).classList.add("d-none");
     }
@@ -383,6 +386,11 @@ function rellenar(json) {
             } else if (datos_principal.Bromas == "Sí") {
                 document.getElementById('bromascheck_y').checked = true;            
             }
+            if (datos_principal.Karaoke == "No") {
+                document.getElementById('karaokecheck_n').checked = true;
+            } else if (datos_principal.Karaoke == "Sí") {
+                document.getElementById('karaokecheck_y').checked = true;            
+            }
             if (datos_principal.Propuestas != "") {
                 document.getElementById('propuestaSwitch').checked = true;
                 showfield(true,'propuesta-input');
@@ -424,11 +432,33 @@ function rellenar(json) {
                     showfield(false,'necesidades-input-acomp');
                     document.getElementById('Necesidades-acomp').value = "";
                 }
-                if (datos_principal.Juegos == "No") {
+                if (datos_acomp.Juegos == "No") {
                     document.getElementById('actividadcheckacomp_n').checked = true;
-                } else if (datos_principal.Juegos == "Sí") {
+                    showfield(false,'actividadesacomp');
+                } else if (datos_acomp.Juegos == "Sí") {
                     document.getElementById('actividadcheckacomp_y').checked = true;
+                    showfield(true,'actividadesacomp');
+                    if (datos_acomp.Bromas == "No") {
+                        document.getElementById('bromascheckacomp_n').checked = true;
+                    } else if (datos_acomp.Bromas == "Sí") {
+                        document.getElementById('bromascheckacomp_y').checked = true;            
+                    }
+                    if (datos_acomp.Karaoke == "No") {
+                        document.getElementById('karaokecheckacomp_n').checked = true;
+                    } else if (datos_acomp.Karaoke == "Sí") {
+                        document.getElementById('karaokecheckacomp_y').checked = true;            
+                    }
+                    if (datos_acomp.Propuestas != "") {
+                        document.getElementById('propuestaSwitchacomp').checked = true;
+                        showfield(true,'propuesta-inputacomp');
+                        document.getElementById('Propuestaacomp').value = datos_acomp.Propuestas;
+                    } else {
+                        document.getElementById('propuestaSwitchacomp').checked = false;
+                        showfield(false,'propuesta-inputacomp');
+                        document.getElementById('Propuestaacomp').value = "";
+                    }
                 }
+            
         
         
                 formsprocesados++;
