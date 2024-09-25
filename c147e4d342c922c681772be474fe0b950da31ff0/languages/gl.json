@@ -1,9 +1,12 @@
 {
     "idioma": "Idioma",
     "titulo": "Unha voda de fantasía entre fentos",
-    "nombres": "Jes & Zupe",
+    "nombre1": "Jes",
+    "nombre2": "Zupe",
     "nosotras": "Nós",
-    "nosotras-extend": "",
+    "nosotras-extend": "Unha lamia galega e unha barda madrileña que se atoparon vivendo aventuras",
+    "nosotras1-long": "",
+    "nosotras2-long": "",
     "celebracion": "O lugar",
     "celebracion-extend": "",
     "celebracion-long": "<div class=\"row\"><iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2414.681127822261!2d-8.803188377955586!3d42.08657943588987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd258d051c8e8a95%3A0x8b2fb621a4e1f1a3!2sEl%20Jard%C3%ADn%20de%20los%20Helechos!5e1!3m2!1ses!2ses!4v1724578963503!5m2!1ses!2ses\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe><\/div><p><\/p><p>O sitio da celebración é El Jardín de los Helechos (Xardín dos Fentos), en Sermán (Gondomar), un xardín no medio do monte cheo, como o seu nome indica, de fentos e árbores centenarias.<\/p><img class=\"img-fluid d-block mx-auto\" src=\"assets/img/portfolio/4.jpg\" alt=\"Foto exterior do salón do Xardín dos Fentos\" \/><p>Na entrada, á esquerda, hai unha zona de aparcadoiro onde quen teñades vido en coche o podedes deixar. Se o tempo permite, 🤞 a cerimonia será no exterior, al igual que un pequeño aperitivo mentres nos poñemos o día, nos damos apertas e facemos fotos para o Instagram.<\/p><img class=\"img-fluid d-block mx-auto\" src=\"assets/img/portfolio/mapa_gl.jpg\" alt=\"Vista aérea do Xardín dos Fentos coas distintas ubicacións\" \/><p>A continuación, o banquete será no salón da finca, e despois intentaremos baixar a comida bailando na discoteca alí mesmo.<\/p><h3>O tempo<\/h3><p>Estamos en Galicia así que o tempo pode ser un pouco cambiante. Se non sabes moi ben qué agardar nin cánto abrigarte, agardamos que esta información sexa útil.<\/p><p>O 31 de maio, a temperatura en Gondomar xeralmente varía de 13 °C a 20 °C e rara vez baixa a menos de 9 °C ou sube a máis de 26 °C. É posible que sexa un día parcialmente nublado.<\/p><p>En promedio, hai unha probabilidade del 26 % de que aa precipitación total sexa de 1 milímetro en Gondomar en todo o día. É decir, que estadísticamente pode que caigan unhas pingas.<\/p>",
@@ -92,6 +95,7 @@
     "formsubmitbtn": "Enviar mensaxe",
     "no": "Non",
     "si": "Sí",
-    "datoscontacto": "Contacto:<br>Jes (+34) 600664019 / Zupe (+34) 646176099<br>"
+    "contacto": "Contacto",
+    "datoscontacto": "Jes (+34) 600664019 / Zupe (+34) 646176099<br>"
 
 }

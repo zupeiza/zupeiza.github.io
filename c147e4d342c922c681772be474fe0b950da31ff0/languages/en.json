@@ -1,9 +1,12 @@
 {
     "idioma": "Language",
     "titulo": "A fantasy wedding among fern",
-    "nombres": "Jes & Zupe",
+    "nombre1": "Jes",
+    "nombre2": "Zupe",
     "nosotras": "Us",
-    "nosotras-extend": "",
+    "nosotras-extend": "A galician lamia and a madrilenian bard that met living adventures",
+    "nosotras1-long": "",
+    "nosotras2-long": "",
     "celebracion": "The venue",
     "celebracion-extend": "",
     "celebracion-long": "<div class=\"row\"><iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2414.681127822261!2d-8.803188377955586!3d42.08657943588987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd258d051c8e8a95%3A0x8b2fb621a4e1f1a3!2sEl%20Jard%C3%ADn%20de%20los%20Helechos!5e1!3m2!1ses!2ses!4v1724578963503!5m2!1ses!2ses\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe><\/div><p><\/p><p>The celebration venue is El Jardín de los Helechos (The Ferns Garden), in Sermán (Gondomar), a garden in the  middle of the forest full, as its name indicates, of fern and centenary trees.<\/p><img class=\"img-fluid d-block mx-auto\" src=\"assets/img/portfolio/4.jpg\" alt=\"Exterior of the The Ferns Garden hall\" \/><p>When entering, to the left, there is a parking zone. Weather permitting 🤞, the ceremony will take place outdoors, and after that a few snacks will be served while we catch up with each other, among hugs and pictures for Instagram.<\/p><img class=\"img-fluid d-block mx-auto\" src=\"assets/img/portfolio/mapa_en.jpg\" alt=\"Aereal view of The Ferns Garden with the different locations\" \/><p>Next, the banquet will be in the hall, and afterwards we will try to let the food settle, dancing in the disco in the same venue.<\/ p><h3>The weather<\/h3><p>We are in Galicia, so the weather changes swiftly. If you are not sure about which weather you will find, or how warmly clothed you should be, we hope this information will be useful.<\/p><p>31st may generally has a temperature in Gondomar between 13°C to 20 °C, and very seldom is lower than 9 °C or higher than 26 °C. It is possible that it is a partially cloudy day.<\/p><p>On average, there is a 26 % probability of 1mm rain on that date in Gondomar. So statistically, it might sprinkle a bit<\/p>",
@@ -92,5 +95,6 @@
     "formsubmitbtn": "Send message",
     "no": "No",
     "si": "Yes",
-    "datoscontacto": "Contacto:<br>Jes (+34) 600664019 / Zupe (+34) 646176099<br>"
+    "contacto": "Contact",
+    "datoscontacto": "Jes (+34) 600664019 / Zupe (+34) 646176099<br>"
 }
