@@ -413,7 +413,7 @@
                                         <img src="assets/img/horiz.svg" class="img-responsive-center">
                                         <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
                                     </div>
-                                    <div class="row mb-7">
+                                    <div class="row mb-7" data-i18n="construccion">
                                         <div class="col-lg-5 col-sm-6 mb-4 mb-sm-0" data-i18n="nosotras1-long"></div>
                                         <div class="col-lg-5 col-sm-6 mb-4 mb-sm-0 ms-auto" data-i18n="nosotras2-long"></div>
                                     </div>
@@ -742,7 +742,49 @@
                                     <p class="item-intro text-muted" data-i18n="informacion-extend"></p>
                                     <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
                                     <!--img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." /-->
-                                    <span data-i18n="informacion-long"></span>
+                                    
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1" data-i18n="tematica"></button>
+                                            </h2>
+                                            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="tematica-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" data-i18n="vestimenta"></button>
+                                            </h2>
+                                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="vestimenta-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" data-i18n="alcohol"></button>
+                                            </h2>
+                                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="alcohol-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" data-i18n="menu"></button>
+                                            </h2>
+                                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="menu-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" data-i18n="restricciones"></button>
+                                            </h2>
+                                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="text-center">
+                                                        <ul class="list-group  list-group-flush">
+                                                            <li class="list-group-item" data-i18n="fumar"></li>
+                                                            <li class="list-group-item" data-i18n="fuegos"></li>
+                                                            <li class="list-group-item" data-i18n="arroz"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <br>
                                     <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -794,7 +836,45 @@
                                     <p class="item-intro text-muted" data-i18n="lejos-extend" ></p>
                                     <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="Europa" />
-                                    <span data-i18n="lejos-long"></span>
+                                    <div class="accordion" id="accordionLejos">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel1" aria-expanded="false" aria-controls="collapsel1" data-i18n="alojamiento"></button>
+                                            </h2>
+                                            <div id="collapsel1" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body" data-i18n="alojamiento-long"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel2" aria-expanded="false" aria-controls="collapsel2" data-i18n="viaje"></button>
+                                            </h2>
+                                            <div id="collapsel2" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body"><span data-i18n="viaje-long"></span>
+                                                    <h3 data-i18n="carretera"></h3><span data-i18n="carretera-long"></span>
+                                                    <h3 data-i18n="avion"></h3><span data-i18n="avion-long"></span>
+                                                    <h3 data-i18n="tren"></h3><span data-i18n="tren-long"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel3" aria-expanded="false" aria-controls="collapsel3" data-i18n="transporteevento"></button>
+                                            </h2>
+                                            <div id="collapsel3" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body" data-i18n="transporteevento-long"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel4" aria-expanded="false" aria-controls="collapsel4" data-i18n="ver"></button>
+                                            </h2>
+                                            <div id="collapsel4" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body" data-i18n="ver-long">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <br>
                                     <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
