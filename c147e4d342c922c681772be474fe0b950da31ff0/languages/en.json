@@ -122,5 +122,7 @@
     "no": "No",
     "si": "Yes",
     "contacto": "Contact",
-    "datoscontacto": "Jes (+34) 600664019 / Zupe (+34) 646176099<br>"
+    "datoscontacto": "Jes (+34) 600664019 / Zupe (+34) 646176099<br>",
+    "ups": "Oops!",
+    "ups-long": "We broke something... we'll try to fix it asap 😅"
 }
