@@ -1,152 +1,732 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es">
     <head>
-        <title>Voda entre Fentos</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="noindex, nofollow">
-
-        <style>
-            *,
-            *:after,
-            *:before {
-                box-sizing: border-box;
-            }
-            body,
-            html {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 300;
-                font-size: 16px;
-                background: #f2f2f2;
-                color: #2D3737;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100%;
-            }
-
-            .protected {
-                background: #fff;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                border-radius: 3px;
-                min-width: 500px;
-
-            }
-            .protected__content {
-                padding: 24px 28px;
-            }
-            .protected__content__heading {
-                font-size: 16px;
-                font-weight: 500;
-                margin: 0 0 12px;
-                line-height: 1;
-            }
-            .protected__alert {
-                display: none;
-                border-bottom: 1px solid transparent;
-                border-radius: 3px 3px 0 0;
-                padding: 12px 14px;
-                color: #a94442;
-                background-color: #f2dede;
-                border-color: #ebccd1;
-            }
-            .protected__content__input {
-                display: block;
-                border: solid 1px #ccc;
-                padding: 12px 14px;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                font-size: 16px;
-                width: 100%;
-                border-radius: 3px;
-
-                margin-bottom: 12px;
-            }
-            .protected__content__input:focus {
-                outline: none;
-                border-color: #228843;
-            }
-            .protected__content__btn {
-                background-color: #228843;
-                border-radius: 3px;
-                cursor: pointer;
-                border: none;
-                color: #fff;
-                padding: 12px 14px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 500;
-                font-size: 16px;
-
-            }
-            .protected__content__btn:hover {
-                background-color: #1C6D36;
-            }
-
-        </style>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title data-i18n="titulo"></title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+        <link rel="manifest" href="assets/site.webmanifest">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!--jquery-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/intlTelInput.min.js"></script>
+
+
+
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!--link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet"-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+      <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/css/intlTelInput.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+        <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"-->
+
     </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!--a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a-->
+                <ul id="languagesFlags" style="list-style-type: none; padding-top: 8px;">
+                  <li style="display: inline-block">
+                    <a class="nav-link" href="index.html" onclick="setLanguagePreference('gl')"><span class="fi fi-es-ga"></span></a>
+                  </li>
+                  <li style="display: inline-block">
+                    <a class="nav-link" href="index.html" onclick="setLanguagePreference('es')"><span class="fi fi-es"></span></a>
+                  </li>
+                  <li style="display: inline-block">
+                    <a class="nav-link" href="index.html" onclick="setLanguagePreference('en')"><span class="fi fi-ie"></span></a>
+                  </li>
+                </ul>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="dropdownSections">
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal1" data-i18n="nosotras"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal3" data-i18n="informacion" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal4" data-i18n="celebracion" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal5" data-i18n="lejos" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal6" data-i18n="fotos" ></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container" id="maintitle">
+                <div class="masthead-heading"><span data-i18n="nombre1"></span>&nbsp;<img class="heart" src="assets/img/corazon_white.svg">&nbsp;<span data-i18n="nombre2"></span></div>
+                <div class="masthead-subheading">31/05/2025 - 12:00</div>
+                <div class="masthead-subheading"><a href="https://maps.app.goo.gl/7a3PQytgt29g4cSr6" class="text-reset text-decoration-none">El Jardín de los Helechos (Gondomar)</a></div>
+            </div>
+        </header>
+        <!-- Secciones-->
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light parallax" id="portfolio">
+            <div class="container">
+                <div class="row mb-7"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">
+                                  <span data-i18n="nosotras" style="padding-left: 20px; padding-right: 20px;"></span>
+                                  </div>
+                                <div class="portfolio-caption-subheading text-muted"  data-i18n="nosotras-extend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="formulario" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="formulario-extend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="informacion" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
 
-    <body>
+                                <div class="portfolio-caption-subheading text-muted"  data-i18n="informacion-extend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="celebracion" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="celebracion-extend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="lejos" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="lejos-extend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="fotos" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="fotos-extend"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4"><img src="assets/img/horiz.svg" class="img-responsive-center-down"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="text-center" id="contact-footer"><h3 data-i18n="contacto"></h3></div>
+                <div class="text-center" style="padding: none;">
+                    <span data-i18n="datoscontacto"></span><a class="text-decoration-none me-3" href="mailto:vodaentrefentos@gmail.com">vodaentrefentos@gmail.com</a>
+                </div>
+            </div>
 
-        <div class="protected">
-            <div class="protected__alert" data-id="alert">Contraseña incorrecta</div>
-            <div class="protected__content">
-                <h1 class="protected__content__heading">Necesitas una contraseña para continuar</h1>
-                <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">Continuar</button>
+        </section>
+
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 data-i18n="nosotras"></h2>
+                                    <p class="item-intro text-muted" data-i18n="nosotras-extend"></p>
+                                    <div class="row">
+                                        <img src="assets/img/horiz.svg" class="img-responsive-center">
+                                        <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                    </div>
+                                    <div class="row mb-7" data-i18n="construccion">
+                                        <div class="col-lg-5 col-sm-6 mb-4 mb-sm-0" data-i18n="nosotras1-long"></div>
+                                        <div class="col-lg-5 col-sm-6 mb-4 mb-sm-0 ms-auto" data-i18n="nosotras2-long"></div>
+                                    </div>
+                                    
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        <span data-i18n="boton-cerrar"></span>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 data-i18n="formulario"></h3>
+                                    <p class="item-intro text-muted" data-i18n="formulario-extend"></p>
+                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                    <!--img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." /-->
+                                    <!--span data-i18n="formulario-long"-->
+                                    <div id="formularios" class="mb-7">
+                                        <form action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
+                                            <div class="form-group mb-3 row">
+                                                    <label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre"></label>
+                                                    <div class="col-md-7">
+                                                        <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+                                                    </div>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label for="Email" class="col-md-5 col-form-label">Email</label>
+                                                <div class="col-md-7"><input type="email" class="form-control" id="Email" name="Email" required></div>
+                                            </div>
+                                            <div class="form-group mb-3 row">
+                                                <label for="password" class="col-md-5 col-form-label" data-i18n="contrasena"></label>
+                                                <div class="col-md-7 password-box">
+                                                    <input type="password" class="form-control" id="password" name="Contrasena" required >
+                                                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label for="telefono-ppal" class="col-md-5 col-form-label" data-i18n="telefono"></label>
+                                                <div class="col-md-7 text-start"><input type="tel" class="form-control" id="telefono-ppal" name="Telefono" required></div>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                                                <div class="col-md-7">
+                                                    <button class="btn btn-secondary btn-lg text-uppercase" type="button" onclick="retrieve();">
+                                                    <i class="fas fa-cloud-download me-1"></i>
+                                                    <span data-i18n="boton-recuperar"></span>                                                
+                                                    </button>
+                                                    
+                                                </div>
+                                                <div id="cannot-retrieve" class="alert alert-warning d-flex align-items-center d-none mt-2" role="alert">
+                                                    <span data-i18n="data-missing"></span>
+                                                </div>
+                                                <div id="retrieve-ko" class="alert alert-warning d-flex align-items-center d-none mt-2" role="alert">
+                                                    <span data-i18n="no-data"></span>
+                                                </div>
+                                                <div id="retrieve-pwd-ko" class="alert alert-warning d-flex align-items-center d-none mt-2" role="alert">
+                                                    <span data-i18n="bad-pwd"></span>
+                                                </div>               
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
-        <script type="text/javascript">
-            "use strict"
-            var button = document.querySelectorAll('[data-id="button"]')
-            var password = document.querySelectorAll('[data-id="password"]')
-
-            function login(secret) {
-                var hash = sha1(secret)
-                var url = hash + "/index.html"
-                var alert = document.querySelectorAll('[data-id="alert"]')
-
-                var request = new XMLHttpRequest()
-                request.open('GET', url, true)
-
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        window.location = url
-                    } else {
-                        parent.location.hash = hash
-                        alert[0].style.display = 'block'
-                        password[0].setAttribute('placeholder', 'Contraseña incorrecta')
-                        password[0].value = ''
-                    }
-                }
-                request.onerror = function () {
-                    parent.location.hash = hash
-                    alert[0].style.display = 'block'
-                    password[0].setAttribute('placeholder', 'Contraseña incorrecta')
-                    password[0].value = ''
-                }
-                request.send()
-            }
-
-            button[0].addEventListener("click", function () {
-                login(password[0].value)
-            })
-
-            document.onkeydown = function (e) {
-                e = e || window.event
-                if (e.keyCode == 13) {
-                    login(password[0].value)
-                }
-            }
-        </script>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="q-vienes"></label>
+                                                <div class="col-md-7  text-start">
+                                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_y" value="Sí" onclick="vienes(true);" required><label class="form-check-label custom-control-label" for="asistencia_y" data-i18n="si"></label></div>
+                                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_n" value="No" onclick="vienes(false);" required><label class="form-check-label custom-control-label" for="asistencia_n" data-i18n="no"></label></div>
+                                                </div>
+                                            </div>
+                                            <div id="novienes" hidden><div class="alert alert-info d-flex align-items-center" role="alert">
+                                                <div data-i18n="novienes"></div>
+                                                </div></div>
+                                            <div class="vienes" hidden>
+                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="agusto"></label>
+                                                    <div class="col-md-7 form-check  text-start">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano" >
+                                                            <label class="form-check-label" for="Vegano" data-i18n="vegano"></label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-input');">
+                                                        </div>
+                                                        <div id="alergenos-input" hidden data-i18n="placeholder-alergenos"></div>
+                                                        <div class="form-check form-switch">
+                                                            <label class="form-check-label" for="necesidadesSwitch" data-i18n="necesidades"></label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch" onclick="showfield(this.checked,'necesidades-input');">
+                                                        </div>
+                                                        <div id="necesidades-input" hidden data-i18n="placeholder-necesidades"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="cerca-nenos"></label>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="dropdown">
+                                                            <select id="select-cercania" class="form-select" aria-label="Default select example" name="Cercania_nenos">
+                                                                <option value="0" selected data-i18n="seleccion"></option>
+                                                                <option value="1" data-i18n="nenoscerca"></option>
+                                                                <option value="2" data-i18n="nenoslejos"></option>
+                                                                <option value="3" data-i18n="indiferente"></option>
+                                                              </select>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                                            
+                                                <div class="form-group mb-5 row">
+                                                    <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qactividad"></label>
+                                                        <div data-i18n="actividadHelpBlock" class="form-text"></div>
+                                                    </div>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');" required><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div id="actividades" hidden>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qconsentimiento-broma"></label>
+                                                        <div data-i18n="bromasHelpBlock" class="form-text"></div>
+                                                        </div>
+                                                        <div class="col-md-7  text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí" checked><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No"><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group mt-5 mb-5 row">
+                                                        <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qkaraoke"></label>
+                                                        </div>
+                                                        <div class="col-md-7  text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheck_y" value="Sí" checked><label class="form-check-label custom-control-label" for="karaokecheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheck_n" value="No"><label class="form-check-label custom-control-label" for="karaokecheck_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-switch  text-start">
+                                                        <label class="form-check-label" for="propuestaSwitch" data-i18n="propuesta"></label>
+                                                        <input class="form-check-input" type="checkbox" role="switch" value="" id="propuestaSwitch" onclick="showfield(this.checked,'propuesta-input');">
+                                                    </div>
+                                                    <div id="propuesta-input" hidden data-i18n="placeholder-propuesta"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="vienes" hidden>
+                                            <form>
+                                                <hr class="my-4" />
+                                                <div class="form-group mb-3 row">
+                                                    <div class="col-md-5 col-form-label" >
+                                                        <label data-i18n="qacompanante"></label>
+                                                    </div>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_y" value="Sí" onclick="vieneSecondForm(true,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_n" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="p-3 mb-2 bg-light" id="div-acomp" hidden>
+                                                <form action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
+                                                    <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre-acomp" class="col-md-5 col-form-label" data-i18n="nombre-acomp"></label>
+                                                        <div class="col-md-7  text-start"><input type="text" class="form-control" id="Nombre-acomp" name="Nombre"></div>
+                                                    </div>
+                                                    <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="menu"></label>
+                                                        <div class="col-md-7 form-check  text-start">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano-acomp" >
+                                                                <label class="form-check-label" for="Vegano" data-i18n="vegano"></label>
+                                                            </div>
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault-acomp" data-i18n="alergenos"></label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault-acomp" onclick="showfield(this.checked,'alergenos-acomp-input');">
+                                                            </div>
+                                                            <div id="alergenos-acomp-input" hidden data-i18n="placeholder-alergenosacomp"></div>
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="necesidadesSwitch-acomp" data-i18n="necesidades"></label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch-acomp" onclick="showfield(this.checked,'necesidades-input-acomp');">
+                                                            </div>
+                                                            <div id="necesidades-input-acomp" hidden data-i18n="placeholder-necesidadesacomp"></div>    
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5 col-form-label" >
+                                                            <label data-i18n="qacomp-actividad"></label>
+                                                            <div data-i18n="actividadHelpBlock" class="form-text"></div>
+                                                        </div>
+                                                        <div class="col-md-7 text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí" onclick="showfield(true,'actividadesacomp');" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No" onclick="showfield(false,'actividadesacomp');" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="actividadesacomp" hidden>
+                                                        <div class="form-group mb-5 row">
+                                                            <div class="col-md-5 col-form-label" >
+                                                                <label data-i18n="qconsentimiento-bromaacomp"></label>
+                                                                <div data-i18n="bromasHelpBlock" class="form-text"></div>
+                                                            </div>
+                                                            <div class="col-md-7  text-start">
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="bromascheckacomp_y" data-i18n="si"></label></div>
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="bromascheckacomp_n" data-i18n="no"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group mb-5 row">
+                                                            <div class="col-md-5 col-form-label">
+                                                                <label data-i18n="qkaraokeacomp"></label>
+                                                            </div>
+                                                            <div class="col-md-7  text-start">
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="karaokecheckacomp_y" data-i18n="si"></label></div>
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="karaokecheckacomp_n" data-i18n="no"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-check form-switch  text-start">
+                                                            <label class="form-check-label" for="propuestaSwitchacomp" data-i18n="propuestaacomp"></label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" value="" id="propuestaSwitchacomp" onclick="showfield(this.checked,'propuesta-inputacomp');">
+                                                        </div>
+                                                        <div id="propuesta-inputacomp" hidden data-i18n="placeholder-propuestaacomp"></div>
+                                                    </div>       
+                                                </form>
+                                            </div><!--div-acomp-->
+                                            <hr class="my-4" />
+                                            <form>
+                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qpeques"></label>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_y" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_n" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="p-3 mb-2 bg-light" id="nenos" hidden>
+                                                <div id="div-form-neno1">
+                                                <form action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
+                                                    <div id="nenos-rows">
+                                                        <div class="mb-3 row" id="neno1">
+                                                            <div class="col" data-i18n="placeholder-neno1-nombre"></div>
+                                                            <div class="col" data-i18n="placeholder-neno1-edad"></div>
+                                                        </div>
+                                                        <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                                                            <div class="col-md-7 form-check  text-start">
+                                                                <div class="form-check form-switch">
+                                                                    <label class="form-check-label" for="flexSwitchCheck-neno1" data-i18n="alergenos"></label>
+                                                                    <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheck-neno1" onclick="showfield(this.checked,'alergenos-neno1-input');">
+                                                                </div>
+                                                                <div id="alergenos-neno1-input" hidden data-i18n="placeholder-alergenos1"></div>
+                                                                <div class="form-check form-switch">
+                                                                    <label class="form-check-label" for="necesidadesSwitch-neno1" data-i18n="necesidades"></label>
+                                                                    <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch-neno1" onclick="showfield(this.checked,'necesidades-input-neno1');">
+                                                                </div>
+                                                                <div id="necesidades-input-neno1" hidden data-i18n="placeholder-necesidades1"></div>  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                </div>
+                                                <form class="m-auto">
+                                                    <div class="btn-group" role="group" id="botonmasnenos">
+                                                        <button id="anadir-neno" class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()">&nbsp;</button>
+                                                        <button id="restar-neno" class="btn btn-primary btn-lg fas fa-minus fa-3x" type="button" onclick="removeneno()"></button>
+                                                    </div>    
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" method="POST">
+                                            <hr class="my-4" />
+                                            <div class="form-group mb-3 row"><label for="transporte" class="col-md-5 col-form-label" data-i18n="qtransporte"></label>
+                                                <div class="col-md-7  text-start"><textarea class="form-control" id="transporte" name="Transporte"></textarea></div>
+                                            </div><hr class="my-4" />
+                                            <div class="form-group mb-3 row"><label for="comentarios" class="col-md-5 col-form-label" data-i18n="qcomentario"></label>
+                                                <div class="col-md-7  text-start"><textarea class="form-control" id="comentarios" name="Comentarios"></textarea></div>
+                                            </div>
+                                        </form>
+                                        <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec" method="POST">
+                                            <hr class="my-4" />
+                                            <div class="form-group mb-3 row">
+                                                <div class="col text-center">
+                                                    <button id="btn-enviar" class="btn btn-primary btn-lg" type="submit">
+                                                        <i id="spinicon" class="fas fa-spinner fa-spin d-none"></i>
+                                                        <i id="sendicon" class="fas fa-paper-plane"></i>
+                                                        <span id="txt-enviar" class="btn-text" data-i18n="enviar"></span>
+                                                        <span id="txt-cargando" class="btn-text d-none" data-i18n="cargando"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div id="validacion-ko" class="alert alert-warning d-flex align-items-center d-none" role="alert">
+                                            <div data-i18n="faltan-campos"></div>
+                                        </div>    
+                                    </div>
+                                    <div id="form-ok" class="alert alert-success d-flex align-items-center d-none" role="alert">
+                                        <div data-i18n="gracias-respuesta"></div>
+                                    </div>
+                                    <div id="form-ko" class="alert alert-warning d-flex align-items-center d-none" role="alert">
+                                        <div data-i18n="fallo-respuesta"></div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="mt-9">
+                                        <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-xmark me-1"></i>
+                                            <span data-i18n="boton-cerrar"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 data-i18n="informacion"></h2>
+                                    <p class="item-intro text-muted" data-i18n="informacion-extend"></p>
+                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                    <!--img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." /-->
+                                    
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1" data-i18n="tematica"></button>
+                                            </h2>
+                                            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="tematica-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" data-i18n="vestimenta"></button>
+                                            </h2>
+                                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="vestimenta-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" data-i18n="alcohol"></button>
+                                            </h2>
+                                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="alcohol-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" data-i18n="menu"></button>
+                                            </h2>
+                                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample"><div class="accordion-body" data-i18n="menu-long"></div></div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" data-i18n="restricciones"></button>
+                                            </h2>
+                                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="text-center">
+                                                        <ul class="list-group  list-group-flush">
+                                                            <li class="list-group-item" data-i18n="fumar"></li>
+                                                            <li class="list-group-item" data-i18n="fuegos"></li>
+                                                            <li class="list-group-item" data-i18n="arroz"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        <span data-i18n="boton-cerrar"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 data-i18n="celebracion"></h2>
+                                    <p class="item-intro text-muted" data-i18n="celebracion-extend"></p>
+                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                    <span data-i18n="celebracion-long"></span>
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        <span data-i18n="boton-cerrar"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 data-i18n="lejos" ></h2>
+                                    <p class="item-intro text-muted" data-i18n="lejos-extend" ></p>
+                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="Europa" />
+                                    <div class="accordion" id="accordionLejos">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel1" aria-expanded="false" aria-controls="collapsel1" data-i18n="alojamiento"></button>
+                                            </h2>
+                                            <div id="collapsel1" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body" data-i18n="alojamiento-long"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel2" aria-expanded="false" aria-controls="collapsel2" data-i18n="viaje"></button>
+                                            </h2>
+                                            <div id="collapsel2" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body"><span data-i18n="viaje-long"></span>
+                                                    <h3 data-i18n="carretera"></h3><span data-i18n="carretera-long"></span>
+                                                    <h3 data-i18n="avion"></h3><span data-i18n="avion-long"></span>
+                                                    <h3 data-i18n="tren"></h3><span data-i18n="tren-long"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel3" aria-expanded="false" aria-controls="collapsel3" data-i18n="transporteevento"></button>
+                                            </h2>
+                                            <div id="collapsel3" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body" data-i18n="transporteevento-long"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsel4" aria-expanded="false" aria-controls="collapsel4" data-i18n="ver"></button>
+                                            </h2>
+                                            <div id="collapsel4" class="accordion-collapse collapse" data-bs-parent="#accordionLejos">
+                                                <div class="accordion-body" data-i18n="ver-long">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        <span data-i18n="boton-cerrar"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 data-i18n="fotos"></h2>
+                                    <p class="item-intro text-muted" data-i18n="fotos-extend"></p>
+                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/giphybolaoeste.gif" alt="Nada por aquí" />
+                                    <span data-i18n="fotos-long"></span>
+                                    <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        <span data-i18n="boton-cerrar"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- I18N -->
+        <script src="js/languages.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
-    <script>
-        window.onload = function () {
-            var hasParam = window.location.href.indexOf('form')
-            console.log(hasParam);
-        }
-    </script>
 </html>
