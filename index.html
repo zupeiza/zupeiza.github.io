@@ -249,13 +249,303 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <div class="modal-body">
+                                <!--div class="modal-body">
                                         <div class="row justify-content-center text-center">
                                             <h2 style="padding-top: 2.5em;" data-i18n="ups"></h2>
                                             <p data-i18n="ups-long"></p>
                                             <div class="row mb-7"><img src="assets/img/techdif.jpg" class="img-responsive-center"></div>
                                         </div>
                 
+                                </div-->
+
+                                <div class="modal-body"></div>
+                                    <!-- Project details-->
+                                    <h2 data-i18n="formulario"></h3>
+                                    <p class="item-intro text-muted" data-i18n="formulario-extend"></p>
+                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                    <!--img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." /-->
+                                    <div data-i18n="formulario-long"></div>
+                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                    <div id="formularios" class="mb-7">
+                                        <form action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
+                                            <div class="form-group mb-3 row">
+                                                    <label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre"></label>
+                                                    <div class="col-md-7">
+                                                        <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+                                                    </div>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label for="Email" class="col-md-5 col-form-label">Email</label>
+                                                <div class="col-md-7"><input type="email" class="form-control" id="Email" name="Email" required></div>
+                                            </div>
+                                            <div class="form-group mb-3 row">
+                                                <label for="password" class="col-md-5 col-form-label" data-i18n="contrasena"></label>
+                                                <div class="col-md-7 password-box">
+                                                    <input type="password" class="form-control" id="password" name="Contrasena" required >
+                                                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label for="telefono-ppal" class="col-md-5 col-form-label" data-i18n="telefono"></label>
+                                                <div class="col-md-7 text-start"><input type="tel" class="form-control" id="telefono-ppal" name="Telefono" required></div>
+                                            </div>
+                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                                                <div class="col-md-7">
+                                                    <button class="btn btn-secondary btn-lg text-uppercase" type="button" onclick="retrieve('principal');">
+                                                    <i class="fas fa-cloud-download me-1"></i>
+                                                    <span data-i18n="boton-recuperar"></span>                                                
+                                                    </button>
+                                                    
+                                                </div>
+                                                <div id="cannot-retrieve" class="alert alert-warning d-flex align-items-center d-none mt-2" role="alert">
+                                                    <span data-i18n="data-missing"></span>
+                                                </div>
+                                                <div id="retrieve-ko" class="alert alert-warning d-flex align-items-center d-none mt-2" role="alert">
+                                                    <span data-i18n="no-data"></span>
+                                                </div>
+                                                <div id="retrieve-pwd-ko" class="alert alert-warning d-flex align-items-center d-none mt-2" role="alert">
+                                                    <span data-i18n="bad-pwd"></span>
+                                                </div>               
+
+                                            </div>
+                                            <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="q-vienes"></label>
+                                                <div class="col-md-7  text-start">
+                                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_y" value="Sí" onclick="vienes(true);" required><label class="form-check-label custom-control-label" for="asistencia_y" data-i18n="si"></label></div>
+                                                    <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Asistencia" id="asistencia_n" value="No" onclick="vienes(false);" required><label class="form-check-label custom-control-label" for="asistencia_n" data-i18n="no"></label></div>
+                                                </div>
+                                            </div>
+                                            <div id="novienes" hidden><div class="alert alert-info d-flex align-items-center" role="alert">
+                                                <div data-i18n="novienes"></div>
+                                                </div></div>
+                                            <div class="vienes" hidden>
+                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="agusto"></label>
+                                                    <div class="col-md-7 form-check  text-start">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano" >
+                                                            <label class="form-check-label" for="Vegano" data-i18n="vegano"></label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <label class="form-check-label" for="flexSwitchCheckDefault" data-i18n="alergenos"></label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault" onclick="showfield(this.checked,'alergenos-input');">
+                                                        </div>
+                                                        <div id="alergenos-input" hidden data-i18n="placeholder-alergenos"></div>
+                                                        <div class="form-check form-switch">
+                                                            <label class="form-check-label" for="necesidadesSwitch" data-i18n="necesidades"></label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch" onclick="showfield(this.checked,'necesidades-input');">
+                                                        </div>
+                                                        <div id="necesidades-input" hidden data-i18n="placeholder-necesidades"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-5 row"><label class="col-md-5 col-form-label" data-i18n="cerca-nenos"></label>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="dropdown">
+                                                            <select id="select-cercania" class="form-select" aria-label="Default select example" name="Cercania_nenos">
+                                                                <option value="0" selected data-i18n="seleccion"></option>
+                                                                <option value="1" data-i18n="nenoscerca"></option>
+                                                                <option value="2" data-i18n="nenoslejos"></option>
+                                                                <option value="3" data-i18n="indiferente"></option>
+                                                              </select>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                                            
+                                                <div class="form-group mb-5 row">
+                                                    <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qactividad"></label>
+                                                        <div data-i18n="actividadHelpBlock" class="form-text"></div>
+                                                    </div>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input a-requerir" type="radio" name="Juegos" id="actividadcheck_y" value="Sí" onclick="showfield(true,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input a-requerir" type="radio" name="Juegos" id="actividadcheck_n" value="No" onclick="showfield(false,'actividades');"><label class="form-check-label custom-control-label" for="actividadcheck_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div id="actividades" hidden>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qconsentimiento-broma"></label>
+                                                        <div data-i18n="bromasHelpBlock" class="form-text"></div>
+                                                        </div>
+                                                        <div class="col-md-7  text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_y" value="Sí" checked><label class="form-check-label custom-control-label" for="bromascheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheck_n" value="No"><label class="form-check-label custom-control-label" for="bromascheck_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group mt-5 mb-5 row">
+                                                        <div class="col-md-5 col-form-label">
+                                                        <label data-i18n="qkaraoke"></label>
+                                                        </div>
+                                                        <div class="col-md-7  text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheck_y" value="Sí" checked><label class="form-check-label custom-control-label" for="karaokecheck_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheck_n" value="No"><label class="form-check-label custom-control-label" for="karaokecheck_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-switch  text-start">
+                                                        <label class="form-check-label" for="propuestaSwitch" data-i18n="propuesta"></label>
+                                                        <input class="form-check-input" type="checkbox" role="switch" value="" id="propuestaSwitch" onclick="showfield(this.checked,'propuesta-input');">
+                                                    </div>
+                                                    <div id="propuesta-input" hidden data-i18n="placeholder-propuesta"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="vienes" hidden>
+                                            <form>
+                                                <hr class="my-4" />
+                                                <div class="form-group mb-3 row">
+                                                    <div class="col-md-5 col-form-label" >
+                                                        <label data-i18n="qacompanante"></label>
+                                                    </div>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_y" value="Sí" onclick="vieneSecondForm(true,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio" id=""><input class="form-check-input custom-control-input" type="radio" name="vienes-con-acompanante" id="vienes-con-acompanante_n" checked value="No" onclick="vieneSecondForm(false,'div-acomp');"><label class="form-check-label custom-control-label" for="vienes-con-acompanante_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="p-3 mb-2 bg-light" id="div-acomp" hidden>
+                                                <form action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
+                                                    <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre-acomp" class="col-md-5 col-form-label" data-i18n="nombre-acomp"></label>
+                                                        <div class="col-md-7  text-start"><input type="text" class="form-control" id="Nombre-acomp" name="Nombre"></div>
+                                                    </div>
+                                                    <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="menu"></label>
+                                                        <div class="col-md-7 form-check  text-start">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="Vegano" id="Vegano-acomp" >
+                                                                <label class="form-check-label" for="Vegano" data-i18n="vegano"></label>
+                                                            </div>
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="flexSwitchCheckDefault-acomp" data-i18n="alergenos"></label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheckDefault-acomp" onclick="showfield(this.checked,'alergenos-acomp-input');">
+                                                            </div>
+                                                            <div id="alergenos-acomp-input" hidden data-i18n="placeholder-alergenosacomp"></div>
+                                                            <div class="form-check form-switch">
+                                                                <label class="form-check-label" for="necesidadesSwitch-acomp" data-i18n="necesidades"></label>
+                                                                <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch-acomp" onclick="showfield(this.checked,'necesidades-input-acomp');">
+                                                            </div>
+                                                            <div id="necesidades-input-acomp" hidden data-i18n="placeholder-necesidadesacomp"></div>    
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5 col-form-label" >
+                                                            <label data-i18n="qacomp-actividad"></label>
+                                                            <div data-i18n="actividadHelpBlock" class="form-text"></div>
+                                                        </div>
+                                                        <div class="col-md-7 text-start">
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_y" value="Sí" onclick="showfield(true,'actividadesacomp');" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_y" data-i18n="si"></label></div>
+                                                            <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Juegos" id="actividadcheckacomp_n" value="No" onclick="showfield(false,'actividadesacomp');" required><label class="form-check-label custom-control-label" for="actividadcheckacomp_n" data-i18n="no"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="actividadesacomp" hidden>
+                                                        <div class="form-group mb-5 row">
+                                                            <div class="col-md-5 col-form-label" >
+                                                                <label data-i18n="qconsentimiento-bromaacomp"></label>
+                                                                <div data-i18n="bromasHelpBlock" class="form-text"></div>
+                                                            </div>
+                                                            <div class="col-md-7  text-start">
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="bromascheckacomp_y" data-i18n="si"></label></div>
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Bromas" id="bromascheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="bromascheckacomp_n" data-i18n="no"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group mb-5 row">
+                                                            <div class="col-md-5 col-form-label">
+                                                                <label data-i18n="qkaraokeacomp"></label>
+                                                            </div>
+                                                            <div class="col-md-7  text-start">
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheckacomp_y" value="Sí" checked><label class="form-check-label custom-control-label" for="karaokecheckacomp_y" data-i18n="si"></label></div>
+                                                                <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="Karaoke" id="karaokecheckacomp_n" value="No"><label class="form-check-label custom-control-label" for="karaokecheckacomp_n" data-i18n="no"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-check form-switch  text-start">
+                                                            <label class="form-check-label" for="propuestaSwitchacomp" data-i18n="propuestaacomp"></label>
+                                                            <input class="form-check-input" type="checkbox" role="switch" value="" id="propuestaSwitchacomp" onclick="showfield(this.checked,'propuesta-inputacomp');">
+                                                        </div>
+                                                        <div id="propuesta-inputacomp" hidden data-i18n="placeholder-propuestaacomp"></div>
+                                                    </div>       
+                                                </form>
+                                            </div><!--div-acomp-->
+                                            <hr class="my-4" />
+                                            <form>
+                                                <div class="form-group mb-3 row"><label class="col-md-5 col-form-label" data-i18n="qpeques"></label>
+                                                    <div class="col-md-7  text-start">
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_y" value="Sí" onclick="vienennenos(true)"><label class="form-check-label custom-control-label" for="vienes-con-peques_y" data-i18n="si"></label></div>
+                                                        <div class="form-check custom-control custom-radio"><input class="form-check-input custom-control-input" type="radio" name="vienes-con-peques" id="vienes-con-peques_n" checked value="No" onclick="vienennenos(false)"><label class="form-check-label custom-control-label" for="vienes-con-peques_n" data-i18n="no"></label></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="p-3 mb-2 bg-light" id="nenos" hidden>
+                                                <div id="div-form-neno1">
+                                                <form action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
+                                                    <div id="nenos-rows">
+                                                        <div class="mb-3 row" id="neno1">
+                                                            <div class="col" data-i18n="placeholder-neno1-nombre"></div>
+                                                            <div class="col" data-i18n="placeholder-neno1-edad"></div>
+                                                        </div>
+                                                        <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
+                                                            <div class="col-md-7 form-check  text-start">
+                                                                <div class="form-check form-switch">
+                                                                    <label class="form-check-label" for="flexSwitchCheck-neno1" data-i18n="alergenos"></label>
+                                                                    <input class="form-check-input" type="checkbox" role="switch" value="alergia" id="flexSwitchCheck-neno1" onclick="showfield(this.checked,'alergenos-neno1-input');">
+                                                                </div>
+                                                                <div id="alergenos-neno1-input" hidden data-i18n="placeholder-alergenos1"></div>
+                                                                <div class="form-check form-switch">
+                                                                    <label class="form-check-label" for="necesidadesSwitch-neno1" data-i18n="necesidades"></label>
+                                                                    <input class="form-check-input" type="checkbox" role="switch" value="" id="necesidadesSwitch-neno1" onclick="showfield(this.checked,'necesidades-input-neno1');">
+                                                                </div>
+                                                                <div id="necesidades-input-neno1" hidden data-i18n="placeholder-necesidades1"></div>  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                </div>
+                                                <form class="m-auto">
+                                                    <div class="btn-group" role="group" id="botonmasnenos">
+                                                        <button id="anadir-neno" class="btn btn-primary btn-lg fas fa-plus fa-3x" type="button" onclick="addneno()">&nbsp;</button>
+                                                        <button id="restar-neno" class="btn btn-primary btn-lg fas fa-minus fa-3x" type="button" onclick="removeneno()"></button>
+                                                    </div>    
+                                                </form>
+                                            </div>
+                                        
+                                        <form id="form-transporte" action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" method="POST">
+                                            <hr class="my-4" />
+                                            <div class="form-group mb-3 row"><label for="transporte" class="col-md-5 col-form-label" data-i18n="qtransporte"></label>
+                                                <div class="col-md-7  text-start"><textarea class="form-control" id="transporte" name="Transporte"></textarea></div>
+                                            </div>
+                                        </form>
+                                        </div>
+                                        <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" method="POST"></form>
+                                            <hr class="my-4" />
+                                            <div class="form-group mb-3 row"><label for="comentarios" class="col-md-5 col-form-label" data-i18n="qcomentario"></label>
+                                                <div class="col-md-7  text-start"><textarea class="form-control" id="comentarios" name="Comentarios"></textarea></div>
+                                            </div>
+                                        </form>
+                                        <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" method="POST">
+                                            <hr class="my-4" />
+                                            <div class="form-group mb-3 row">
+                                                <div class="col text-center">
+                                                    <button id="btn-enviar" class="btn btn-primary btn-lg" type="submit">
+                                                        <i id="spinicon" class="fas fa-spinner fa-spin d-none"></i>
+                                                        <i id="sendicon" class="fas fa-paper-plane"></i>
+                                                        <span id="txt-enviar" class="btn-text" data-i18n="enviar"></span>
+                                                        <span id="txt-cargando" class="btn-text d-none" data-i18n="cargando"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div id="validacion-ko" class="alert alert-warning d-flex align-items-center d-none" role="alert">
+                                            <div data-i18n="faltan-campos"></div>
+                                        </div>    
+                                    </div>
+                                    <div id="form-ok" class="alert alert-success d-flex align-items-center d-none" role="alert">
+                                        <div data-i18n="gracias-respuesta"></div>
+                                    </div>
+                                    <div id="form-ko" class="alert alert-warning d-flex align-items-center d-none" role="alert">
+                                        <div data-i18n="fallo-respuesta"></div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="mt-9">
+                                        <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-xmark me-1"></i>
+                                            <span data-i18n="boton-cerrar"></span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

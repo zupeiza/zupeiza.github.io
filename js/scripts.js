@@ -142,7 +142,12 @@ window.addEventListener("load", function() {
                     data.set('Transporte',document.getElementById('transporte').value);
                 }
                 data.set('Contrasena',document.getElementById('password').value);
-                data.set('Asistencia','Sí');
+                if (document.getElementById('asistencia_y').checked == true) {
+                    data.set('Asistencia',"Si");
+                } else {
+                    data.set('Asistencia',"No");
+                }
+                
 
                 const value = Object.fromEntries(data.entries());
                 console.log(value);
@@ -229,6 +234,9 @@ function vieneSecondForm(rvsp,formid) {
         else {
             console.log('desvalidating' + document.getElementById(i));
             document.getElementById(i).classList.remove("a-validar");
+            if (formid == 'div-acomp') {
+                deleteData('acomp');
+            }
         }
     })
 }
@@ -264,12 +272,17 @@ function addneno() {
 
 function removeneno(){
     num_nenos = document.getElementsByClassName("neno").length;
-    if (num_nenos>1){
-        const divEle = document.getElementById("div-form-neno"+num_nenos);
+    const divEle = document.getElementById("div-form-neno"+num_nenos);
         showfield(false,"div-form-neno"+num_nenos);
+        deleteData("neno"+num_nenos);
+    if (num_nenos>1){
         divEle.remove();
+        vienennenos(true);
+    } else {//solo hay uno
+        divEle.hidden = true;
+        document.getElementById('vienes-con-peques_n').checked = true;
+        vienennenos(false);
     }
-    vienennenos(true);
     
 }
 
@@ -305,7 +318,7 @@ function retrieve() {
 }
 
 async function getData() {
-    const url = "https://script.google.com/macros/s/AKfycbxM2V7eJFfpO8uFTdM_QQfrWYRKEx01PIIp7sehcyGiOcm6ImLP4NniqGTbO0smif0Fsw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','');
+    const url = "https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&reason=retrieve';
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -317,10 +330,10 @@ async function getData() {
       if (json.length == 0) {
         (document.querySelector('#retrieve-ko')).classList.remove("d-none");
       } else {
-        (document.querySelector('#retrieve-ko')).classList.add("d-none");
-        if (checkPwd(json)) {
-            rellenar(json);
-        }
+            (document.querySelector('#retrieve-ko')).classList.add("d-none");
+            if (checkPwd(json)) {
+                    rellenar(json);
+            }
       }
     } catch (error) {
       console.error(error.message);
@@ -339,6 +352,19 @@ function checkPwd (json) {
 //    alert(JSON.stringify(json.find(r => r.Tipo == 'principal')));
 //    var formsdata = JSON.stringify(json);  
 }
+
+async function deleteData(quien) {
+    const url = "https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&form='+quien+'&reason=delete';
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+}
+
 
 function rellenar(json) {
     var datos_principal = json.find(r => r.Tipo == 'principal');
@@ -400,6 +426,12 @@ function rellenar(json) {
                 document.getElementById('propuestaSwitch').checked = false;
                 showfield(false,'propuesta-input');
                 document.getElementById('Propuesta').value = "";
+            }
+            if (datos_principal.Transporte != "") {
+                document.getElementById('transporte').value = datos_principal.Transporte;
+            }
+            if (datos_principal.Comentarios != "") {
+                document.getElementById('comentarios').value = datos_principal.Comentarios;
             }
         }
         console.log(json.length);
