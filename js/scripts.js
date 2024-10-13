@@ -197,11 +197,20 @@ function loading(proceso) {
         (document.querySelector('#txt-enviar')).classList.remove("d-none");
         (document.querySelector('#txt-cargando')).classList.add("d-none");
     }
-     /* var button = document.getElementById("submit");
-      button.innerHTML = "Loading...";
-      var span = document.getElementById("button_span");
-      span.classList.add("spinner-grow");
-      span.classList.add("spinner-grow-sm");*/
+}
+
+function retrieving(proceso) {
+    if (proceso) {
+        (document.querySelector('#cloudicon')).classList.add("d-none");
+        (document.querySelector('#spin-recuperar-icon')).classList.remove("d-none");
+        (document.querySelector('#txt-cargar')).classList.add("d-none");
+        (document.querySelector('#txt-recuperar-cargando')).classList.remove("d-none");
+    } else {
+        (document.querySelector('#cloudicon')).classList.remove("d-none");
+        (document.querySelector('#spin-recuperar-icon')).classList.add("d-none");
+        (document.querySelector('#txt-cargar')).classList.remove("d-none");
+        (document.querySelector('#txt-recuperar-cargando')).classList.add("d-none");
+    }
 }
 
 function showfield(check,field){
@@ -311,7 +320,9 @@ function retrieve() {
         
     else {
         (document.querySelector('#cannot-retrieve')).classList.add("d-none");
+        retrieving(true);
         getData('retrieve');
+        retrieving(false);
     }
   
     return;
@@ -319,7 +330,7 @@ function retrieve() {
 }
 
 async function getData(reason) {
-    const url = "https://script.google.com/macros/s/AKfycbzYOdnVDOHl171LGse_9oep28ihQZ5VvtQC9H_WKQ8NJhHlC7Bkd_zPrv6gOtMWY7kPag/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&reason='+reason;
+    const url = "https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&reason='+reason;
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -355,7 +366,7 @@ function checkPwd (json) {
 }
 
 async function deleteData(quien) {
-    const url = "https://script.google.com/macros/s/AKfycbzYOdnVDOHl171LGse_9oep28ihQZ5VvtQC9H_WKQ8NJhHlC7Bkd_zPrv6gOtMWY7kPag/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&form='+quien+'&reason=delete';
+    const url = "https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&form='+quien+'&reason=delete';
     try {
       const response = await fetch(url);
       if (!response.ok) {
