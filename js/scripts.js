@@ -165,7 +165,7 @@ window.addEventListener("load", function() {
                     }
                     if (numEnviosOk == arrayLength){
                         //(document.querySelector('#formularios')).classList.add("d-none");
-                        getData();
+                        getData('saveok');
                         (document.querySelector('#form-ok')).classList.remove("d-none");
                         (document.querySelector('#form-ko')).classList.add("d-none");
                         loading(false);
@@ -310,15 +310,15 @@ function retrieve() {
         
     else {
         (document.querySelector('#cannot-retrieve')).classList.add("d-none");
-        getData();
+        getData('retrieve');
     }
   
     return;
 
 }
 
-async function getData() {
-    const url = "https://script.google.com/macros/s/AKfycbyPhj8gMejgrFW9fvHt0U9h4hxTIxDCANsgXF_z3o3BL0L23Q4WfytQLwOSnRABj7w2Zw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&reason=retrieve';
+async function getData(reason) {
+    const url = "https://script.google.com/macros/s/AKfycbyLsT3-mN6wKWGjnDX2gj2mBAwReaxWkFqOmFT3iqDi2fUFXkP0Ur7c-Rp5w9u9ZRmQGw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&reason='+reason;
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -354,7 +354,7 @@ function checkPwd (json) {
 }
 
 async function deleteData(quien) {
-    const url = "https://script.google.com/macros/s/AKfycbyPhj8gMejgrFW9fvHt0U9h4hxTIxDCANsgXF_z3o3BL0L23Q4WfytQLwOSnRABj7w2Zw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&form='+quien+'&reason=delete';
+    const url = "https://script.google.com/macros/s/AKfycbyLsT3-mN6wKWGjnDX2gj2mBAwReaxWkFqOmFT3iqDi2fUFXkP0Ur7c-Rp5w9u9ZRmQGw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&form='+quien+'&reason=delete';
     try {
       const response = await fetch(url);
       if (!response.ok) {
