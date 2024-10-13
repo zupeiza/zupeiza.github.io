@@ -141,6 +141,7 @@ window.addEventListener("load", function() {
                     data.set('Comentarios',document.getElementById('comentarios').value);
                     data.set('Transporte',document.getElementById('transporte').value);
                 }
+                data.set('Idioma',localStorage.getItem('language'));
                 data.set('Contrasena',document.getElementById('password').value);
                 if (document.getElementById('asistencia_y').checked == true) {
                     data.set('Asistencia',"Si");
@@ -318,7 +319,7 @@ function retrieve() {
 }
 
 async function getData(reason) {
-    const url = "https://script.google.com/macros/s/AKfycbyLsT3-mN6wKWGjnDX2gj2mBAwReaxWkFqOmFT3iqDi2fUFXkP0Ur7c-Rp5w9u9ZRmQGw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&reason='+reason;
+    const url = "https://script.google.com/macros/s/AKfycbzYOdnVDOHl171LGse_9oep28ihQZ5VvtQC9H_WKQ8NJhHlC7Bkd_zPrv6gOtMWY7kPag/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&reason='+reason;
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -354,7 +355,7 @@ function checkPwd (json) {
 }
 
 async function deleteData(quien) {
-    const url = "https://script.google.com/macros/s/AKfycbyLsT3-mN6wKWGjnDX2gj2mBAwReaxWkFqOmFT3iqDi2fUFXkP0Ur7c-Rp5w9u9ZRmQGw/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&form='+quien+'&reason=delete';
+    const url = "https://script.google.com/macros/s/AKfycbzYOdnVDOHl171LGse_9oep28ihQZ5VvtQC9H_WKQ8NJhHlC7Bkd_zPrv6gOtMWY7kPag/exec?Telefono=" + document.querySelector(".iti__selected-dial-code").innerHTML.replace('+','')+document.getElementById('telefono-ppal').value.replaceAll(' ','')+'&form='+quien+'&reason=delete';
     try {
       const response = await fetch(url);
       if (!response.ok) {
