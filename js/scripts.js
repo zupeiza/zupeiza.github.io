@@ -203,12 +203,12 @@ function retrieving(proceso) {
     if (proceso) {
         (document.querySelector('#cloudicon')).classList.add("d-none");
         (document.querySelector('#spin-recuperar-icon')).classList.remove("d-none");
-        (document.querySelector('#txt-cargar')).classList.add("d-none");
+        (document.querySelector('#txt-recuperar')).classList.add("d-none");
         (document.querySelector('#txt-recuperar-cargando')).classList.remove("d-none");
     } else {
         (document.querySelector('#cloudicon')).classList.remove("d-none");
         (document.querySelector('#spin-recuperar-icon')).classList.add("d-none");
-        (document.querySelector('#txt-cargar')).classList.remove("d-none");
+        (document.querySelector('#txt-recuperar')).classList.remove("d-none");
         (document.querySelector('#txt-recuperar-cargando')).classList.add("d-none");
     }
 }
@@ -322,7 +322,6 @@ function retrieve() {
         (document.querySelector('#cannot-retrieve')).classList.add("d-none");
         retrieving(true);
         getData('retrieve');
-        retrieving(false);
     }
   
     return;
@@ -346,6 +345,7 @@ async function getData(reason) {
             if (checkPwd(json)) {
                     rellenar(json);
             }
+            retrieving(false);
       }
     } catch (error) {
       console.error(error.message);
