@@ -9,7 +9,7 @@
 
 window.onload = function () {
     var hasParam = window.location.href.indexOf('form=yes')
-    console.log(hasParam);
+    //console.log(hasParam);
     if(hasParam != -1) {
         $('#form-modal').modal('show');
     }
@@ -118,15 +118,15 @@ window.addEventListener("load", function() {
         const forms = document.querySelectorAll('.a-validar');
         Array.from(forms)
         .forEach(function (form) {
-            console.log(form.id);
-            console.log(form.id + form.checkValidity());
+            //console.log(form.id);
+            //console.log(form.id + form.checkValidity());
             formsIdArray.push(form.id);
             if (!form.checkValidity() && (ready == true)) {
                 ready = false;
             };
         }); //foreach
-        console.log("Pulsado");
-        console.log(ready);
+        //console.log("Pulsado");
+        //console.log(ready);
         if(ready==true) {
             loading(true);
             (document.querySelector('#validacion-ko')).classList.add("d-none");
@@ -151,7 +151,7 @@ window.addEventListener("load", function() {
                 
 
                 const value = Object.fromEntries(data.entries());
-                console.log(value);
+                //console.log(value);
 
                 const action = e.target.action;
             
@@ -160,7 +160,7 @@ window.addEventListener("load", function() {
                     body: data,
                 })
                 .then(response => {
-                    console.log(response);
+                    //console.log(response);
                     if (response.ok){
                         numEnviosOk++;
                     }
@@ -214,7 +214,7 @@ function retrieving(proceso) {
 }
 
 function showfield(check,field){
-    console.log(field);
+    //console.log(field);
     let fieldToHideShow = document.body.querySelector('#'+field);
     if(check === "Sí" || check){
         fieldToHideShow.hidden = false;
@@ -236,13 +236,13 @@ function vieneSecondForm(rvsp,formid) {
         var i = f.id;
 
         if(rvsp) {
-            console.log('validating' + document.getElementById(i));
+            //console.log('validating' + document.getElementById(i));
             document.getElementById(i).classList.add("a-validar");
 
         }
             
         else {
-            console.log('desvalidating' + document.getElementById(i));
+            //console.log('desvalidating' + document.getElementById(i));
             document.getElementById(i).classList.remove("a-validar");
             if (formid == 'div-acomp') {
                 deleteData('acomp');
@@ -253,7 +253,7 @@ function vieneSecondForm(rvsp,formid) {
 
 function vienennenos(rvsp) {
     showfield(rvsp,'nenos');
-    console.log(document.querySelectorAll('.neno'));
+    //console.log(document.querySelectorAll('.neno'));
     document.querySelectorAll('.neno').forEach(function(form) {
         vieneSecondForm(rvsp,'div-'+form.id);
     });
@@ -337,7 +337,7 @@ async function getData(reason) {
       }
   
       const json = await response.json();
-      console.log(json);
+      //console.log(json);
       if (json.length == 0) {
         (document.querySelector('#retrieve-ko')).classList.remove("d-none");
       } else {
@@ -446,11 +446,11 @@ function rellenar(json) {
                 document.getElementById('comentarios').value = datos_principal.Comentarios;
             }
         }
-        console.log(json.length);
+        //console.log(json.length);
         if (json.length > 1) {
             var datos_acomp = json.find(r => r.Tipo == 'acomp');
             if (datos_acomp) {
-                console.log('Hay acompañante')
+                //console.log('Hay acompañante')
                 document.getElementById('vienes-con-acompanante_y').checked = true;
                 vieneSecondForm(true,'div-acomp');
                 document.getElementById('Nombre-acomp').value = datos_acomp.Nombre;
@@ -548,7 +548,7 @@ function rellenar(json) {
             }
 
         } else {
-            console.log('No hay más registros')
+            //console.log('No hay más registros')
             document.getElementById('vienes-con-acompanante_n').checked = true;
             vieneSecondForm(false,'div-acomp');
         }
