@@ -101,7 +101,7 @@
     "qcomentario": "¿Quieres añadir algún comentario?",
     "enviar": "Enviar",
     "fotos": "Las fotos",
-    "gracias-respuesta": "¡Gracias por tu respuesta! Los datos se han guardado correctamente",
+    "gracias-respuesta": "¡Gracias por tu respuesta! Los datos se han guardado correctamente.<br>Hemos enviado una copia de los datos a tu email, para futuras consultas (si no lo encuentras, por favor mira en la carpeta de correo no deseado).",
     "fallo-respuesta": "Algo ha fallado... Por favor inténtalo de nuevo",
     "faltan-campos": "Hay campos pendientes de rellenar",
     "fotos-extend": "Aquí estarán accesibles las fotos después de la boda",

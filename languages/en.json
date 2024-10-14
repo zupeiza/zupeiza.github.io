@@ -100,7 +100,7 @@
     "qtransporte": "Do you need help with the trip?",
     "qcomentario": "Anything you would like to add?",
     "enviar": "Send",
-    "gracias-respuesta": "Thank you for your response! Your data was successfully saved",
+    "gracias-respuesta": "Thank you for your response! Your data was successfully saved.<br>We sent a copy of the data to your email, for future reference (if you do not find it, please check the spam folder).",
     "fallo-respuesta": "Something went wrong... Please try again",
     "faltan-campos": "Some data are missing",
     "fotos": "The pictures",
