@@ -267,7 +267,7 @@
                                     <div data-i18n="formulario-long"></div>
                                     <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
                                     <div id="formularios" class="mb-7">
-                                        <form action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
+                                        <form action="https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec" class="a-validar m-auto" style="max-width:600px" id="form-principal" method="POST">
                                             <div class="form-group mb-3 row">
                                                     <label for="Nombre" class="col-md-5 col-form-label" data-i18n="nombre"></label>
                                                     <div class="col-md-7">
@@ -290,8 +290,10 @@
                                             <div class="form-group mb-3 row"><label class="col-md-5 col-form-label"></label>
                                                 <div class="col-md-7">
                                                     <button class="btn btn-secondary btn-lg text-uppercase" type="button" onclick="retrieve('principal');">
-                                                    <i class="fas fa-cloud-download me-1"></i>
-                                                    <span data-i18n="boton-recuperar"></span>                                                
+                                                        <i id="spin-recuperar-icon" class="fas fa-spinner fa-spin d-none"></i>
+                                                        <i id="cloudicon" class="fas fa-cloud-download me-1"></i>
+                                                        <span id="txt-recuperar" class="btn-text" data-i18n="boton-recuperar"></span>
+                                                        <span id="txt-recuperar-cargando" class="btn-text d-none" data-i18n="cargando"></span>
                                                     </button>
                                                     
                                                 </div>
@@ -401,7 +403,7 @@
                                                 </div>
                                             </form>
                                             <div class="p-3 mb-2 bg-light" id="div-acomp" hidden>
-                                                <form action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
+                                                <form action="https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec" class="m-auto" style="max-width:600px" id="form-acomp" method="POST">
                                                     <div class="form-group mb-3 row" id="nombre-acompanante"><label for="Nombre-acomp" class="col-md-5 col-form-label" data-i18n="nombre-acomp"></label>
                                                         <div class="col-md-7  text-start"><input type="text" class="form-control" id="Nombre-acomp" name="Nombre"></div>
                                                     </div>
@@ -472,7 +474,7 @@
                                             </form>
                                             <div class="p-3 mb-2 bg-light" id="nenos" hidden>
                                                 <div id="div-form-neno1">
-                                                <form action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
+                                                <form action="https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec" class="m-auto neno" style="max-width:600px" id="form-neno1" method="POST">
                                                     <div id="nenos-rows">
                                                         <div class="mb-3 row" id="neno1">
                                                             <div class="col" data-i18n="placeholder-neno1-nombre"></div>
@@ -503,20 +505,20 @@
                                                 </form>
                                             </div>
                                         
-                                        <form id="form-transporte" action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" method="POST">
+                                        <form id="form-transporte" action="https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec" method="POST">
                                             <hr class="my-4" />
                                             <div class="form-group mb-3 row"><label for="transporte" class="col-md-5 col-form-label" data-i18n="qtransporte"></label>
                                                 <div class="col-md-7  text-start"><textarea class="form-control" id="transporte" name="Transporte"></textarea></div>
                                             </div>
                                         </form>
                                         </div>
-                                        <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" method="POST"></form>
+                                        <form id="form-mensaje" action="https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec" method="POST"></form>
                                             <hr class="my-4" />
                                             <div class="form-group mb-3 row"><label for="comentarios" class="col-md-5 col-form-label" data-i18n="qcomentario"></label>
                                                 <div class="col-md-7  text-start"><textarea class="form-control" id="comentarios" name="Comentarios"></textarea></div>
                                             </div>
                                         </form>
-                                        <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbxzSucMHvWvgLfh22_wNrX60cbqHQ3sy3pyeb0Bjqsy6URU_oEYot1E8pFgSlD9yuQpzw/exec" method="POST">
+                                        <form id="form-enviar" action="https://script.google.com/macros/s/AKfycbwgB-Qch-S0P9s4cnYyHyqlW0v4AKn5aHq0uznrTRVFKZuqATy4HwZyDV4bVwR5mDQvHw/exec" method="POST">
                                             <hr class="my-4" />
                                             <div class="form-group mb-3 row">
                                                 <div class="col text-center">
