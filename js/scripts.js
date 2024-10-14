@@ -141,7 +141,7 @@ window.addEventListener("load", function() {
                     data.set('Comentarios',document.getElementById('comentarios').value);
                     data.set('Transporte',document.getElementById('transporte').value);
                 }
-                data.set('Idioma',localStorage.getItem('language'));
+                data.set('Idioma',localStorage.getItem('language') || 'es');
                 data.set('Contrasena',document.getElementById('password').value);
                 if (document.getElementById('asistencia_y').checked == true) {
                     data.set('Asistencia',"Si");
