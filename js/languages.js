@@ -1,3 +1,4 @@
+
 // Function to update content based on selected language
 function updateContent(langData) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -25,8 +26,6 @@ async function changeLanguage(lang) {
 
 // Call updateContent() on page load
 window.addEventListener('DOMContentLoaded', async () => {
-    const userPreferredLanguage = localStorage.getItem('language') || 'es';
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
-    //toggleArabicStylesheet(userPreferredLanguage);
 });

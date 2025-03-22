@@ -7,11 +7,36 @@
 // Scripts
 // 
 
+const userPreferredLanguage = localStorage.getItem('language');
+
 window.onload = function () {
+    //const firstModal = new bootstrap.Modal(document.getElementById('languagePopup'));
+    const secondModal = new bootstrap.Modal(document.getElementById('form-modal'));
+
+    var popupIdioma = false;
     var hasParam = window.location.href.indexOf('form=yes')
-    //console.log(hasParam);
-    if(hasParam != -1) {
-        $('#form-modal').modal('show');
+    
+    // Listen for when the first modal is closed
+    document.getElementById('languagePopup').addEventListener('hidden.bs.modal', function () {
+        // Once the first modal is closed, open the second modal
+        secondModal.show();
+    });
+
+    if (userPreferredLanguage == null) {
+        $('#languagePopup').modal('show');
+            if(hasParam != -1) {
+                document.getElementById('firstModal').addEventListener('hidden.bs.modal', function () {
+                    // Once the first modal is closed, open the second modal
+                    secondModal.show();
+                });
+            }
+        }
+        else {
+        //console.log(hasParam);
+        if(hasParam != -1) {
+            secondModal.show();
+            // $('#form-modal').modal('show');
+        }
     }
 
 };
