@@ -24,14 +24,15 @@ window.onload = function () {
 
     if (userPreferredLanguage == null) {
         $('#languagePopup').modal('show');
-            if(hasParam != -1) {
-                document.getElementById('firstModal').addEventListener('hidden.bs.modal', function () {
-                    // Once the first modal is closed, open the second modal
-                    secondModal.show();
-                });
-            }
+
+        if(hasParam != -1) {
+            document.getElementById('firstModal').addEventListener('hidden.bs.modal', function () {
+                // Once the first modal is closed, open the second modal
+                secondModal.show();
+            });
         }
-        else {
+    }
+    else {
         //console.log(hasParam);
         if(hasParam != -1) {
             secondModal.show();
