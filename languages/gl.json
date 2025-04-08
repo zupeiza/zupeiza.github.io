@@ -17,7 +17,7 @@
     "tematica": "Temática",
     "tematica-long": "<p>A nosa celebración da voda vai a ter inspiración céltica, porque nos atrae a súa idea de unión coa natureza, a súa espiritualidade e o seu simbolismo. Iso non significa que teñades que vestir de druidas para a celebración, para iso ver o seguinte apartado.<\/p>",
     "vestimenta": "Código de vestimenta",
-    "vestimenta-long": "<p>Non hai. Vide como vos apeteza, queremos que a xente estea cómoda e o pase ben. Se queredes aproveitar a temática da voda e disfrazarvos de druida, ou por ese kilt escocés que tendes no armario collendo pó, sen problema ningún. Se queredes ir en vaqueros, ou en chándal, dálle. Se queredes ir súper elegantes ¡é cosa vosa!<\/p><p>Dito isto, o que sí recomendamos é que no levades zapato de tacón afiado, pois a cerimonia e o cóctel serán o aire libre sobre chan de terra ou herba e podedes quedarvos có zapato clavado no chan... 👠<\/p><p>Para quen nos preguntastes cómo sería vestir acorde á temática, temos preparado un taboleiro con ideas, pero tede en conta que só son suxerencias - e que probablemente non sexa boa idea traer armas<\/p><iframe src=\"https:\/\/petracoding.github.io/pinterest/board.html?link=zupeiza/trapitos-celtas/&hideHeader=1&transparent=1\"><\/iframe>",
+    "vestimenta-long": "<p>Non hai. Vide como vos apeteza, queremos que a xente estea cómoda e o pase ben. Se queredes aproveitar a temática da voda e disfrazarvos de druida, ou por ese kilt escocés que tendes no armario collendo pó, sen problema ningún. Se queredes ir en vaqueros, ou en chándal, dálle. Se queredes ir súper elegantes ¡é cosa vosa!<\/p><p>Dito isto, o que si recomendamos é que no levades zapato de tacón afiado, pois a cerimonia e o cóctel serán o aire libre sobre chan de terra ou herba e podedes quedarvos có zapato clavado no chan... 👠<\/p><p>Para quen nos preguntastes cómo sería vestir acorde á temática, temos preparado un taboleiro con ideas, pero tede en conta que só son suxerencias - e que probablemente non sexa boa idea traer armas<\/p><iframe src=\"https:\/\/petracoding.github.io/pinterest/board.html?link=zupeiza/trapitos-celtas/&hideHeader=1&transparent=1\"><\/iframe>",
     "alcohol": "Consumo de alcol",
     "alcohol-long": "<p>Gustaríanos disfrutar do día convosco pasándoo ben, e cremos que, aínda que os poida gustar tomarvos unha copa, pode irse un pouco de madre a festa e poñervos en peligro na volta a casa - aparte de amargarvos o día despois coa resaca. Así que lo que decidimos é que só se poida consumir alcol durante o cóctel e o banquete. Despois no baile haberá barra libre, pero será sin alcol (incluíndo coctelería sen alcol por se queredes tomar algo exótico).<\/p>",
     "menu-long": "<p>Engadiremos o menú aquí cando o teñamos pechado (maio aproximadamente).<\/p>",
@@ -37,7 +37,7 @@
     "fuegos": "<strong>Fogos artificiais<\/strong>: Está prohibido o uso de petardos, bengalas ou fogos artificiais.",
     "arroz": "<strong>Arroz e confetti<\/strong>: Non está permitido o uso de confetti de papel, ou bombas ou cañóns de pétalos de papel. Tampouco arroz, podedes deixalo na casa. Pero non vos preocupedes que alí atoparedes algo para tirarnos (que non doa).",
     "regalos": "Agasallos",
-    "regalos-long": "O verdadeiro agasallo é pasar este día convosco (de verdade, non é unha frase feita), para contribuirdes facernos un pouco menos pobres, non imos dicir que non! Non se nos ocorre nada material que necesitemos (bueno, sí, unha casa, ¿nos mercades unha casa?), así que se queredes aportar, os nosos números de teléfono de contacto admiten Bizum (e moitas grazas por adiantado 🥲)",
+    "regalos-long": "O verdadeiro agasallo é pasar este día convosco (de verdade, non é unha frase feita), para contribuirdes facernos un pouco menos pobres, non imos dicir que non! Estamos mercando unha casa, así que se queredes aportar, os nosos números de teléfono de contacto admiten Bizum (e moitas grazas por adiantado 🥲)",
     "informacion-long": "",
     "lejos": "Veño de lonxe",
     "lejos-extend": "De alén os montes e os mares, na busca de morada",
@@ -133,10 +133,12 @@
     "formsubmiterrorblock": "Erro no envío da mensaxe",
     "formsubmitbtn": "Enviar mensaxe",
     "no": "Non",
-    "si": "Sí",
+    "si": "Si",
     "contacto": "Contacto",
     "datoscontacto": "Jes (+34) 600664019 / Zupe (+34) 646176099<br>",
     "ups": "Ups!",
-    "ups-long": "Algo estoupou... intentaremolo arranxar o antes posible 😅"
+    "ups-long": "Algo estoupou... intentaremolo arranxar o antes posible 😅",
+    "inputsolution": "Introduce a Resposta Correcta",
+    "inputsolution_long": "Introduce a túa resposta: "
 
 }

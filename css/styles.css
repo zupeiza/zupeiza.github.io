@@ -11476,3 +11476,7 @@ div.password-box {
     background-color: #45a049;
 }
 
+#hiddenImage {
+    display: none;
+    margin-top: 20px;
+}

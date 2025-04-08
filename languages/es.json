@@ -37,7 +37,7 @@
     "fuegos": "<strong>Fuegos artificiales<\/strong>: Está prohibido el uso de petardos, bengalas y fuegos artificiales.",
     "arroz": "<strong>Arroz y confetti<\/strong>: No está permitido el uso de confetti de papel, o bombas o cañones de pétalos de papel. Tampoco arroz, podéis dejarlo en casa. Pero no os preocupéis que allí encontraréis algo para tirarnos (que no duela).",
     "regalos": "Regalos",
-    "regalos-long": "El regalo de verdad es pasar este día en vuestra compañía (de verdad, no es una frase hecha), pero si queréis contribuir a hacernos un poquito menos pobres, tampoco vamos a negarnos. No se nos ocurre nada material que necesitemos (bueno sí, una casa, ¿nos regaláis una casa?), así que si queréis hacer una aportación, nuestros números de teléfono de contacto admiten Bizum - y muchas gracias por adelantado 🥲",
+    "regalos-long": "El regalo de verdad es pasar este día en vuestra compañía (de verdad, no es una frase hecha), pero si queréis contribuir a hacernos un poquito menos pobres, tampoco vamos a negarnos. Estamos comprando una casa, así que si queréis hacer una aportación, nuestros números de teléfono de contacto admiten Bizum - y muchas gracias por adelantado 🥲",
     "informacion-long": "",
     "lejos": "Vengo de lejos",
     "lejos-extend": "De allende los montes y los mares, buscando morada",
@@ -138,5 +138,7 @@
     "contacto": "Contacto",
     "datoscontacto": "Isa (+34) 646176099 / Jes (+34) 600664019<br>",
     "ups": "¡Ups!",
-    "ups-long": "Hemos roto algo... intentaremos arreglarlo lo antes posible 😅"
+    "ups-long": "Hemos roto algo... intentaremos arreglarlo lo antes posible 😅",
+    "inputsolution": "Introduce la Respuesta Correcta",
+    "inputsolution_long": "Introduce tu respuesta: "
 }

@@ -37,7 +37,7 @@
     "fuegos": "<strong>Fireworks<\/strong>: It is forbidden throwing firecrackers, flares or fireworks.",
     "arroz": "<strong>Rice and confetti<\/strong>: It is not allowed throwing paper-made confetti, or confetti-bombs or canyons throwing paper-made confetti. Rice is not allowed either, you can leave it at home. But do not worry, you will find something to throw us (hopefully non-harming).",
     "regalos": "Presents",
-    "regalos-long": "The real present is to spend the day on your company (really, it's not a common place), but if you want to contribute to make us a little less poor, we aren't going to say no! We cannot think of any specific material thing that we could need (except for a house, do you want to give us a house as a present?), so if you want to support us, our contact phone numbers are open for Bizum - and many thanks in advance 🥲",
+    "regalos-long": "The real present is to spend the day on your company (really, it's not a common place), but if you want to contribute to make us a little less poor, we aren't going to say no! We are buying a house, so if you want to support us, our contact phone numbers are open for Bizum - and many thanks in advance 🥲",
     "informacion-long": "",
     "lejos": "From far away",
     "lejos-extend": "Beyond the mountains and seas, seeking a place to dwell",
@@ -138,5 +138,7 @@
     "contacto": "Contact",
     "datoscontacto": "Jes (+34) 600664019 / Zupe (+34) 646176099<br>",
     "ups": "Oops!",
-    "ups-long": "We broke something... we'll try to fix it asap 😅"
+    "ups-long": "We broke something... we'll try to fix it asap 😅",
+    "inputsolution": "Enter the Correct Solution",
+    "inputsolution_long": "Enter your solution: "
 }
