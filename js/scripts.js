@@ -8,13 +8,20 @@
 // 
 
 const userPreferredLanguage = localStorage.getItem('language');
-
+/*const toastLiveExample = document.getElementById('liveToast')
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);*/
 window.onload = function () {
-    //const firstModal = new bootstrap.Modal(document.getElementById('languagePopup'));
-    const secondModal = new bootstrap.Modal(document.getElementById('form-modal'));
+    var hasParam = window.location.href.indexOf('form=')
+    if (hasParam != -1) { // Contains 'form='
+        var secondModal;
+        if (window.location.href.indexOf('=yes') != -1) {
+            secondModal = new bootstrap.Modal(document.getElementById('form-modal'));
+        } else if (window.location.href.indexOf('=no') != -1) {
+            secondModal = new bootstrap.Modal(document.getElementById('special-modal'));
+        }
+    } 
 
     var popupIdioma = false;
-    var hasParam = window.location.href.indexOf('form=yes')
     
     // Listen for when the first modal is closed
     document.getElementById('languagePopup').addEventListener('hidden.bs.modal', function () {
@@ -29,24 +36,18 @@ window.onload = function () {
             document.getElementById('firstModal').addEventListener('hidden.bs.modal', function () {
                 // Once the first modal is closed, open the second modal
                 secondModal.show();
+                /*toastBootstrap.show();*/  //<- Uncomment for photo sharing
             });
         }
     }
     else {
-        //console.log(hasParam);
+        /*toastBootstrap.show();*/  //<- Uncomment for photo sharing
         if(hasParam != -1) {
             secondModal.show();
-            // $('#form-modal').modal('show');
         }
     }
-
 };
 
-/*function modalReopen() {
-    window.location.href = window.location.href.replace('?form=yes','');
-    console.log(window.location.href)
-    location.reload();
-}*/
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -581,4 +582,3 @@ function rellenar(json) {
     }
 //    var formsdata = JSON.stringify(json);
 }
-

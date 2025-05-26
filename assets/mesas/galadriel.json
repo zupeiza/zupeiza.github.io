@@ -1,0 +1,13 @@
+{
+    "img_j_preguntas1": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%;\" id=\"hiddenImage1\" src=\".\/assets\/img\/puntos\/galadriel1.png\" alt=\"Primeros puntos desbloqueados\">",
+    "img_j_preguntas2": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%\" id=\"hiddenImage2b\" src=\".\/assets\/img\/puntos\/galadriel2.png\" alt=\"Segundos puntos desbloqueados\"><\/p><p><img  style=\"max-width: 50%;\"id=\"hiddenImage2\" src=\".\/assets\/img\/trituradora\/getafe.png\" alt=\"Getafe\"><\/p><p>Isa se crió en Getafe, donde estuvo viviendo y trabajando hasta hace casi un par de años que se vino a vivir a tierras gallegas.<\/p><p>Sabías que... Lo de cuna de la aviación española viene de que en su Base Aérea se realizaron importantes avances en la aviación, incluyendo el primer vuelo en autogiro creado por Juan de la Cierva. Es además el centro geográfico de la península, situado en el Cerro de los Ángeles.<\/p>",
+    "img_j_preguntas3": "<img  style=\"max-width: 100%\" id=\"hiddenImage3\" src=\".\/assets\/img\/puntos\/galadriel3.png\" alt=\"Terceros puntos desbloqueados\"><p>¡Correcto! ¡Tienes muchas coordenadas que podrían ser de un mapa, y hay un mapa en la mesa nupcial! Ve a marcar los puntos en su lugar y descubre con el resto de las mesas... ¡el mensaje final!<\/p>",
+    "claves": [
+        {
+            "pregunta1": ["llamada","la llamada"],
+            "pregunta2": ["getafe", "getamola"],
+            "pregunta3": ["20", "veinte", "vinte", "twenty"]
+        }
+    ]
+    
+}

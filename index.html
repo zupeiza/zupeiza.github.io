@@ -147,11 +147,13 @@
                 <div class="collapse navbar-collapse shadow" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="dropdownSections">
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal1" data-i18n="nosotras"></a></li>
-                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#special-modal" data-i18n="fotos" ></a></li>
+                        <!--li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#special-modal" data-i18n="ajugar" ></a></li-->
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal3" data-i18n="informacion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal4" data-i18n="celebracion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal5" data-i18n="lejos" ></a></li>
-                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal6" data-i18n="fotos" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -163,6 +165,16 @@
                 <div class="masthead-subheading">31/05/2025 - 12:00</div>
                 <div class="masthead-subheading"><a href="https://maps.app.goo.gl/7a3PQytgt29g4cSr6" class="text-reset text-decoration-none">El Jardín de los Helechos (Gondomar)</a></div>
             </div>
+            <!--UNCOMMENT FOR TOAST FOR PHOTO SHARING-->
+            <!--div class="toast-container position-absolute top-0 end-0 p-3">
+            <div class="toast align-items-center text-bg-secondary border-0" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                <div class="toast-body" data-i18n="toast">
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+            </div-->
         </header>
         <!-- Secciones-->
         <!-- Portfolio Grid-->
@@ -170,8 +182,8 @@
             <div class="container">
                 <div class="row mb-7"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
                 <div class="row">
+                    <!-- Portfolio item 1-->
                     <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
@@ -187,27 +199,39 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal">
+                    <!-- Portfolio item 2-->
+                    <div class="col-lg-4 col-sm-6">
+                        <div id="portfolio-item-fotos" class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#special-modal">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
-                                <span data-i18n="formulario" style="padding-left: 20px; padding-right: 20px;"></span>
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
+                                <span data-i18n="fotos" style="padding-left: 20px; padding-right: 20px;"></span>
                               </div>
-                              <div class="portfolio-caption-subheading text-muted"  data-i18n="formulario-extend"></div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="fotos-extend"></div>
                             </div>
                         </div>
+                        <!--div id="portfolio-item-juegos" class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#special-modal">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6-bis.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">
+                                <span data-i18n="ajugar" style="padding-left: 20px; padding-right: 20px;"></span>
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="ajugar-extend"></div>
+                            </div>
+                        </div-->
                     </div>
+                    <!-- Portfolio item 3-->
                     <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
@@ -226,8 +250,8 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Portfolio item 4-->
                     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
@@ -245,8 +269,8 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Portfolio item 5-->
                     <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
@@ -264,25 +288,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
+                    <!-- Portfolio item 6-->
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">
                                 <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
-                                <span data-i18n="fotos" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <span data-i18n="formulario" style="padding-left: 20px; padding-right: 20px;"></span>
                                 <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                               </div>
-                              <div class="portfolio-caption-subheading text-muted"  data-i18n="fotos-extend"></div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="formulario-extend"></div>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="row mb-4"><img src="assets/img/horiz.svg" class="img-responsive-center-down"></div>
             </div>
@@ -312,13 +337,13 @@
                                     <p class="item-intro text-muted" data-i18n="nosotras-extend"></p>
                                     <div class="row">
                                         <img src="assets/img/horiz.svg" class="img-responsive-center">
-                                        <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                        <img class="img-fluid d-block mx-auto" src="assets/img/ilustr.png" alt="Lamia y barda" />
                                     </div>
-                                    <div class="row mb-7" data-i18n="construccion">
+                                    <div class="row mb-7" data-i18n="construccion1">
                                         <div class="col-lg-5 col-sm-6 mb-4 mb-sm-0" data-i18n="nosotras1-long"></div>
                                         <div class="col-lg-5 col-sm-6 mb-4 mb-sm-0 ms-auto" data-i18n="nosotras2-long"></div>
                                     </div>
-                                    
+                                    <p><i><span data-i18n="dibujode"></span><a href="https://linktr.ee/MeliMS/">Melimsart</a></i></p>
                                     <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         <span data-i18n="boton-cerrar"></span>
@@ -685,8 +710,8 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" data-i18n="menu"></button>
                                             </h2>
                                             <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body" data-i18n="menu-long">
-                                                <!--div class="accordion-body">
+                                                <!--div class="accordion-body" data-i18n="menu-long"-->
+                                                <div class="accordion-body">
                                                     <div class="text-center">
                                                         <ul class="list-group  list-group-flush">
                                                             <li class="list-group-item"><ul class="list-group  list-group-flush"  data-i18n="coctel"></ul></li>
@@ -705,7 +730,7 @@
                                                             <li class="list-group-item" data-i18n="barra-libre"></li>
                                                             <li class="list-group-item" data-i18n="recena"></li>
                                                         </ul>
-                                                    </div-->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -835,7 +860,7 @@
             </div>
         </div>
         <!-- Portfolio item 6 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="special-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
@@ -844,11 +869,197 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 data-i18n="fotos"></h2>
-                                    <p class="item-intro text-muted" data-i18n="fotos-extend"></p>
-                                    <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/giphybolaoeste.gif" alt="Nada por aquí" />
-                                    <span data-i18n="fotos-long"></span>
+                                    <div id="modal-fotos" >
+                                        <h2 data-i18n="fotos"></h2>
+                                        <p class="item-intro text-muted" data-i18n="fotos-extend"></p>
+                                        <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+                                        <p><a href="https://drive.google.com/drive/folders/1isebDAVAhC5E7HF5q2nCGB6VEhdgO8vR?usp=drive_link"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/qrfotos.png" alt="Qr para subir fotos" /></a></p>
+                                        <p><span data-i18n="fotos-long"></span></p>
+                                        
+                                    </div>
+                                    <div id="modal-acert" hidden>
+                                        <h2 class="mb-4" data-i18n="ajugar"></h2>
+                                        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 mb-3 justify-content-center">
+
+                                            <!-- Card 1 -->
+                                            <div class="col">
+                                              <div class="card gallery-card gallery-card-mesas card-img-mesas card-img-mesas" data-target="acertijos" data-name="buffy">
+                                                <img src="assets/img/imgmesas/buffy.png" class="card-img-top card-img-mesas" alt="Buffy">
+                                                <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                  <h4 class="card-title-mesas">Buffy</h4>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        
+                                            <!-- Card 2 -->
+                                            <div class="col">
+                                              <div id="demona" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="demona">
+                                                <img src="assets/img/imgmesas/demona.png" class="card-img-top card-img-mesas" alt="Demona">
+                                                <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                  <h4 class="card-title-mesas">Demona</h4>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        
+                                            <!-- Card 3 -->
+                                            <div class="col">
+                                                <div id="galadriel" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="galadriel">
+                                                  <img src="assets/img/imgmesas/galadriel.png" class="card-img-top card-img-mesas" alt="Galadriel">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas">Galadriel</h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Card 4 -->
+                                            <div class="col">
+                                                <div id="guerreirolua" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="guerreirolua">
+                                                  <img src="assets/img/imgmesas/guerreirolua.png" class="card-img-top card-img-mesas" alt="Sailor Moon">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas" data-i18n="bunny"></h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Card 5 -->
+                                            <div class="col">
+                                                <div id="heidi" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="heidi">
+                                                  <img src="assets/img/imgmesas/heidi.png" class="card-img-top card-img-mesas" alt="Sailor Moon">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas">Heidi</h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 6 -->
+                                            <div class="col">
+                                                <div id="kimberly" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="kimberly">
+                                                  <img src="assets/img/imgmesas/kimberly.png" class="card-img-top card-img-mesas" alt="Power Ranger">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas">Kimberly</h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 7 -->
+                                            <div class="col">
+                                                <div id="leia" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="leia">
+                                                  <img src="assets/img/imgmesas/leia.png" class="card-img-top card-img-mesas" alt="Princesa Leia">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas" data-i18n="leia"></h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 8 -->
+                                            <div class="col">
+                                                <div id="sheila" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="sheila">
+                                                  <img src="assets/img/imgmesas/sheila.png" class="card-img-top card-img-mesas" alt="Sheila">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas" data-i18n="sheila"></h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 9 -->
+                                            <div class="col">
+                                                <div id="sora" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="sora">
+                                                  <img src="assets/img/imgmesas/sora.png" class="card-img-top card-img-mesas" alt="Sora">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas">Sora</h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 10 -->
+                                            <div class="col">
+                                                <div id="tiamat" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="tiamat">
+                                                  <img src="assets/img/imgmesas/tiamat.png" class="card-img-top card-img-mesas" alt="Tiamat">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas">Tiamat</h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card 11 -->
+                                            <div class="col">
+                                                <div id="xena" class="card gallery-card gallery-card-mesas card-img-mesas" data-target="acertijos"  data-name="xena">
+                                                  <img src="assets/img/imgmesas/xena.png" class="card-img-top card-img-mesas" alt="Xena">
+                                                  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                                                    <h4 class="card-title-mesas">Xena</h4>
+                                                  </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        
+                                      
+                                        <div id="acertijos" class="alert alert-primary" hidden>
+                                            <div class="accordion" id="acertaccordion">
+                                                <div class="accordion-item">
+                                                  <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acertcollapseOne" aria-expanded="true" aria-controls="acertcollapseOne" data-i18n="juegopreguntas"></button>
+                                                  </h3>
+                                                  <div id="acertcollapseOne" class="accordion-collapse collapse" data-bs-parent="#acertaccordion">
+                                                    <div class="accordion-body">
+                                                        <div id="error-message1" class="alert alert-danger tohide" data-i18n="incorr" hidden></div>
+                                                        <p data-i18n="busca-trit"></p>
+                                                        <form id="solutionForm1" class="toview">
+                                                            <label for="solutionInput1" data-i18n="introducesol"></label>
+                                                            <input type="text" id="solutionInput1" class="toreset" required>
+                                                            <button class="btn btn-primary btn-lg" type="submit" onclick="solutionAttempt('1')">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                                <span class="btn-text" data-i18n="enviar"></span>
+                                                            </button>
+                                                        </form>
+                                                        <div id="hiddenImagePreguntas1"  class="tohide" data-mesa="img_j_preguntas1" hidden></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                  <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acertcollapseTwo" aria-expanded="false" aria-controls="acertcollapseTwo" data-i18n="juego2"></button></button>
+                                                  </h3>
+                                                  <div id="acertcollapseTwo" class="accordion-collapse collapse" data-bs-parent="#acertaccordion">
+                                                    <div class="accordion-body">
+                                                        <div id="error-message2" class="alert alert-danger tohide" data-i18n="incorr" hidden></div>
+                                                        <p data-i18n="instr-trituradora"></p>
+                                                        <form id="solutionForm2" class="toview">
+                                                            <label for="solutionInput2" data-i18n="introducesol"></label>
+                                                            <input type="text" id="solutionInput2" class="toreset" required>
+                                                            <button class="btn btn-primary btn-lg" type="submit" onclick="solutionAttempt('2')">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                                <span class="btn-text" data-i18n="enviar"></span>
+                                                            </button>
+                                                        </form>
+                                                        <div id="hiddenImagePreguntas2"  class="tohide" data-mesa="img_j_preguntas2" hidden></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                  <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acertcollapseThree" aria-expanded="false" aria-controls="acertcollapseThree" data-i18n="juego3"></button></button>
+                                                  </h3>
+                                                  <div id="acertcollapseThree" class="accordion-collapse collapse" data-bs-parent="#acertaccordion">
+                                                    <div class="accordion-body">
+                                                        <div id="error-message3" class="alert alert-danger tohide" data-i18n="incorr" hidden></div>
+                                                        <p data-i18n="instr-pares"></p>
+                                                        <form id="solutionForm3" class="toview">
+                                                            <label for="solutionInput3" data-i18n="introducesol"></label>
+                                                            <input type="text" id="solutionInput3" class="toreset" required>
+                                                            <button class="btn btn-primary btn-lg" type="submit" onclick="solutionAttempt('3')">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                                <span class="btn-text" data-i18n="enviar"></span>
+                                                            </button>
+                                                        </form>
+                                                        <div id="hiddenImagePreguntas3" class="tohide" data-mesa="img_j_preguntas3" hidden></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                        
+                                    </div>
                                     <button class="btn btn-secondary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         <span data-i18n="boton-cerrar"></span>
@@ -865,5 +1076,7 @@
         <!-- I18N -->
         <script src="js/languages.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/acert.js"></script>
+        <script src="js/table.js"></script>
     </body>
 </html>

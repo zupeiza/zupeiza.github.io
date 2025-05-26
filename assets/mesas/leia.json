@@ -1,0 +1,13 @@
+{
+    "img_j_preguntas1": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%;\" id=\"hiddenImage1\" src=\".\/assets\/img\/puntos\/leia1.png\" alt=\"Primeros puntos desbloqueados\">",
+    "img_j_preguntas2": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%\" id=\"hiddenImage2b\" src=\".\/assets\/img\/puntos\/leia2.png\" alt=\"Segundos puntos desbloqueados\"><\/p><p><img  style=\"max-width: 50%;\"id=\"hiddenImage2\" src=\".\/assets\/img\/trituradora\/vigo.png\" alt=\"Vigo\"><\/p><p>El casco viejo de Vigo fue el testigo de los primeros besos de la pareja, cuando aún se estaban conociendo.<\/p><p>Sabías que... La ciudad de Vigo fue conocida algún tiempo con el sobrenombre de “Ciudad de la oliva”, y actualmente “Ciudad olívica” debido a que en el atrio de la iglesia de la Colegiata de Santa María existía desde muy antiguo un gran olivo. Este olivo fue plantado por los Caballeros monjes Templarios, cuando éstos regían la feligresía. El viejo árbol, símbolo de la Paz, desapareció al construirse la actual iglesia, menos una de sus ramas que fue recuperada por el administrador de la Aduana. La plantó en el huerto de su casa, donde arraigó y creció hasta que fue plantado de nuevo en el Paseo de Alfonso XII -donde puede verse en la actualidad.<\/p>",
+    "img_j_preguntas3": "<img  style=\"max-width: 100%\" id=\"hiddenImage3\" src=\".\/assets\/img\/puntos\/leia3.png\" alt=\"Terceros puntos desbloqueados\"><p>¡Correcto! ¡Tienes muchas coordenadas que podrían ser de un mapa, y hay un mapa en la mesa nupcial! Ve a marcar los puntos en su lugar y descubre con el resto de las mesas... ¡el mensaje final!<\/p>",
+    "claves": [
+        {
+            "pregunta1": ["cthulhu","nyarlathotep","mitos"],
+            "pregunta2": ["vigo"],
+            "pregunta3": ["20","veinte","vinte","twenty"]
+        }
+    ]
+    
+}

@@ -11477,6 +11477,58 @@ div.password-box {
 }
 
 #hiddenImage {
-    display: none;
     margin-top: 20px;
+}
+
+.content-div {
+  display: none;
+  /*margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;*/
+}
+.content-div.active {
+  display: block;
+}
+
+.gallery-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1.05);
+}
+
+.gallery-card.selected {
+  border: 3px solid #0d6efd; /* Bootstrap's primary blue */
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.4);
+}
+
+.gallery-card-mesas {
+  width: 100px;
+  height: 100px;
+}
+
+.card-img-mesas {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-img-mesas:hover {
+  background: rgba(48, 181, 212, 0.9);
+  /*opacity: 0;*/
+  transition: opacity ease-in-out 0.25s;
+}
+
+.card-img-mesas {
+  opacity: 1;
+}
+
+.card-title-mesas {
+  color: white;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
 }

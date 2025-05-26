@@ -1,0 +1,13 @@
+{
+    "img_j_preguntas1": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%;\" id=\"hiddenImage1\" src=\".\/assets\/img\/puntos\/buffy1.png\" alt=\"Primeros puntos desbloqueados\">",
+    "img_j_preguntas2": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%\" id=\"hiddenImage2b\" src=\".\/assets\/img\/puntos\/buffy2.png\" alt=\"Segundos puntos desbloqueados\"><\/p><p><img  style=\"max-width: 50%;\"id=\"hiddenImage2\" src=\".\/assets\/img\/trituradora\/madrid.png\" alt=\"Madrid\"><\/p><p>Isa nació en Madrid, allí estudió en el instituto y en la universidad, y años más tarde fue donde conoció a Jes.<\/p><p>Sabías que... El blasón medieval de Madrid tenía la figura de una osa, y una misteriosa frase que decía: «Fui sobre agua edificada. Mis muros de fuego son. Esta es mi insignia y mi blasón» La abundancia de agua en forma de  arroyos y pozos dio origen a la leyenda de que la Villa estaba construida sobre agua. El propio nombre de Madrid hace referencia a la matriz o el nacimiento de las aguas (Mayrit). En cuanto a los muros de fuego, la explicación está en que buena parte de la muralla estaba hecha de sílex o pedernal, una piedra que se solía frotar con otra para producir chispas, y así encendían el fuego. Pues bien, parece ser que cuando arrojaban flechas contra la muralla, saltaban chispas y se incendiaban las hierbas secas que rodeaban los muros. De aquí vendría esta otra leyenda: Mis muros de fuego son. <\/p>",
+    "img_j_preguntas3": "<img  style=\"max-width: 100%\" id=\"hiddenImage3\" src=\".\/assets\/img\/puntos\/buffy3.png\" alt=\"Terceros puntos desbloqueados\"><p>¡Correcto! ¡Tienes muchas coordenadas que podrían ser de un mapa, y hay un mapa en la mesa nupcial! Ve a marcar los puntos en su lugar y descubre con el resto de las mesas... ¡el mensaje final!<\/p>",
+    "claves": [
+        {
+            "pregunta1": ["conjuro","hechizo","conxuro","feitizo","encantamiento", "spell"],
+            "pregunta2": ["madrid"],
+            "pregunta3": ["10","diez","dez","ten"]
+        }
+    ]
+    
+}

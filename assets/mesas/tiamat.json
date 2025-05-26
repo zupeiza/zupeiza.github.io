@@ -1,0 +1,13 @@
+{
+    "img_j_preguntas1": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%;\" id=\"hiddenImage1\" src=\".\/assets\/img\/puntos\/tiamat1.png\" alt=\"Primeros puntos desbloqueados\">",
+    "img_j_preguntas2": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%\" id=\"hiddenImage2b\" src=\".\/assets\/img\/puntos\/tiamat2.png\" alt=\"Segundos puntos desbloqueados\"><\/p><p><img  style=\"max-width: 50%;\"id=\"hiddenImage2\" src=\".\/assets\/img\/trituradora\/santiago.png\" alt=\"Vigo\"><\/p><p>Santiago de Compostela fue el hogar de Jes mientras estudiaba Psicología en la Universidad. Y hace un año fue el testigo de la pedida de mano, una pedida <i>única</i><\/p><p>Sabías que... Existe el rumor de que el Juego de la Oca tiene su origen en el Camino de Santiago. Se dice que cada etapa del Camino, está marcada por una casilla de este tradicional juego. Los puentes corresponden con los de la ruta peregrina y la Oca se identifica con la evolución personal del peregrino. También está la figura de la muerte, que simboliza a Santiago en el paso previo al final, Finis Terrae.<\/p>",
+    "img_j_preguntas3": "<img  style=\"max-width: 100%\" id=\"hiddenImage3\" src=\".\/assets\/img\/puntos\/tiamat3.png\" alt=\"Terceros puntos desbloqueados\"><p>¡Correcto! ¡Tienes muchas coordenadas que podrían ser de un mapa, y hay un mapa en la mesa nupcial! Ve a marcar los puntos en su lugar y descubre con el resto de las mesas... ¡el mensaje final!<\/p>",
+    "claves": [
+        {
+            "pregunta1": ["iniciativa","tirada de iniciativa","initiative roll"],
+            "pregunta2": ["santiago","santiago de compostela"],
+            "pregunta3": ["6","seis","six"]
+        }
+    ]
+    
+}

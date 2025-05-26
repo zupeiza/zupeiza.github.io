@@ -1,0 +1,13 @@
+{
+    "img_j_preguntas1": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%;\" id=\"hiddenImage1\" src=\".\/assets\/img\/puntos\/sailormoon1.png\" alt=\"Primeros puntos desbloqueados\">",
+    "img_j_preguntas2": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%\" id=\"hiddenImage2b\" src=\".\/assets\/img\/puntos\/sailormoon2.png\" alt=\"Segundos puntos desbloqueados\"><\/p><p><img  style=\"max-width: 50%;\"id=\"hiddenImage2\" src=\".\/assets\/img\/trituradora\/nigran.png\" alt=\"Vigo\"><\/p><p>Nigrán es donde viven Jes y Zupe desde hace casi dos años (bueno, Jes más).<\/p><p>Sabías que... Monteferro, en Nigrán, como su nombre indica viene de hierro que en gallego es «ferro» se supone que en la zona existía abundante hierro y eso fue un atractivo para los antiguos pobladores de esa zona. Monteferro cuenta también con varios petroglifos , con una característica extraña «los podomorfos» con forma de pie descalzo que es una rareza en Galicia. Junto a ellos una especie de figuras como si fueran cuencos que son los llamados molinos pues se cree que se utilizaban para moler, de hecho en Monteferro se encuentra la mayor concentración de molinos rupestres, hasta 21 que nos dan a entender como sería la vida en el pasado de sus habitantes.<\/p>",
+    "img_j_preguntas3": "<img  style=\"max-width: 100%\" id=\"hiddenImage3\" src=\".\/assets\/img\/puntos\/sailormoon3.png\" alt=\"Terceros puntos desbloqueados\"><p>¡Correcto! ¡Tienes muchas coordenadas que podrían ser de un mapa, y hay un mapa en la mesa nupcial! Ve a marcar los puntos en su lugar y descubre con el resto de las mesas... ¡el mensaje final!<\/p>",
+    "claves": [
+        {
+            "pregunta1": ["oneshot","one-shot"],
+            "pregunta2": ["nigran","nigrán","monteferro"],
+            "pregunta3": ["doce","12","twelve"]
+        }
+    ]
+    
+}

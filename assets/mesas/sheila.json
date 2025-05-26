@@ -1,0 +1,13 @@
+{
+    "img_j_preguntas1": "<p>Correcto! Aquí tes parte do que necesitarás para revelar o tesouro: na mesa das noivas, podes usar estas coordenadas no mapa.<\/p><img style=\"max-width: 100%;\" id=\"hiddenImage1\" src=\".\/assets\/img\/puntos\/sheila1.png\" alt=\"Primeros puntos desbloqueados\">",
+    "img_j_preguntas2": "<p>Correcto! Aquí tes parte do que necesitarás para revelar o tesouro: na mesa das noivas, podes usar estas coordenadas no mapa.<\/p><img style=\"max-width: 100%\" id=\"hiddenImage2b\" src=\".\/assets\/img\/puntos\/sheila2.png\" alt=\"Segundos puntos desbloqueados\"><\/p><p><img  style=\"max-width: 50%;\"id=\"hiddenImage2\" src=\".\/assets\/img\/trituradora\/cork.png\" alt=\"Cork\"><\/p><p>Jes fixo unha estancia en Cork en 2017 para aprender inglés e namorouse do lugar (a súa introdución aos xogos de rol mentres estaba alí pode ter algo que ver con iso...)<\/p><p>Sabías que... Cork é coñecida como a <i>Cidade Rebelde<\/i> de Irlanda debido á súa historia de rebelións e levantamentos contra o dominio inglés ao longo dos séculos. Este alcume atribúese, en parte, ao apoio da xente de Cork a Perkin Warbeck, un pretendente ao trono inglés, durante a Guerra das Rosas.<\/p>",
+    "img_j_preguntas3": "<img  style=\"max-width: 100%\" id=\"hiddenImage3\" src=\".\/assets\/img\/puntos\/sheila3.png\" alt=\"Terceros puntos desbloqueados\"><p>¡Correcto! ¡Tienes muchas coordenadas que podrían ser de un mapa, y hay un mapa en la mesa nupcial! Ve a marcar los puntos en su lugar y descubre con el resto de las mesas... ¡el mensaje final!<\/p>",
+    "claves": [
+        {
+            "pregunta1": ["salvación", "salvacion", "salvation throw", "tirada de salvación", "tirada de salvacion"],
+            "pregunta2": ["cork"],
+            "pregunta3": ["8", "ocho", "oito", "eight"]
+        }
+    ]
+    
+}

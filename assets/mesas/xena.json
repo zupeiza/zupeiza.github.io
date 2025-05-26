@@ -1,0 +1,13 @@
+{
+    "img_j_preguntas1": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%;\" id=\"hiddenImage1\" src=\".\/assets\/img\/puntos\/xena1.png\" alt=\"Primeros puntos desbloqueados\">",
+    "img_j_preguntas2": "<p>¡Correcto! Aquí tienes parte de lo que necesitarás para desvelar el tesoro: en la mesa de las novias podrás utilizar estas coordenadas en el mapa.<\/p><img style=\"max-width: 100%\" id=\"hiddenImage2b\" src=\".\/assets\/img\/puntos\/xena2.png\" alt=\"Segundos puntos desbloqueados\"><\/p><p><img  style=\"max-width: 50%;\"id=\"hiddenImage2\" src=\".\/assets\/img\/trituradora\/munich.png\" alt=\"Vigo\"><\/p><p>Munich fue el lugar donde una Isa jovencita fue de Erasmus entre 2022 y 2023, una ciudad de la que siempre llevará un cachito en el corazón.<\/p><p>Sabías que... Franz Kolb, el dueño de una farmacia en Múnich, Alemania, inventó la plastilina en 1880. En aquella época industrial, Múnich era un centro de las artes, y entre los amigos de Kolb había también escultores. Estos se quejaban de que la arcilla que usaban para modelar sus esculturas se secaba enseguida y que, sobre todo en invierno, era muy difícil trabajar con ella. Para comercializar su invento, lo dio a conocer en el año 1887 en Faber-Castell y, en la actualidad, se sigue vendiendo.<\/p>",
+    "img_j_preguntas3": "<img  style=\"max-width: 100%\" id=\"hiddenImage3\" src=\".\/assets\/img\/puntos\/xena3.png\" alt=\"Terceros puntos desbloqueados\"><p>¡Correcto! ¡Tienes muchas coordenadas que podrían ser de un mapa, y hay un mapa en la mesa nupcial! Ve a marcar los puntos en su lugar y descubre con el resto de las mesas... ¡el mensaje final!<\/p>",
+    "claves": [
+        {
+            "pregunta1": ["mazmorra","mazmorras","dungeon","dungeons"],
+            "pregunta2": ["munich","munchen","münchen"],
+            "pregunta3": ["8","ocho","oito","eight"]
+        }
+    ]
+    
+}
