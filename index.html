@@ -93,12 +93,14 @@
                 <div class="collapse navbar-collapse shadow" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" id="dropdownSections">
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal1" data-i18n="nosotras"></a></li>
-                        <!--li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#special-modal" data-i18n="fotos" ></a></li-->
-                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#special-modal" data-i18n="ajugar" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#album-colab" data-i18n="album-colab" ></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#special-modal" data-i18n="fotos" ></a></li>
+
+                        <!--li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#special-modal" data-i18n="ajugar" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal3" data-i18n="informacion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal4" data-i18n="celebracion" ></a></li>
                         <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#portfolioModal5" data-i18n="lejos" ></a></li>
-                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link" data-bs-toggle="modal" href="#form-modal" data-i18n="formulario"></a></li-->
 
                     </ul>
                 </div>
@@ -117,6 +119,9 @@
         <section class="page-section bg-light parallax" id="portfolio">
             <div class="container">
                 <div class="row mb-7"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
+
+                <div class="row align-items-center">
+                <div class="text-center" ><h1 data-i18n="graciasporvenir"></h1><br></div></div>
                 <div class="row">
                     <!-- Portfolio item 1-->
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -136,22 +141,22 @@
                         </div>
                     </div>
                     <!-- Portfolio item 2-->
-                    <div class="col-lg-4 col-sm-6">
-                        <!--div id="portfolio-item-fotos" class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#special-modal">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div id="portfolio-item-album-colab" class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#album-colab">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/alb.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">
-                                <span data-i18n="fotos" style="padding-left: 20px; padding-right: 20px;"></span>
+                                <span data-i18n="album-colab" style="padding-left: 20px; padding-right: 20px;"></span>
                               </div>
-                              <div class="portfolio-caption-subheading text-muted"  data-i18n="fotos-extend"></div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="album-colab-extend"></div>
                             </div>
-                        </div-->
-                        <div id="portfolio-item-juegos" class="portfolio-item">
+                        </div>
+                        <!--div id="portfolio-item-juegos" class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#special-modal">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -164,11 +169,25 @@
                               </div>
                               <div class="portfolio-caption-subheading text-muted"  data-i18n="ajugar-extend"></div>
                             </div>
-                        </div>
+                        </div-->
                     </div>
                     <!-- Portfolio item 3-->
                     <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
+                        <div id="portfolio-item-fotos" class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#fotos">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                              <div class="portfolio-caption-heading">
+                                <span data-i18n="fotos" style="padding-left: 20px; padding-right: 20px;"></span>
+                              </div>
+                              <div class="portfolio-caption-subheading text-muted"  data-i18n="fotos-extend"></div>
+                            </div>
+                        </div>
+                        <!--div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -177,17 +196,15 @@
                             </a>
                             <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                                 <span data-i18n="informacion" style="padding-left: 20px; padding-right: 20px;"></span>
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                               </div>
 
                                 <div class="portfolio-caption-subheading text-muted"  data-i18n="informacion-extend"></div>
                             </div>
-                        </div>
+                        </div-->
                     </div>
                     <!-- Portfolio item 4-->
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!--div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
@@ -197,16 +214,14 @@
                             </a>
                             <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                                 <span data-i18n="celebracion" style="padding-left: 20px; padding-right: 20px;"></span>
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                               </div>
                               <div class="portfolio-caption-subheading text-muted"  data-i18n="celebracion-extend"></div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
                     <!-- Portfolio item 5-->
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!--div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
@@ -216,16 +231,14 @@
                             </a>
                             <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                                 <span data-i18n="lejos" style="padding-left: 20px; padding-right: 20px;"></span>
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                               </div>
                               <div class="portfolio-caption-subheading text-muted"  data-i18n="lejos-extend"></div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
                     <!-- Portfolio item 6-->
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <!--div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#form-modal">
                                 <div class="portfolio-hover">
@@ -235,14 +248,12 @@
                             </a>
                             <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                                 <span data-i18n="formulario" style="padding-left: 20px; padding-right: 20px;"></span>
-                                <!--img src="assets/img/dobleheart.svg" height="20px"></i-->
                               </div>
                               <div class="portfolio-caption-subheading text-muted"  data-i18n="formulario-extend"></div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
 
                 </div>
                 <div class="row mb-4"><img src="assets/img/horiz.svg" class="img-responsive-center-down"></div>
@@ -796,7 +807,7 @@
             </div>
         </div>
         <!-- Portfolio item 6 modal popup-->
-        <div class="portfolio-modal modal fade" id="special-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="album-colab" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
@@ -805,15 +816,16 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <div id="modal-fotos" hidden>
+                                    <div id="modal-fotos">
                                         <h2 data-i18n="fotos"></h2>
                                         <p class="item-intro text-muted" data-i18n="fotos-extend"></p>
                                         <div class="row"><img src="assets/img/horiz.svg" class="img-responsive-center"></div>
                                         <p><a href="https://drive.google.com/drive/folders/1isebDAVAhC5E7HF5q2nCGB6VEhdgO8vR?usp=drive_link"><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/qrfotos.png" alt="Qr para subir fotos" /></a></p>
                                         <p><span data-i18n="fotos-long"></span></p>
-                                        
+                                        <iframe src="https://drive.google.com/embeddedfolderview?id=1isebDAVAhC5E7HF5q2nCGB6VEhdgO8vR#grid" style="width:100%; height:600px; border:0;"></iframe>
+
                                     </div>
-                                    <div id="modal-acert">
+                                    <div id="modal-acert" hidden>
                                         <h2 class="mb-4" data-i18n="ajugar"></h2>
                                         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 mb-3 justify-content-center">
 

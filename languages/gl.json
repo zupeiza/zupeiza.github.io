@@ -121,8 +121,10 @@
     "fallo-respuesta": "Algo fallou... Por favor inténtao de novo",
     "faltan-campos": "Hay campos pendientes de rellenar",
     "fotos": "As fotos",
-    "fotos-extend": "Comparte as túas imaxes da voda!",
-    "fotos-long": "Queres compartir as túas fotos e videos da voda connosco? Escanea o código ou fai clic e sube as imaxes ao álbum dixital colaborativo!",
+    "album-colab-extend": "Comparte as túas imaxes da voda!",
+    "album-colab-long": "Queres compartir as túas fotos e videos da voda connosco? Escanea o código ou fai clic e sube as imaxes ao álbum dixital colaborativo!",
+    "fotos-long": "Aquí incluiremos as fotos (\"oficiais\") da voda",
+    "fotos-extend": "En breve incluiremos nesta sección as fotos (\"oficiais\") da voda. Mentres, bota un ollo no álbum colaborativo!",
     "boton-cerrar": "Pechar",
     "boton-recuperar": "Recuperar datos",
     "data-missing": "Faltan datos para realizar a procura",
@@ -156,5 +158,7 @@
     "busca-trit": "Qué palabra esconde a mensaxe secreta? Cando o desveles, enfrentaraste a un laberinto... Se consigues sair de ahí, saberás qué táboa visitar para que che entreguen un simpático puzzle",
     "instr-trituradora": "A solución a este enigma é un lugar emblemático na vida da parella, cuando teñades os papeis en orde, qué lugar será?",
     "instr-pares": "Busca de cál dos dados hai unha ovella sen a súa parella (a resposta é o número de caras: 4, 6, 8, 10, 12 ou 20)",
-    "dibujode": "Debuxo de "
+    "dibujode": "Debuxo de ",
+    "graciasporvenir": "Moitas grazas por compartir este día connosco!",
+    "album-colab": "Álbum colaborativo"
 }

@@ -121,8 +121,10 @@
     "gracias-respuesta": "¡Gracias por tu respuesta! Los datos se han guardado correctamente.<br>Hemos enviado una copia de los datos a tu email, para futuras consultas (si no lo encuentras, por favor mira en la carpeta de correo no deseado).",
     "fallo-respuesta": "Algo ha fallado... Por favor inténtalo de nuevo",
     "faltan-campos": "Hay campos pendientes de rellenar",
-    "fotos-extend": "¡Comparte tus fotos de la boda!",
-    "fotos-long": "¿Quieres compartir tus fotos y vídeos de la boda con nosotras? ¡Escanea el código o haz clic y sube las imágenes al álbum digital colaborativo!",
+    "album-colab-extend": "¡Comparte tus fotos de la boda!",
+    "album-colab-long": "¿Quieres compartir tus fotos y vídeos de la boda con nosotras? ¡Escanea el código o haz clic y sube las imágenes al álbum digital colaborativo!",
+    "fotos-long": "Aquí incluiremos las fotos (\"oficiales\") de la boda",
+    "fotos-extend": "En breve incluiremos en esta sección las fotos (\"oficiales\") de la boda. Mientras, ¡echa un vistazo al álbum colaborativo!",
     "boton-cerrar": "Cerrar",
     "boton-recuperar": "Recuperar datos",
     "data-missing": "Faltan datos para realizar la búsqueda",
@@ -156,5 +158,7 @@
     "busca-trit": "¿Qué palabra esconde el mensaje secreto?",
     "instr-trituradora": "La solución a este acertijo es un lugar emblemático en la vida de la pareja, cuando pongáis los papeles en orden, ¿a qué lugar se referirá?",
     "instr-pares": "Busca de cuál de los dados hay una oveja que se queda sin su pareja (la respuesta es el número de caras: 4, 6, 8, 10, 12 ó 20)",
-    "dibujode": "Dibujo de "
+    "dibujode": "Dibujo de ",
+    "graciasporvenir": "¡Muchas gracias por compartir este día con nosotras!",
+    "album-colab": "Álbum colaborativo"
 }

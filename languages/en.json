@@ -122,8 +122,10 @@
     "fallo-respuesta": "Something went wrong... Please try again",
     "faltan-campos": "Some data are missing",
     "fotos": "The pictures",
-    "fotos-extend": "Share the wedding photos!",
-    "fotos-long": "Do you want to share your wedding pictures and videos with us? Scan or touch he code and upload your media to the digital shared album!",
+    "album-colab-extend": "Share the wedding photos!",
+    "album-colab-long": "Do you want to share your wedding pictures and videos with us? Scan or touch he code and upload your media to the digital shared album!",
+    "fotos-long": "(\"Official\" photos here",
+    "fotos-extend": "Soon we will upload in this section the \"official\" wedding pictures, meanwhile check the collaborative album.",
     "boton-cerrar": "Close",
     "boton-recuperar": "Recover data",
     "data-missing": "Some data are missing",
@@ -157,5 +159,7 @@
     "busca-trit": "Which word is hidden in the secret message? When you unveil it, you will face a labyrinth... If you can get out, you will know which table to visit to get another puzzle",
     "instr-trituradora": "The solution to this puzzle is a special place in the couple's life. When you put the papers in order, which place will it refer to?",
     "instr-pares": "Find for which of the die types there is not a lid for a pot (the answer is the number of faces: 4, 6, 8, 10, 12 or 20)",
-    "dibujode": "Drawing by "
+    "dibujode": "Drawing by ",
+    "graciasporvenir": "Thanks for sharing this day with us!",
+    "album-colab": "Collaborative media-gallery"
 }
