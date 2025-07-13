@@ -11532,3 +11532,8 @@ div.password-box {
     0 0 1em blue,
     0 0 0.2em blue;
 }
+
+.flip-entry-title {
+  display: none !important;
+  visibility: none !important;
+}
